@@ -1,0 +1,20 @@
+imlib_cache_size 0
+gap_x 10
+gap_y 26
+alignment top_left
+background yes
+update_interval 1.0
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+double_buffer yes
+border_inner_margin 0
+border_outer_margin 0
+mpd_host localhost
+mpd_port 6600
+minimum_size 100 100
+
+TEXT
+${execpi 5 ~/Scripts/conky_coverart.sh}

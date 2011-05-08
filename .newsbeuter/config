@@ -1,0 +1,10 @@
+auto-reload      yes
+browser          ~/Scripts/chrome.sh
+max-items        100
+
+# Colors
+#          element                   foreground  background
+highlight  feedlist     "^.* N .*$"  color15     default
+highlight  articlelist  "^.* N .*$"  color15     default
+color      listfocus                 white       blue
+color      info                      white       black

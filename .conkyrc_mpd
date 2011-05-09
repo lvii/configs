@@ -1,3 +1,8 @@
+#
+## ~/.conkyrc_mpd
+## author: OK <ok100.ok100.ok100@gmail.com>
+#
+
 imlib_cache_size 0
 gap_x 10
 gap_y 26

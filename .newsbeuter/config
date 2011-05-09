@@ -1,7 +1,13 @@
+#
+## ~/.newsbeuter/config
+## author: OK <ok100.ok100.ok100@gmail.com>
+#
+
 auto-reload      yes
 browser          ~/Scripts/chrome.sh
 max-items        100
 
+#
 # Colors
 #          element                   foreground  background
 highlight  feedlist     "^.* N .*$"  color15     default

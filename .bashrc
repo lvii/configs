@@ -39,6 +39,9 @@ alias pacback='sudo pacman -Qqe | grep -v "$(pacman -Qmq)" > ~/Dropbox/pklist.tx
 alias :q='clear; exit'
 alias cmatrix='cmatrix -bx -u8'
 
+alias commit='git commit -m'
+alias push='git push -u origin master'
+
 alias bashrc='vim ~/.bashrc'
 alias dwmrc='cd ~/Build/dwm && vim config.h && ./recompile.sh && ~/Scripts/dwm-reload.sh'
 alias gitignore='vim .gitignore'

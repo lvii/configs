@@ -19,7 +19,7 @@ __version__ = "0.1"
 
 CONFIG = {
 "Terminal": "urxvtc",
-"Editor" : "/home/ok/Scripts/vim.sh",
+"Editor" : "geany",
 "FileManager" : "thunar",
 "RunCommand" : "dmenu-launch",
 "ExitCommand" : "/home/ok/Scripts/shutdown-dialog.py"

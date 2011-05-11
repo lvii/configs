@@ -38,7 +38,7 @@ parcellite &
 conky -c ~/.conkyrc_mpd &
 
 # set wallpaper
-sleep 13 && nitrogen --restore &
+nitrogen --restore &
 
 # cdm
 wm_bin="$1"

@@ -3,72 +3,91 @@
 ## author: OK <ok100.ok100.ok100@gmail.com>
 #
 
-# Check for an interactive session
+# check for an interactive session
 [ -z "$PS1" ] && return
+
+# export path
+PATH=$PATH:~/Scripts/
+
+# set 256 colours in tmux
+[ -n "$TMUX" ] && export TERM=screen-256color
 
 # pathname expansion will be treated as case-insensitive
 shopt -s nocaseglob
 
+# bash prompt
 PS1="┌─[\[\e[34m\]\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]\n└─╼ "
 
+# share history across all terminals
+shopt -s histappend
+PROMPT_COMMAND='history -a'
+
+# default apps
 export EDITOR='urxvtc -e ~/Scripts/vim.sh'
 export VIEWER='urxvtc -e ~/Scripts/view.sh'
 export BROWSER='~/Scripts/chrome.sh'
 
+# aliases
 alias openports='netstat --all --numeric --programs --inet'
+alias svi='sudo vim'
 alias svim='sudo vim'
+alias vi='vim'
+alias smc='sudo mc'
 alias grep='grep --color=auto'
+alias ls='ls --color=auto'
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias more='less'
 alias df='df -h'
 alias du='du -c -h'
 alias alsi='alsi -n'
 alias connect='sudo dhcpcd'
 alias locate='sudo updatedb && slocate -i'
-alias ls='ls --color=auto'
-alias pacman='sudo pacman-color'
-alias pacclean='sudo pacman -Rs $(pacman -Qqtd)'
-alias pacup='yaourt -Syu --aur'
 alias powertop='sudo powertop'
-alias scrot_dropbox='cd ~/Dropbox/Public/Screenshots && scrot && dropbox-index.py ~/Dropbox/Public/Screenshots'
-alias yaourt_temp='yaourt -S --asdeps'
-alias exit="clear; exit"
+alias scrotbox='cd ~/Dropbox/Public/Screenshots && scrot && dropbox-index.py ~/Dropbox/Public/Screenshots'
 alias tmux="tmux -f ~/.tmux/conf"
 alias meld='GTK2_RC_FILES=~/.themes/BSM_Simple/gtk-2.0/gtkrc meld'
-alias pacback='sudo pacman -Qqe | grep -v "$(pacman -Qmq)" > ~/Dropbox/pklist.txt'
-alias :q='clear; exit'
 alias cmatrix='cmatrix -bx -u8'
+alias cl='clear'
+alias :q='clear; exit'
+alias exit="clear; exit"
 
-alias commit='git commit -m'
-alias push='git push -u origin master'
+# pacman aliases
+alias pacman='sudo pacman-color'
+alias pac='sudo pacman-color'
+alias pacclean='sudo pacman-color -Rs $(pacman-color -Qqtd)'
+alias pacup='yaourt -Syu --aur'
+alias pacin='yaourt -S'
+alias pacrc='sudo vim /etc/pacman.conf'
+alias pacback='sudo pacman-color -Qqe | grep -v "$(pacman-color -Qmq)" > ~/Dropbox/pklist.txt'
 
+# git aliases
+alias gitcom='git commit -m'
+alias gitsta='git status'
+alias gitpus='git push -u origin master'
+alias gitdif='git diff'
+alias gitign='vim .gitignore'
+alias gitadd='git add'
+
+# config aliases
 alias bashrc='vim ~/.bashrc'
 alias dwmrc='cd ~/Build/dwm && vim config.h && ./recompile.sh && ~/Scripts/dwm-reload.sh'
-alias gitignore='vim .gitignore'
 alias pacrc='sudo vim /etc/pacman.conf'
 alias rcrc='sudo vim /etc/rc.conf'
 alias rssrc='vim ~/.newsbeuter/urls'
-alias yaourtrc='sudo vim /etc/yaourtrc'
 alias wmfsrc='vim ~/.config/wmfs/wmfsrc'
 
-PATH=$PATH:~/Scripts/
-
-# set 256 colours in tmux
-[ -n "$TMUX" ] && export TERM=screen-256color
-
-# share history across all terminals
-shopt -s histappend
-PROMPT_COMMAND='history -a'
-
 # coloured repo search
-search () {
-       echo -e "$(pacman -Ss $@ | sed \
+pacs () {
+       echo -e "$(yaourt -Ss $@ | sed \
        -e 's#core/.*#\\033[1;31m&\\033[0;37m#g' \
        -e 's#extra/.*#\\033[0;32m&\\033[0;37m#g' \
        -e 's#community/.*#\\033[1;35m&\\033[0;37m#g' \
        -e 's#^.*/.* [0-9].*#\\033[0;36m&\\033[0;37m#g' )"
 }
 
+# extract function
 extract () {
   if [ -f $1 ] ; then
       case $1 in
@@ -95,7 +114,15 @@ extract () {
   fi
 }
 
-# Linux console colors (jwr dark) 
+# simple notes
+n() {
+	vim ~/.notes/"$*".txt
+	}
+nls() {
+	tree -CR --noreport ~/.notes | awk '{ if ((NR > 1) gsub(/.txt/,"")); if (NF==1) print $1; else if (NF==2) print $2; else if (NF==3) printf " %s\n", $3 }' ;
+	}
+
+# linux console colors (jwr dark) 
 if [ "$TERM" = "linux" ]; then
     echo -en "\e]P0000000" #black
     echo -en "\e]P83d3d3d" #darkgrey
@@ -115,3 +142,4 @@ if [ "$TERM" = "linux" ]; then
     echo -en "\e]PFc0c0c0" #white
     clear # bring us back to default input colours
 fi
+

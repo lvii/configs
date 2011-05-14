@@ -19,6 +19,7 @@ set nocompatible        " leave the old ways behind...
 set wrap                " wrap lines
 set nobackup            " disable backup files (filename~)
 set splitbelow          " place new files below the current
+set clipboard+=unnamed  " yank and copy to X clipboard
 set encoding=utf-8      " UTF-8 encoding for all new files
 set backspace=2         " full backspacing capabilities (indent,eol,start)
 set number              " show line numbers

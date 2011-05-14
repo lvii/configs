@@ -5,7 +5,7 @@
 
 imlib_cache_size 0
 gap_x 10
-gap_y 26
+gap_y 24
 alignment top_left
 background yes
 update_interval 1.0

@@ -69,6 +69,7 @@ alias gitpus='git push -u origin master'
 alias gitdif='git diff'
 alias gitign='vim .gitignore'
 alias gitadd='git add'
+alias gitclo='git clone'
 
 # config aliases
 alias bashrc='vim ~/.bashrc'
@@ -79,7 +80,7 @@ alias rssrc='vim ~/.newsbeuter/urls'
 alias wmfsrc='vim ~/.config/wmfs/wmfsrc'
 
 # coloured repo search
-pacs () {
+pacse () {
        echo -e "$(yaourt -Ss $@ | sed \
        -e 's#core/.*#\\033[1;31m&\\033[0;37m#g' \
        -e 's#extra/.*#\\033[0;32m&\\033[0;37m#g' \
@@ -115,10 +116,10 @@ extract () {
 }
 
 # simple notes
-n() {
+n () {
 	vim ~/.notes/"$*".txt
 	}
-nls() {
+nls () {
 	tree -CR --noreport ~/.notes | awk '{ if ((NR > 1) gsub(/.txt/,"")); if (NF==1) print $1; else if (NF==2) print $2; else if (NF==3) printf " %s\n", $3 }' ;
 	}
 

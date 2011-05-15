@@ -1,7 +1,8 @@
 #!/bin/sh
 #
 ## ~/.xinitrc
-## author: OK <ok100.ok100.ok100@gmail.com>
+## author  : OK <ok100.ok100.ok100@gmail.com>
+## website : https://github.com/ok100
 #
 
 export GTK2_RC_FILES="/home/ok/.gtkrc-2.0"

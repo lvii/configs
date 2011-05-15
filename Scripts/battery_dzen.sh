@@ -1,4 +1,9 @@
 #!/bin/sh
+#
+## battery widget for use with dzen2 + conky
+## author  : OK <ok100.ok100.ok100@gmail.com
+## website : https://github.com/ok100
+#
 
 AC=$(cat /sys/class/power_supply/AC0/online)
 STATEFILE='/proc/acpi/battery/BAT0/state'

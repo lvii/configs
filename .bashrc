@@ -1,6 +1,7 @@
 #
 ## ~/.bashrc
-## author: OK <ok100.ok100.ok100@gmail.com>
+## author  : OK <ok100.ok100.ok100@gmail.com>
+## website : https://github.com/ok100
 #
 
 # check for an interactive session

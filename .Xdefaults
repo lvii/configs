@@ -6,12 +6,8 @@
 
 !-- colors --!
 #include "/home/ok/.colors/dark"
-!#include "/home/ok/.colors/matrix"
-!#include "/home/ok/.colors/phrakture"
-!#include "/home/ok/.colors/zenburn"
 
 !-- urxvt --!
-#urxvt*cursorBlink:        true
 urxvt*scrollBar:          false
 urxvt*background:         #121212
 urxvt*foreground:         #999999
@@ -23,7 +19,3 @@ urxvt*buffered:           true
 urxvt*urgentOnBell:       true
 urxvt*geometry:           80x22
 
-!urxvt*depth:      32
-!urxvt*background: rgba:3f00/3f00/3f00/dddd
-!If that color does not work properly, try:
-!!urxvt*background: rgba:1111/1111/1111/dddd

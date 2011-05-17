@@ -10,9 +10,6 @@
 # export path
 PATH=$PATH:~/Scripts/
 
-# set 256 colours in tmux
-[ -n "$TMUX" ] && export TERM=screen-256color
-
 # pathname expansion will be treated as case-insensitive
 shopt -s nocaseglob
 
@@ -24,8 +21,8 @@ shopt -s histappend
 PROMPT_COMMAND='history -a'
 
 # default apps
-export EDITOR='urxvtc -e ~/Scripts/vim.sh'
-export VIEWER='urxvtc -e ~/Scripts/view.sh'
+export EDITOR='vim'
+export VIEWER='vim -R'
 export BROWSER='~/Scripts/chrome.sh'
 
 # aliases
@@ -47,7 +44,6 @@ alias connect='sudo dhcpcd'
 alias locate='sudo updatedb && slocate -i'
 alias powertop='sudo powertop'
 alias scrotbox='cd ~/Dropbox/Public/Screenshots && scrot && dropbox-index.py ~/Dropbox/Public/Screenshots'
-alias tmux="tmux -f ~/.tmux/conf"
 alias meld='GTK2_RC_FILES=~/.themes/BSM_Simple/gtk-2.0/gtkrc meld'
 alias cmatrix='cmatrix -bx -u8'
 alias cl='clear'

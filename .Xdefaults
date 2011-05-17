@@ -12,8 +12,9 @@ urxvt*scrollBar:          false
 urxvt*background:         #121212
 urxvt*foreground:         #999999
 urxvt*cursorColor:        #5E468C
-urxvt*font:               xft:terminus:medium:size=9
-urxvt*boldFont:           xft:terminus:medium:size=9
+urxvt*font:               -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+urxvt*boldFont:           -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+#urxvt*boldFont:           xft:terminus:medium:size=9
 urxvt*borderLess:         false
 urxvt*buffered:           true
 urxvt*urgentOnBell:       true

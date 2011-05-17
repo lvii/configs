@@ -26,7 +26,7 @@ set number              " show line numbers
 set ww=b,s,h,l,<,>,[,]  " whichwrap -- left/right keys can traverse up/down
 set linebreak           " attempt to wrap lines cleanly
 set wildmenu            " enhanced tab-completion shows all matching cmds in a popup menu
-set spelllang=cs        " real English spelling
+set spelllang=cs        " spelling language
 set wildmode=list:longest,full
 let g:loaded_matchparen=1
 

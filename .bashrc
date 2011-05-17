@@ -49,6 +49,7 @@ alias cmatrix='cmatrix -bx -u8'
 alias cl='clear'
 alias :q='clear; exit'
 alias exit="clear; exit"
+alias mc="mc -x"
 
 # pacman aliases
 alias pacman='sudo pacman-color'
@@ -75,6 +76,8 @@ alias pacrc='sudo vim /etc/pacman.conf'
 alias rcrc='sudo vim /etc/rc.conf'
 alias rssrc='vim ~/.newsbeuter/urls'
 alias wmfsrc='vim ~/.config/wmfs/wmfsrc'
+alias tmuxrc='vim ~/.tmux.conf'
+alias statusrc='vim ~/.conkyrc_dzen'
 
 # coloured repo search
 pacse () {

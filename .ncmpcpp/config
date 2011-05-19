@@ -39,3 +39,6 @@ main_window_highlight_color = "blue"
 progressbar_color = "black"
 statusbar_color = "cyan" 
 active_column_color = "cyan"
+ask_before_clearing_main_playlist = "yes"
+mouse_support = "yes"
+

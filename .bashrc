@@ -78,6 +78,8 @@ alias rssrc='vim ~/.newsbeuter/urls'
 alias wmfsrc='vim ~/.config/wmfs/wmfsrc'
 alias tmuxrc='vim ~/.tmux.conf'
 alias statusrc='vim ~/.conkyrc_dzen'
+alias vimrc='vim ~/.vimrc'
+alias virc='vim ~/.vimrc'
 
 # coloured repo search
 pacse () {

@@ -4,14 +4,19 @@
 ## website : https://github.com/ok100
 #
 
-auto-reload      yes
-browser          ~/Scripts/chrome.sh
-max-items        100
+auto-reload         yes
+browser             "~/Scripts/chrome.sh"
+max-items           500
+confirm-exit        yes
+notify-program      "/usr/bin/notify-send"
+notify-format       "RSS: %n new"
+refresh-on-startup  yes
+reload-time         15
 
 #
 # Colors
 #          element                   foreground  background
 highlight  feedlist     "^.* N .*$"  color15     default
 highlight  articlelist  "^.* N .*$"  color15     default
-color      listfocus                 white       blue
+color      listfocus                 color15     blue
 color      info                      white       black

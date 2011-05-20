@@ -61,13 +61,13 @@ alias pacrc='sudo vim /etc/pacman.conf'
 alias pacback='sudo pacman-color -Qqe | grep -v "$(pacman-color -Qmq)" > ~/Dropbox/pklist.txt'
 
 # git aliases
-alias gitcom='git commit -m'
-alias gitsta='git status'
-alias gitpus='git push -u origin master'
-alias gitdif='git diff'
-alias gitign='vim .gitignore'
-alias gitadd='git add'
-alias gitclo='git clone'
+alias gitco='git commit -m'
+alias gitst='git status'
+alias gitpu='git push -u origin master'
+alias gitdi='git diff'
+alias gitig='vim .gitignore'
+alias gitad='git add'
+alias gitcl='git clone'
 
 # config aliases
 alias bashrc='vim ~/.bashrc'

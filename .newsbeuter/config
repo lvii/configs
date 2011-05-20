@@ -8,8 +8,8 @@ auto-reload         yes
 browser             "~/Scripts/chrome.sh"
 max-items           500
 confirm-exit        yes
-notify-program      "/usr/bin/notify-send"
-notify-format       "RSS: %n new"
+#notify-program      "/usr/bin/notify-send"
+#notify-format       "RSS: %n new"
 refresh-on-startup  yes
 reload-time         15
 

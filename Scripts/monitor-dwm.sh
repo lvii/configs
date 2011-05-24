@@ -11,5 +11,5 @@ if [ "x${CRT}x" = "xx" ]; then
 fi
 setxkbmap cz
 nitrogen --restore
-conky -c ~/.conkyrc_dzen | dzen2 -e 'button3=' -p -fn 'terminus:size=8' -h 17 -bg '#121212' -fg '#696969' -expand left &
+conky -c ~/.conkyrc_dzen | dzen2 -e 'button3=' -p -fn 'arial:bold:size=9' -h 16 -bg '#121212' -fg '#696969' -expand left &
 sleep 1 && fbpanel &

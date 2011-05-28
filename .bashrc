@@ -8,7 +8,7 @@
 [ -z "$PS1" ] && return
 
 # export path
-PATH=$PATH:~/Scripts/
+PATH=$PATH:~/Scripts/:/mnt/SD/texlive/2010/bin/i386-linux/
 
 # pathname expansion will be treated as case-insensitive
 shopt -s nocaseglob
@@ -57,6 +57,7 @@ alias pac='sudo pacman-color'
 alias pacclean='sudo pacman-color -Rs $(pacman-color -Qqtd)'
 alias pacup='yaourt -Syu --aur'
 alias pacin='yaourt -S'
+alias pacrm='yaourt -R'
 alias pacrc='sudo vim /etc/pacman.conf'
 alias pacback='sudo pacman-color -Qqe | grep -v "$(pacman-color -Qmq)" > ~/Dropbox/pklist.txt'
 

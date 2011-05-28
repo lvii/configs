@@ -63,7 +63,7 @@ hi Question        ctermfg=10   ctermbg=15
 hi Pmenu           ctermfg=2    ctermbg=15
 hi PmenuSel        ctermfg=1    ctermbg=15
 hi Visual          ctermfg=8    ctermbg=15
-hi StatusLine      ctermfg=0    ctermbg=7
+hi StatusLine      ctermfg=236  ctermbg=7
 hi StatusLineNC    ctermfg=8    ctermbg=0
 
 " Specific for Vim script  --- 

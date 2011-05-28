@@ -29,11 +29,11 @@ setxkbmap -option caps:escape
 # urxvt daemon
 urxvtd -q -o -f &
 
-# dropbox
-dropboxd &
-
 # clipboard manager
 parcellite &
+
+# tray volume icon
+volumeicon &
 
 # mpd cover on desktop
 conky -c ~/.conkyrc_mpd &

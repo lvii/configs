@@ -26,7 +26,7 @@ CONFIG = {
 }
 
 MY_GTK_MENU_BINARY="/usr/bin/mygtkmenu"
-MY_GTK_MENU_FILE="/tmp/myGtkMenu.txt"
+MY_GTK_MENU_FILE="/dev/shm/myGtkMenu.txt"
 ICONSIZE=-1        # Set to -1 to ignore icon
 MENUPOS=(-1, -1)    # Set both to -1 to ignore position
 

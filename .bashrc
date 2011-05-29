@@ -69,6 +69,7 @@ alias gitig='vim .gitignore'
 alias gitad='git add'
 alias gitcl='git clone'
 alias gitlo='git log'
+alias gitpl='git pull'
 
 # config aliases
 alias bashrc='vim ~/.bashrc'

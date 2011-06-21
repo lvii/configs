@@ -5,7 +5,7 @@
 #
 
 auto-reload         yes
-browser             "~/Scripts/chrome.sh"
+browser             "~/Scripts/opera.sh"
 max-items           500
 confirm-exit        yes
 #notify-program      "/usr/bin/notify-send"

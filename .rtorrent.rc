@@ -15,7 +15,7 @@ schedule = watch_directory,10,30,load_start=~/Downloads/*.torrent
 schedule = untied_directory,10,30,stop_untied=
 
 # stop at ratio 1.0 with at least 100 MB uploaded, or else ratio 2.0
-schedule = ratio,60,30,"stop_on_ratio=100,100M,200"
+#schedule = ratio,60,30,"stop_on_ratio=100,100M,200"
 
 # stop all torrents when disk space is lower than 100MB
 schedule = low_diskspace,10,120,close_low_diskspace=100M

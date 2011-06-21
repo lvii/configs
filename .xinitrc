@@ -17,6 +17,14 @@ if [ "x${CRT}x" = "xx" ]; then
    dcompmgr --no-fade &
 fi
 
+# overclock cpu on demand
+sudo eeecpud -D
+
+# lirc daemon
+sudo lircd --driver=audio_alsa -d default
+irexec -d
+irxevent -d
+
 # automount drives
 ck-launch-session dbus-launch devmon --unmount-on-exit &
 
@@ -32,8 +40,8 @@ urxvtd -q -o -f &
 # clipboard manager
 parcellite &
 
-# tray volume icon
-volumeicon &
+# dropbox
+dropboxd &
 
 # mpd cover on desktop
 conky -c ~/.conkyrc_mpd &

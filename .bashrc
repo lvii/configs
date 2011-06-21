@@ -23,7 +23,7 @@ PROMPT_COMMAND='history -a'
 # default apps
 export EDITOR='vim'
 export VIEWER='vim -R'
-export BROWSER='~/Scripts/chrome.sh'
+export BROWSER='~/Scripts/opera.sh'
 
 # aliases
 alias openports='netstat --all --numeric --programs --inet'
@@ -39,7 +39,6 @@ alias ....='cd ../../..'
 alias more='less'
 alias df='df -h'
 alias du='du -c -h'
-alias alsi='alsi -n'
 alias connect='sudo dhcpcd'
 alias locate='sudo updatedb && slocate -i'
 alias powertop='sudo powertop'
@@ -49,6 +48,7 @@ alias cl='clear'
 alias :q='clear; exit'
 alias exit="clear; exit"
 alias mc="mc -x"
+alias lirc_run='sudo lircd --driver=audio_alsa -d default && irexec &'
 
 # pacman aliases
 alias pacman='sudo pacman-color'
@@ -70,10 +70,12 @@ alias gitad='git add'
 alias gitcl='git clone'
 alias gitlo='git log'
 alias gitpl='git pull'
+alias gitin='git init'
+alias gitrm='git rm'
 
 # config aliases
 alias bashrc='vim ~/.bashrc'
-alias dwmrc='cd ~/Build/dwm && vim config.h && ./recompile.sh && ~/Scripts/dwm-reload.sh'
+alias dwmrc='curr_dir=`pwd`; cd ~/Build/dwm; vim config.h; ./recompile.sh; ~/Scripts/dwm-reload.sh; cd $curr_dir'
 alias pacrc='sudo vim /etc/pacman.conf'
 alias rcrc='sudo vim /etc/rc.conf'
 alias rssrc='vim ~/.newsbeuter/urls'

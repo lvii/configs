@@ -18,7 +18,7 @@ if [ "x${CRT}x" = "xx" ]; then
 fi
 
 # overclock cpu on demand
-sudo eeecpud -D
+#sudo eeecpud -D
 
 # lirc daemon
 sudo lircd --driver=audio_alsa -d default
@@ -49,6 +49,5 @@ conky -c ~/.conkyrc_mpd &
 # set wallpaper
 nitrogen --restore &
 
-# cdm
-wm_bin="$1"
-exec dbus-launch ${wm_bin}
+# dwm
+exec ck-launch-session dbus-launch /home/ok/Scripts/dwm-start

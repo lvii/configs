@@ -1,25 +1,43 @@
 #!/bin/sh
 #
-## battery widget for use with dzen2 + conky
+## Eee PC battery monitor
 ## author  : OK <ok100.ok100.ok100@gmail.com>
 ## website : https://github.com/ok100
 #
 
-AC=$(cat /sys/class/power_supply/AC0/online)
-STATE=$(acpi -b | cut -d " " -f4 | cut -d "%" -f1)
-LOWBAT=35
+BAT_MAX_mV=7971
+BAT_MIN_mV=6171
+AC_MAX_mV=8335
+AC_MIN_mV=7771
+LOWBAT=30
 CRITBAT=15
 
+AC=`cat /sys/class/power_supply/AC0/online`
+CUR_mV=`cat /proc/acpi/battery/BAT0/state | grep mV | cut -d " " -f11`
+
 if [ "$AC" = "1" ]; then
-	echo '^fg(\#477AB3)AC^fg()'
+    let DIVIDER=($AC_MAX_mV-$AC_MIN_mV)/100
+    let STATE=($CUR_mV-$AC_MIN_mV)/$DIVIDER
+
+    if [ $STATE -gt 100 ]; then STATE=100; fi
+    if [ $STATE -lt 0 ]; then STATE=0; fi
+
+	echo '^i(/home/ok/.dzen/icons/ac_01.xbm) ^fg(\#477AB3)'$STATE'%^fg()'
 else
+    let DIVIDER=($BAT_MAX_mV-$BAT_MIN_mV)/100
+    let STATE=($CUR_mV-$BAT_MIN_mV)/$DIVIDER
+
+    if [ $STATE -gt 100 ]; then STATE=100; fi
+    if [ $STATE -lt 0 ]; then STATE=0; fi
+
 	if [ $STATE -le $LOWBAT ]; then
 		if [ $STATE -le $CRITBAT ]; then
-			echo '^fg(\#BF4D80)${battery_percent}%^fg()'
+			echo '^i(/home/ok/.dzen/icons/bat_empty_01.xbm) ^fg(\#BF4D80)'$STATE'%^fg()'
 		else
-			echo '^fg(\#A270A3)${battery_percent}%^fg()'
+			echo '^i(/home/ok/.dzen/icons/bat_low_01.xbm) ^fg(\#A270A3)'$STATE'%^fg()'
 		fi
 	else
-		echo '^fg(\#519C7D)${battery_percent}%^fg()'
+		echo '^i(/home/ok/.dzen/icons/bat_full_01.xbm) ^fg(\#519C7D)'$STATE'%^fg()'
 	fi
 fi
+

@@ -10,11 +10,11 @@ update_interval 1.0
 if_up_strictness address
 
 TEXT
-      ^i(/home/ok/.dzen/icons/cpu.xbm) ^fg(\#BF85CC)${cpu}% ^fg(\#7F62B3)${loadavg 1} ^fg(\#395573)${execpi 5 /home/ok/Scripts/eeecpufreq.sh}MHz \
+  ^i(/home/ok/.dzen/icons/cpu.xbm) ^fg(\#BF85CC)${cpu}% ^fg(\#7F62B3)${loadavg 1} ^fg(\#395573)^ca(1,/home/ok/Scripts/overclock.sh)${execpi 5 /home/ok/Scripts/eeecpufreq.sh}MHz^ca() \
 ^fg()^i(/home/ok/.dzen/icons/temp.xbm) ^fg(\#8A2F58)${hwmon 0 temp 1}° \
 ^fg()^i(/home/ok/.dzen/icons/mem.xbm) ^fg(\#6096BF)${mem} \
 ^fg()${if_up eth0}^i(/home/ok/.dzen/icons/net_wired.xbm) ^fg(\#53A6A6)${downspeedf eth0}k ^i(/home/ok/.dzen/icons/net_down_03.xbm)^fg(\#287373)^i(/home/ok/.dzen/icons/net_up_03.xbm) ${upspeedf eth0}k ${else}${if_up wlan0}^i(/home/ok/.dzen/icons/wifi_01.xbm) ^fg(\#53A6A6)${downspeedf wlan0}k ^i(/home/ok/.dzen/icons/net_down_03.xbm)^fg(\#287373)^i(/home/ok/.dzen/icons/net_up_03.xbm) ${upspeedf wlan0}k ${endif}${endif}\
-^fg()^i(/home/ok/.dzen/icons/bat_full_01.xbm) ${execpi 30 /home/ok/Scripts/battery_dzen.sh} \
+^fg()${execpi 30 /home/ok/Scripts/battery_dzen.sh} \
 ^fg()^ca(1,amixer set Master toggle)^ca(3,urxvtc -e alsamixer)^ca(4,amixer set Master 2dB+)^ca(5,amixer set Master 2dB-)${if_mixer_mute}^fg(\#5E468C)^i(/home/ok/.dzen/icons/spkr_02.xbm) M${else}^fg(\#47959E)^i(/home/ok/.dzen/icons/spkr_01.xbm) ${mixer}%${endif}^ca()^ca()^ca()^ca()  \
 ${if_mpd_playing}^fg(\#E0E0E0)${else}^fg(\#3D3D3D)${endif}^ca(1,mpc prev)^i(/home/ok/.dzen/icons/prev.xbm)^ca() ^ca(1,mpc toggle)^i(/home/ok/.dzen/icons/play.xbm)^i(/home/ok/.dzen/icons/pause.xbm)^ca() ^ca(1,mpc next)^i(/home/ok/.dzen/icons/next.xbm)^ca()  \
-^fg()^fg(\#899CA1)${if_up eth0}${execpi 300 /home/ok/Scripts/accuweather.sh "EUR|SK|LO000|BZOVIK"}°C ${else}${if_up wlan0}${execpi 300 /home/ok/Scripts/accuweather.sh "EUR|SK|LO000|BZOVIK"}°C ${endif}${endif}^fg()${time %a %d} ^fg(\#E0E0E0)${time %H:%M} 
+^fg(\#E0E0E0)${time %H:%M} 

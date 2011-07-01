@@ -147,7 +147,7 @@ class ShutdownDialog:
                 subprocess.Popen("kill -9 " + str(proc.pid), shell = True)
 
         if status != 0:
-            subprocess.Popen("gksu -- " + cmd, shell = True)
+            subprocess.Popen(cmd, shell = True)
 
         self.terminate()
 

@@ -6,7 +6,7 @@
 #
 
 export GTK2_RC_FILES="/home/ok/.gtkrc-2.0"
-export DMENU_OPTIONS="-i -nb #121212 -nf #696969 -sb #121212 -sf #e0e0e0"
+export DMENU_OPTIONS="-i -nb #121212 -nf #696969 -sb #121212 -sf #e0e0e0 -fn -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*"
 
 # switch to external monitor or start dcompmgr 
 CRT=`xrandr | grep "VGA1 connected"`

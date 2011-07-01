@@ -14,7 +14,7 @@ PATH=$PATH:~/Scripts/:/mnt/SD/texlive/2010/bin/i386-linux/
 shopt -s nocaseglob
 
 # bash prompt
-PS1="┌─[\[\e[34m\]\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]\n└─╼ "
+PS1="\[\e[30m\]┌─[ \[\e[32m\]\w\[\e[30m\] ]\n└─╼\[\e[0m\] "
 
 # share history across all terminals
 shopt -s histappend

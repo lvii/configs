@@ -73,6 +73,9 @@ alias gitpl='git pull'
 alias gitin='git init'
 alias gitrm='git rm'
 
+# dropbox aliases
+alias drurl='dropbox puburl'
+
 # config aliases
 alias bashrc='vim ~/.bashrc'
 alias dwmrc='curr_dir=`pwd`; cd ~/Build/dwm; vim config.h; ./recompile.sh; ~/Scripts/dwm-reload.sh; cd $curr_dir'

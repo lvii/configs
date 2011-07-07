@@ -20,10 +20,10 @@ fi
 # overclock cpu on demand
 #sudo eeecpud -D
 
-# lirc daemon
-sudo lircd --driver=audio_alsa -d default
-irexec -d
-irxevent -d
+# lirc
+sudo lircd -H audio_alsa -d default
+irexec & 
+irxevent &
 
 # automount drives
 ck-launch-session dbus-launch devmon --unmount-on-exit &
@@ -42,9 +42,6 @@ parcellite &
 
 # dropbox
 dropboxd &
-
-# mpd cover on desktop
-conky -c ~/.conkyrc_mpd &
 
 # set wallpaper
 nitrogen --restore &

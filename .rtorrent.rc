@@ -17,8 +17,8 @@ schedule = untied_directory,10,30,stop_untied=
 # stop at ratio 1.0 with at least 100 MB uploaded, or else ratio 2.0
 #schedule = ratio,60,30,"stop_on_ratio=100,100M,200"
 
-# stop all torrents when disk space is lower than 100MB
-schedule = low_diskspace,10,120,close_low_diskspace=100M
+# stop all torrents when disk space is lower than 50MB
+schedule = low_diskspace,10,120,close_low_diskspace=50M
 
 # The ip address reported to the tracker.
 ip = 127.0.0.1

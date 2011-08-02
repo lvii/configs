@@ -8,15 +8,14 @@ auto-reload         yes
 browser             "~/Scripts/opera.sh"
 max-items           500
 confirm-exit        yes
-#notify-program      "/usr/bin/notify-send"
-#notify-format       "RSS: %n new"
 refresh-on-startup  yes
 reload-time         15
 
 #
 # Colors
-#          element                   foreground  background
-highlight  feedlist     "^.* N .*$"  color15     default
-highlight  articlelist  "^.* N .*$"  color15     default
-color      listfocus                 color15     blue
-color      info                      white       black
+#          element                      foreground  background
+highlight  feedlist     "^.* N .*$"     color12     default
+highlight  articlelist  "^.* N .*$"     color12     default
+color      listnormal                   blue        default
+color      listfocus                    color16     cyan
+color      info                         white       black

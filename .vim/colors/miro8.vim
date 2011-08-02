@@ -60,10 +60,10 @@ hi IncSearch       ctermfg=red	    ctermbg=white
 hi WarningMsg      ctermfg=red	    ctermbg=white
 hi Question        ctermfg=green    ctermbg=white	cterm=bold
 hi Pmenu           ctermfg=green    ctermbg=white	cterm=bold
-hi PmenuSel        ctermfg=red	    ctermbg=white
-hi Visual          ctermfg=black    ctermbg=grey	cterm=bold
-hi StatusLine      ctermfg=black    ctermbg=grey	cterm=bold
-hi StatusLineNC    ctermfg=grey     ctermbg=black	cterm=bold
+hi PmenuSel        ctermfg=gray	    ctermbg=red 	cterm=bold
+hi Visual          ctermfg=red      ctermbg=grey	cterm=bold
+hi StatusLine      ctermfg=black    ctermbg=grey
+hi StatusLineNC    ctermfg=white    ctermbg=black	cterm=bold
 
 " Specific for Vim script  --- 
 hi vimCommentTitle ctermfg=green	cterm=bold

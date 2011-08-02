@@ -48,7 +48,7 @@ alias cl='clear'
 alias :q='clear; exit'
 alias exit="clear; exit"
 alias mc="mc -x"
-alias lirc_run='sudo lircd --driver=audio_alsa -d default && irexec &'
+alias lirc_run='sudo lircd --driver=audio_alsa -d default && irexec -d && irxevent -d'
 
 # pacman aliases
 alias pacman='sudo pacman-color'
@@ -72,6 +72,7 @@ alias gitlo='git log'
 alias gitpl='git pull'
 alias gitin='git init'
 alias gitrm='git rm'
+alias githu='~/Scripts/github_update.sh'
 
 # dropbox aliases
 alias drurl='dropbox puburl'
@@ -135,19 +136,19 @@ nls () {
 # linux console colors (jwr dark) 
 if [ "$TERM" = "linux" ]; then
     echo -en "\e]P0000000" #black
-    echo -en "\e]P83d3d3d" #darkgrey
-    echo -en "\e]P18c4665" #darkred
-    echo -en "\e]P9bf4d80" #red
+    echo -en "\e]P85e5e5e" #darkgrey
+    echo -en "\e]P18a2f58" #darkred
+    echo -en "\e]P9cf4f88" #red
     echo -en "\e]P2287373" #darkgreen
     echo -en "\e]PA53a6a6" #green
-    echo -en "\e]P37c7c99" #brown
-    echo -en "\e]PB9e9ecb" #yellow
+    echo -en "\e]P3914e89" #darkyellow
+    echo -en "\e]PBbf85cc" #yellow
     echo -en "\e]P4395573" #darkblue
-    echo -en "\e]PC477ab3" #blue
+    echo -en "\e]PC4779b3" #blue
     echo -en "\e]P55e468c" #darkmagenta
-    echo -en "\e]PD7e62b3" #magenta
-    echo -en "\e]P631658c" #darkcyan
-    echo -en "\e]PE6096bf" #cyan
+    echo -en "\e]PD7f62b3" #magenta
+    echo -en "\e]P62b7694" #darkcyan
+    echo -en "\e]PE47959e" #cyan
     echo -en "\e]P7899ca1" #lightgrey
     echo -en "\e]PFc0c0c0" #white
     clear # bring us back to default input colours

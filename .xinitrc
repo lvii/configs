@@ -6,7 +6,7 @@
 #
 
 export GTK2_RC_FILES="/home/ok/.gtkrc-2.0"
-export DMENU_OPTIONS="-i -nb #121212 -nf #696969 -sb #121212 -sf #e0e0e0 -fn -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*"
+export LIBOVERLAY_SCROLLBAR=1
 
 # switch to external monitor or start dcompmgr 
 CRT=`xrandr | grep "VGA1 connected"`
@@ -16,9 +16,6 @@ fi
 if [ "x${CRT}x" = "xx" ]; then
    dcompmgr --no-fade &
 fi
-
-# overclock cpu on demand
-#sudo eeecpud -D
 
 # lirc
 sudo lircd -H audio_alsa -d default
@@ -43,7 +40,7 @@ parcellite &
 # dropbox
 dropboxd &
 
-# set wallpaper
+# wallpaper
 nitrogen --restore &
 
 # dwm

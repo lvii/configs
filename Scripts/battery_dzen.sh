@@ -5,9 +5,9 @@
 ## website : https://github.com/ok100
 #
 
-BAT_MAX_mV=7971
+BAT_MAX_mV=7716
 BAT_MIN_mV=6171
-AC_MAX_mV=8335
+AC_MAX_mV=8226
 AC_MIN_mV=7771
 LOWBAT=30
 CRITBAT=15
@@ -22,7 +22,7 @@ if [ "$AC" = "1" ]; then
     if [ $STATE -gt 100 ]; then STATE=100; fi
     if [ $STATE -lt 0 ]; then STATE=0; fi
 
-	echo '^i(/home/ok/.dzen/icons/ac_01.xbm) ^fg(\#477AB3)'$STATE'%^fg()'
+	echo '^i(/home/ok/.dzen/icons/ac_01.xbm) ^fg(\#477AB3)'$STATE'^fg()'
 else
     let DIVIDER=($BAT_MAX_mV-$BAT_MIN_mV)/100
     let STATE=($CUR_mV-$BAT_MIN_mV)/$DIVIDER
@@ -32,12 +32,12 @@ else
 
 	if [ $STATE -le $LOWBAT ]; then
 		if [ $STATE -le $CRITBAT ]; then
-			echo '^i(/home/ok/.dzen/icons/bat_empty_01.xbm) ^fg(\#BF4D80)'$STATE'%^fg()'
+			echo '^i(/home/ok/.dzen/icons/bat_empty_01.xbm) ^fg(\#BF4D80)'$STATE'^fg()'
 		else
-			echo '^i(/home/ok/.dzen/icons/bat_low_01.xbm) ^fg(\#A270A3)'$STATE'%^fg()'
+			echo '^i(/home/ok/.dzen/icons/bat_low_01.xbm) ^fg(\#A270A3)'$STATE'^fg()'
 		fi
 	else
-		echo '^i(/home/ok/.dzen/icons/bat_full_01.xbm) ^fg(\#519C7D)'$STATE'%^fg()'
+		echo '^i(/home/ok/.dzen/icons/bat_full_01.xbm) ^fg(\#519C7D)'$STATE'^fg()'
 	fi
 fi
 

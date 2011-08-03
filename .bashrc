@@ -20,6 +20,9 @@ PS1="\[\e[0m\]┌─[ \[\e[32m\]\w\[\e[0m\] ]\n└─╼ "
 shopt -s histappend
 PROMPT_COMMAND='history -a'
 
+# avoid duplicates & blank commands in history
+export HISTCONTROL=ignoreboth
+
 # default apps
 export EDITOR='vim'
 export VIEWER='vim -R'
@@ -154,3 +157,6 @@ if [ "$TERM" = "linux" ]; then
     clear # bring us back to default input colours
 fi
 
+# auto-completion
+complete -cf sudo
+complete -cf man

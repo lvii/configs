@@ -1,0 +1,23 @@
+Global {
+    edge = top
+    allign = right
+    margin = 0
+    widthtype = request
+    width = 86
+    height = 14
+    transparent = true
+    tintcolor = #151515
+    alpha = 255
+    setdocktype = true
+    setpartialstrut = true
+    autohide = false
+    heightWhenHidden = 0
+    roundcorners = false
+    roundcornersradius = 7
+    layer = above
+    MaxElemHeight = 14
+    setlayer = false
+}
+Plugin {
+    type = tray
+}

@@ -12,5 +12,5 @@ fi
 killall dwm
 setxkbmap cz
 nitrogen --restore
-conky -c ~/.conkyrc_dzen | dzen2 -e 'button3=' -p -fn 'terminus:size=9' -h 14 -bg '#151515' -fg '#5E5E5E' -expand left &
+conky -c ~/.conkyrc_dzen | dzen2 -e 'button3=' -p -fn 'terminus:size=9' -h 14 -bg '#002b36' -fg '#657b83' -expand left &
 sleep 1 && fbpanel &

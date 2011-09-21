@@ -7,6 +7,11 @@
 
 !! jwr dark
 
+
+URxvt.cursorColor: #5E468C
+URxvt.background:  #121212
+URxvt.foreground:  #999999
+
 !black
 *color0:#3D3D3D
 *color8:#5E5E5E

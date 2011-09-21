@@ -10,7 +10,7 @@ filetype plugin on
 if &t_Co < 256
     colorscheme miro8   " colourscheme for the 8 colour linux term
 else
-    colorscheme miromiro
+    colorscheme solarized
 endif
 
 set mouse=a             " enable mouse
@@ -73,6 +73,7 @@ MapToggle <F8> wrap
 " LaTeX settings
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
 
 " keep cursor centered
 :nnoremap j jzz

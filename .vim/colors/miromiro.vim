@@ -13,8 +13,8 @@ let g:color_name="miromiro"
 " Normal colors  --- 
 hi Normal          ctermfg=15
 hi Ignore          ctermfg=8
-hi Comment         ctermfg=7
-hi LineNr          ctermfg=0
+hi Comment         ctermfg=7 
+hi LineNr          ctermfg=8
 hi Float           ctermfg=3
 hi Include         ctermfg=5
 hi Define          ctermfg=2
@@ -63,7 +63,7 @@ hi Question        ctermfg=10   ctermbg=15
 hi Pmenu           ctermfg=2    ctermbg=15
 hi PmenuSel        ctermfg=1    ctermbg=15
 hi Visual          ctermfg=8    ctermbg=15
-hi StatusLine      ctermfg=236  ctermbg=7
+hi StatusLine      ctermfg=0    ctermbg=7
 hi StatusLineNC    ctermfg=8    ctermbg=0
 
 " Specific for Vim script  --- 

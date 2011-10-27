@@ -6,4 +6,12 @@
 #
 
 let CPU_FREQ=`cat /proc/eee/fsb | cut -d " " -f1`*9
-echo $CPU_FREQ
+if [ $CPU_FREQ = 900 ]; then
+    echo "^fg(\#dc322f)"
+fi
+if [ $CPU_FREQ = 765 ]; then
+    echo "^fg(\#b58900)"
+fi
+if [ $CPU_FREQ = 630 ]; then
+    echo "^fg(\#2aa198)"
+fi

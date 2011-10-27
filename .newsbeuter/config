@@ -7,7 +7,7 @@
 include ~/.newsbeuter/solarized.theme
 
 auto-reload         yes
-browser             "~/Scripts/opera.sh"
+browser             "opera-next -noargb -nolirc"
 max-items           500
 confirm-exit        yes
 refresh-on-startup  yes

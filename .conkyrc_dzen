@@ -10,12 +10,12 @@ update_interval 1.0
 if_up_strictness address
 
 TEXT
- \
-^i(/home/ok/.dzen/icons/cpu.xbm) ^fg(\#859900)${cpu} ^fg(\#2aa198)^ca(3,/home/ok/Scripts/cpu_control.sh)${execpi 5 /home/ok/Scripts/eeecpufreq.sh}^ca() \
-^fg()^i(/home/ok/.dzen/icons/temp.xbm) ^fg(\#d33682)${hwmon 0 temp 1} \
-^fg()^ca(3, /home/ok/Scripts/fan_control.sh)^i(/home/ok/.dzen/icons/fs_02.xbm) ^fg(\#6c71c4)${execpi 10 /home/ok/Scripts/fan.sh}^ca() \
-^fg()^i(/home/ok/.dzen/icons/mem.xbm) ^fg(\#268bd2)${memperc} \
-^fg()${if_up eth0}^fg()^i(/home/ok/.dzen/icons/net_wired.xbm) ^fg(\#859900)${downspeedf eth0}${else}${if_up wlan0}^fg()^i(/home/ok/.dzen/icons/wifi_01.xbm) ${wireless_link_qual_perc wlan0} ^fg(\#859900)${downspeedf wlan0}${else}^i(/home/ok/.dzen/icons/net_wired.xbm) N/A${endif}${endif} \
+  \
+^ca(3,/home/ok/Scripts/cpu_control.sh)CPU ${execpi 5 /home/ok/Scripts/eeecpufreq.sh}${cpu}^ca() \
+^fg()TMP ^fg(\#d33682)${hwmon 0 temp 1} \
+^fg()^ca(3, /home/ok/Scripts/fan_control.sh)FAN ^fg(\#6c71c4)${execpi 10 /home/ok/Scripts/fan.sh}^ca() \
+^fg()MEM ^fg(\#268bd2)${memperc} \
+^fg()NET ${if_up eth0}^fg(\#859900)ON${else}${if_up wlan0}^fg(\#839496)${wireless_link_qual_perc wlan0} ^fg(\#859900)ON${else}N/A${endif}${endif} \
 ^fg()${execpi 30 /home/ok/Scripts/battery_dzen.sh} \
-^fg()^ca(1,amixer set Master toggle)^ca(3,urxvtc -e alsamixer)^ca(4,amixer set Master 2dB+)^ca(5,amixer set Master 2dB-)${if_mixer_mute}^i(/home/ok/.dzen/icons/spkr_02.xbm) M${else}^i(/home/ok/.dzen/icons/spkr_01.xbm) ^fg(\#b58900)${mixer}${endif}^ca()^ca()^ca()^ca() \
-^fg()* ${time %a %d} ^fg(\#FFFFFF)${time %H:%M}        
+^fg()^ca(1,amixer set Master toggle)^ca(3,urxvtc -e alsamixer)^ca(4,amixer set Master 2dB+)^ca(5,amixer set Master 2dB-)VOL ${if_mixer_mute}M${else}^fg(\#b58900)${mixer}${endif}^ca()^ca()^ca()^ca() \
+^fg()[^fg(\#839496)${time %a %d} ^fg(\#EDE7D4)${time %H:%M}^fg()]        

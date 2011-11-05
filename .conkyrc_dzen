@@ -16,4 +16,4 @@ TEXT
 [^fg(\#738080)NET ${if_up eth0}^fg(\#608040)ON${else}${if_up wlan0}^fg(\#337373)${wireless_link_qual_perc wlan0} ^fg(\#80852D)ON${else}N/A${endif}${endif}^fg()] \
 [${execpi 30 /home/ok/Scripts/battery_dzen.sh}^fg()] \
 [^ca(1,amixer set Master toggle)^ca(3,urxvtc -e alsamixer)^ca(4,amixer set Master 2dB+)^ca(5,amixer set Master 2dB-)^fg(\#738080)VOL ^fg(\#4BA65A)${if_mixer_mute}M${else}${mixer}%${endif}^ca()^ca()^ca()^ca()^fg()] \
-^fg(\#738080)${time %a %d} ^fg(\#B3B3B3)${time %H:%M}^fg()       
+^fg(\#738080)${time %a %d} ^fg(\#B3B3B3)${time %H:%M}^fg()        

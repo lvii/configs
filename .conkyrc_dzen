@@ -11,11 +11,9 @@ if_up_strictness address
 
 TEXT
   \
-^ca(3,/home/ok/Scripts/cpu_control.sh)CPU ${execpi 5 /home/ok/Scripts/eeecpufreq.sh}${cpu}^ca() \
-^fg()TMP ^fg(\#d33682)${hwmon 0 temp 1} \
-^fg()^ca(3, /home/ok/Scripts/fan_control.sh)FAN ^fg(\#6c71c4)${execpi 10 /home/ok/Scripts/fan.sh}^ca() \
-^fg()MEM ^fg(\#268bd2)${memperc} \
-^fg()NET ${if_up eth0}^fg(\#859900)ON${else}${if_up wlan0}^fg(\#839496)${wireless_link_qual_perc wlan0} ^fg(\#859900)ON${else}N/A${endif}${endif} \
-^fg()${execpi 30 /home/ok/Scripts/battery_dzen.sh} \
-^fg()^ca(1,amixer set Master toggle)^ca(3,urxvtc -e alsamixer)^ca(4,amixer set Master 2dB+)^ca(5,amixer set Master 2dB-)VOL ${if_mixer_mute}M${else}^fg(\#b58900)${mixer}${endif}^ca()^ca()^ca()^ca() \
-^fg()[^fg(\#839496)${time %a %d} ^fg(\#EDE7D4)${time %H:%M}^fg()]        
+[^ca(3,/home/ok/Scripts/cpu_control.sh)${execpi 5 /home/ok/Scripts/eeecpufreq.sh}${cpu}%^ca() ^fg(\#A64286)${hwmon 0 temp 1}°C ^fg()^ca(3, /home/ok/Scripts/fan_control.sh)^fg(\#738080)${execpi 10 /home/ok/Scripts/fan.sh}%^ca()^fg()] \
+[^fg(\#1C678C)${memperc}%^fg()] \
+[^fg(\#738080)NET ${if_up eth0}^fg(\#608040)ON${else}${if_up wlan0}^fg(\#337373)${wireless_link_qual_perc wlan0} ^fg(\#80852D)ON${else}N/A${endif}${endif}^fg()] \
+[${execpi 30 /home/ok/Scripts/battery_dzen.sh}^fg()] \
+[^ca(1,amixer set Master toggle)^ca(3,urxvtc -e alsamixer)^ca(4,amixer set Master 2dB+)^ca(5,amixer set Master 2dB-)^fg(\#738080)VOL ^fg(\#4BA65A)${if_mixer_mute}M${else}${mixer}%${endif}^ca()^ca()^ca()^ca()^fg()] \
+^fg(\#738080)${time %a %d} ^fg(\#B3B3B3)${time %H:%M}^fg()       

@@ -21,7 +21,7 @@ let g:colors_name="darkcourses"
 hi Normal                  guifg=#999999 guibg=#020202
 hi Boolean                 guifg=#B248B2
 hi Character               guifg=#808080 guibg=#020202 gui=none 
-hi Comment                 guifg=#4C4C4C gui=italic
+hi Comment                 guifg=#4C4C4C gui=none
 hi Conditional             guifg=#CCBB66
 hi Constant                guifg=#80800D
 hi Cursor                  guifg=#335A80 guibg=#335A80
@@ -238,7 +238,7 @@ hi MBEVisibleChanged       ctermfg=7
 hi MBEVisibleChangedActive ctermfg=9
 
 if ($TERM =~ "rxvt" || "xterm")
-	hi Comment                 ctermfg=8   cterm=italic
+	hi Comment                 ctermfg=8   cterm=none
 endif
 
 if ($TERM =~ "screen" || "tmux")

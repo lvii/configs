@@ -4,7 +4,7 @@
 ## website : https://github.com/ok100
 #
 
-include ~/.newsbeuter/solarized.theme
+include ~/.newsbeuter/darkcourses.theme
 
 auto-reload         yes
 browser             "opera-next -noargb -nolirc"

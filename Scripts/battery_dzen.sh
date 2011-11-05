@@ -22,7 +22,7 @@ if [ "$AC" = "1" ]; then
     if [ $STATE -gt 100 ]; then STATE=100; fi
     if [ $STATE -lt 0 ]; then STATE=0; fi
 
-	echo 'BAT ^fg(\#839496)'$STATE'^fg()'
+	echo '^fg(\#738080)AC ^fg(\#3995BF)'$STATE'%^fg()'
 else
     let DIVIDER=($BAT_MAX_mV-$BAT_MIN_mV)/100
     let STATE=($CUR_mV-$BAT_MIN_mV)/$DIVIDER
@@ -32,12 +32,12 @@ else
 
 	if [ $STATE -le $LOWBAT ]; then
 		if [ $STATE -le $CRITBAT ]; then
-			echo 'BAT ^fg(\#dc322f)'$STATE'^fg()'
+			echo '^fg(\#738080)BAT ^fg(\#B3354C)'$STATE'%^fg()'
 		else
-			echo 'BAT ^fg(\#d33682)'$STATE'^fg()'
+			echo '^fg(\#738080)BAT ^fg(\#A64286)'$STATE'%^fg()'
 		fi
 	else
-		echo 'BAT ^fg(\#268bd2)'$STATE'^fg()'
+		echo '^fg(\#738080)BAT ^fg(\#3995BF)'$STATE'%^fg()'
 	fi
 fi
 

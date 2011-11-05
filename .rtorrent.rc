@@ -1,12 +1,6 @@
-# ~/.rtorrent.rc
-# Thayer Williams - http://cinderwick.ca
-# vim:nu:ai:si:et:ts=4:sts=4:sw=4:ft=sh:
-
 # storage
-directory = ~/Downloads/Torrents/
+directory = /media/StoreJet/Torrents/
 session = ~/Downloads/Torrents/.session/
-
-# schedule = id,start after x secs,interval in secs,command to execute
 
 # watch a directory for new torrents
 schedule = watch_directory,10,30,load_start=~/Downloads/*.torrent
@@ -14,19 +8,14 @@ schedule = watch_directory,10,30,load_start=~/Downloads/*.torrent
 # stop torrents that have been deleted
 schedule = untied_directory,10,30,stop_untied=
 
-# stop at ratio 1.0 with at least 100 MB uploaded, or else ratio 2.0
-#schedule = ratio,60,30,"stop_on_ratio=100,100M,200"
-
 # stop all torrents when disk space is lower than 50MB
 schedule = low_diskspace,10,120,close_low_diskspace=50M
 
 # The ip address reported to the tracker.
 ip = 127.0.0.1
 
-# traffic
-max_uploads = 8
+# Global upload and download rate in KiB. "0" for unlimited.
 download_rate = 0
-upload_rate = 32
-port_range = 49282-49282
-port_random = no
-encryption = allow_incoming, try_outgoing, enable_retry
+upload_rate = 5
+
+# vim:ft=sh:

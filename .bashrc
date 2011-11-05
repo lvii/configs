@@ -7,14 +7,11 @@
 # check for an interactive session
 [ -z "$PS1" ] && return
 
-# export path
-PATH=$PATH:~/Scripts/:/mnt/SD/texlive/2010/bin/i386-linux/
-
 # pathname expansion will be treated as case-insensitive
 shopt -s nocaseglob
 
 # bash prompt
-PS1="\[\e[0m\]┌─[ \[\e[32m\]\w\[\e[0m\] ]\n└─╼ "
+PS1=" \[\e[0;32m\]\W \[\e[1;30m\]> \[\e[0m\]"
 
 # share history across all terminals
 shopt -s histappend
@@ -26,7 +23,7 @@ export HISTCONTROL=ignoreboth
 # default apps
 export EDITOR='vim'
 export VIEWER='vim -R'
-export BROWSER='~/Scripts/opera.sh'
+export BROWSER='opera-next -noargb -nolirc'
 
 # aliases
 alias openports='netstat --all --numeric --programs --inet'
@@ -52,18 +49,19 @@ alias :q='clear; exit'
 alias exit="clear; exit"
 alias mc="mc -x"
 alias lirc_run='sudo lircd --driver=audio_alsa -d default && irexec -d && irxevent -d'
-
-# pacman aliases
-alias pacman='sudo pacman-color'
-alias pac='sudo pacman-color'
-alias pacclean='sudo pacman-color -Rs $(pacman-color -Qqtd)'
+alias abook='~/Scripts/abook-autoexport'
+alias drurl='dropbox puburl'
+alias rip='cdparanoia -B -w -d /dev/sr0'
+# pacman
+alias pacman='sudo pacman'
+alias pac='sudo pacman'
+alias pacclean='sudo pacman -Rs $(pacman -Qqtd)'
 alias pacup='yaourt -Syu --aur'
 alias pacin='yaourt -S'
 alias pacrm='yaourt -R'
 alias pacrc='sudo vim /etc/pacman.conf'
-alias pacback='sudo pacman-color -Qqe | grep -v "$(pacman-color -Qmq)" > ~/Dropbox/pklist.txt'
-
-# git aliases
+alias pacback='sudo pacman -Qqe | grep -v "$(pacman -Qmq)" > ~/Dropbox/pklist.txt'
+# git
 alias gitco='git commit -m'
 alias gitst='git status'
 alias gitpu='git push -u origin master'
@@ -76,11 +74,7 @@ alias gitpl='git pull'
 alias gitin='git init'
 alias gitrm='git rm'
 alias githu='~/Scripts/github_update.sh'
-
-# dropbox aliases
-alias drurl='dropbox puburl'
-
-# config aliases
+# config
 alias bashrc='vim ~/.bashrc'
 alias dwmrc='curr_dir=`pwd`; cd ~/Build/dwm; vim config.h; ./recompile.sh; ~/Scripts/dwm-reload.sh; cd $curr_dir'
 alias pacrc='sudo vim /etc/pacman.conf'
@@ -131,31 +125,58 @@ extract () {
 # simple notes
 n () {
 	vim ~/.notes/"$*".txt
-	}
+}
 nls () {
 	tree -CR --noreport ~/.notes | awk '{ if ((NR > 1) gsub(/.txt/,"")); if (NF==1) print $1; else if (NF==2) print $2; else if (NF==3) printf " %s\n", $3 }' ;
-	}
+}
 
-# linux console colors (jwr dark) 
-if [ "$TERM" = "linux" ]; then
-    echo -en "\e]P0000000" #black
-    echo -en "\e]P85e5e5e" #darkgrey
-    echo -en "\e]P18a2f58" #darkred
-    echo -en "\e]P9cf4f88" #red
-    echo -en "\e]P2287373" #darkgreen
-    echo -en "\e]PA53a6a6" #green
-    echo -en "\e]P3914e89" #darkyellow
-    echo -en "\e]PBbf85cc" #yellow
-    echo -en "\e]P4395573" #darkblue
-    echo -en "\e]PC4779b3" #blue
-    echo -en "\e]P55e468c" #darkmagenta
-    echo -en "\e]PD7f62b3" #magenta
-    echo -en "\e]P62b7694" #darkcyan
-    echo -en "\e]PE47959e" #cyan
-    echo -en "\e]P7899ca1" #lightgrey
-    echo -en "\e]PFc0c0c0" #white
-    clear # bring us back to default input colours
-fi
+# create mp3 audio files
+mp3 () {
+    for file in $1; do
+        lame --preset standard $file $file.mp3
+    done
+}
+
+# linux console colors 
+#if [ "$TERM" = "linux" ]; then
+    # jwr dark
+    #echo -en "\e]P0000000" #black
+    #echo -en "\e]P85e5e5e" #darkgrey
+    #echo -en "\e]P18a2f58" #darkred
+    #echo -en "\e]P9cf4f88" #red
+    #echo -en "\e]P2287373" #darkgreen
+    #echo -en "\e]PA53a6a6" #green
+    #echo -en "\e]P3914e89" #darkyellow
+    #echo -en "\e]PBbf85cc" #yellow
+    #echo -en "\e]P4395573" #darkblue
+    #echo -en "\e]PC4779b3" #blue
+    #echo -en "\e]P55e468c" #darkmagenta
+    #echo -en "\e]PD7f62b3" #magenta
+    #echo -en "\e]P62b7694" #darkcyan
+    #echo -en "\e]PE47959e" #cyan
+    #echo -en "\e]P7899ca1" #lightgrey
+    #echo -en "\e]PFc0c0c0" #white
+    #clear # bring us back to default input colours
+
+    # zenburn
+    #echo -en "\e]P01e2320" # zenburn black (normal black)
+    #echo -en "\e]P8709080" # bright-black  (darkgrey)
+    #echo -en "\e]P1705050" # red           (darkred)
+    #echo -en "\e]P9dca3a3" # bright-red    (red)
+    #echo -en "\e]P260b48a" # green         (darkgreen)
+    #echo -en "\e]PAc3bf9f" # bright-green  (green)
+    #echo -en "\e]P3dfaf8f" # yellow        (brown)
+    #echo -en "\e]PBf0dfaf" # bright-yellow (yellow)
+    #echo -en "\e]P4506070" # blue          (darkblue)
+    #echo -en "\e]PC94bff3" # bright-blue   (blue)
+    #echo -en "\e]P5dc8cc3" # purple        (darkmagenta)
+    #echo -en "\e]PDec93d3" # bright-purple (magenta)
+    #echo -en "\e]P68cd0d3" # cyan          (darkcyan)
+    #echo -en "\e]PE93e0e3" # bright-cyan   (cyan)
+    #echo -en "\e]P7dcdccc" # white         (lightgrey)
+    #echo -en "\e]PFffffff" # bright-white  (white)
+    #clear # bring us back to default input colours
+#fi
 
 # auto-completion
 complete -cf sudo

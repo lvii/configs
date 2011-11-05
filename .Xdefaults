@@ -5,22 +5,23 @@
 !
 
 !-- colors --!
-#include "/home/ok/.colors/dark"
+#include "/home/ok/.colors/dc3"
 
 !-- urxvt --!
 urxvt*scrollBar:          false
-urxvt*background:         #121212
-urxvt*foreground:         #999999
-urxvt*cursorColor:        #5E468C
 urxvt*font:               -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
-!urxvt*boldFont:           -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
-!urxvt*font:               xft:dejavu sans mono:medium:size=9
-!urxvt*boldFont:           xft:dejavu sans mono:bold:size=9
-!urxvt*font:               xft:envy code r:medium:size=9
-!urxvt*boldFont:           xft:envy code r:medium:size=9
+!urxvt*font:               -*-erusfont-medium-r-*-*-11-*-*-*-*-*-*-*
 urxvt*borderLess:         false
 urxvt*buffered:           true
 urxvt*urgentOnBell:       true
-urxvt*geometry:           80x22
+urxvt*geometry:           81x21
 urxvt*cursorBlink:        true
+URxvt.perl-ext-common:    default,matcher
+URxvt.urlLauncher:        opera-next
+URxvt.matcher.button:     1
+URxvt.matcher.pattern.1:  \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 
+!-- dzen2 --!
+dzen2*font:               -*-fixed-medium-r-*-*-10-*-*-*-*-*-iso8859-*
+dzen2*foreground:         #44484C
+dzen2*background:         #0D131A

@@ -11,7 +11,7 @@ if_up_strictness address
 
 TEXT
   \
-[^ca(3,/home/ok/Scripts/cpu_control.sh)${execpi 5 /home/ok/Scripts/eeecpufreq.sh}${cpu}%^ca() ^fg(\#A64286)${hwmon 0 temp 1}°C ^fg()^ca(3, /home/ok/Scripts/fan_control.sh)^fg(\#738080)${execpi 10 /home/ok/Scripts/fan.sh}%^ca()^fg()] \
+[^ca(3,/home/ok/Scripts/cpu_control.sh)${execpi 5 /home/ok/Scripts/eeecpufreq.sh}${cpu}%^ca() ^fg(\#A64286)${hwmon 0 temp 1}°C ^fg()^ca(3, /home/ok/Scripts/fan_control.sh)^fg(\#738080)${hwmon 1 fan 1 0.045978 0}%^ca()^fg()] \
 [^fg(\#1C678C)${memperc}%^fg()] \
 [^fg(\#738080)NET ${if_up eth0}^fg(\#608040)ON${else}${if_up wlan0}^fg(\#337373)${wireless_link_qual_perc wlan0} ^fg(\#80852D)ON${else}N/A${endif}${endif}^fg()] \
 [${execpi 30 /home/ok/Scripts/battery_dzen.sh}^fg()] \

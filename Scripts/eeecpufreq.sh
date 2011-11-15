@@ -10,7 +10,7 @@ if [ $CPU_FREQ = 900 ]; then
     echo "^fg(\#B3354C)"
 fi
 if [ $CPU_FREQ = 765 ]; then
-    echo "^fg(\#BF9F5F)"
+    echo "^fg(\#A64286)"
 fi
 if [ $CPU_FREQ = 630 ]; then
     echo "^fg(\#337373)"

@@ -3,7 +3,7 @@ Global {
     allign = right
     margin = 0
     widthtype = request
-    width = 86
+    width = 36
     height = 12
     transparent = true
     tintcolor = #0d131a
@@ -15,7 +15,7 @@ Global {
     roundcorners = false
     roundcornersradius = 7
     layer = above
-    MaxElemHeight = 14
+    MaxElemHeight = 12
     setlayer = false
 }
 Plugin {

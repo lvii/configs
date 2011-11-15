@@ -9,8 +9,9 @@
 
 !-- urxvt --!
 urxvt*scrollBar:          false
-urxvt*font:               -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
-!urxvt*font:               -*-erusfont-medium-r-*-*-11-*-*-*-*-*-*-*
+!urxvt*font:               -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+urxvt*font:               -*-gohufont-medium-*-*-*-11-*-*-*-*-*-iso10646-*
+urxvt*boldFont:           -*-gohufont-medium-*-*-*-11-*-*-*-*-*-iso10646-*
 urxvt*borderLess:         false
 urxvt*buffered:           true
 urxvt*urgentOnBell:       true
@@ -22,6 +23,6 @@ URxvt.matcher.button:     1
 URxvt.matcher.pattern.1:  \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 
 !-- dzen2 --!
-dzen2*font:               -*-glisp-*-*-*-*-11-*-*-*-*-*-*-*
+dzen2*font:               -*-glisp-medium-*-*-*-11-*-*-*-*-*-*-*
 dzen2*foreground:         #44484C
 dzen2*background:         #0D131A

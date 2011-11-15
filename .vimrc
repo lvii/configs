@@ -17,10 +17,13 @@ set number              " show line numbers
 set linebreak           " attempt to wrap lines cleanly
 set wildmenu            " enhanced tab-completion shows all matching cmds in a popup menu
 set spelllang=sk        " default spelling language
-set expandtab           " insert spaces instead of tabs
+
 set tabstop=4           " tabs appear as n number of columns
 set shiftwidth=4        " n cols for auto-indenting
 set autoindent          " auto indents next new line
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+
 set hlsearch            " highlight all search results
 set incsearch           " increment search
 set ignorecase          " case-insensitive search
@@ -74,30 +77,30 @@ inoremap  ggVG
 nnoremap  :confirm quit<CR>
 inoremap  :confirm quit<CR>
 
-"noremap ěě @
-"noremap ššš #
-"noremap čč $
-"noremap řř %
-"noremap žž ^
-"noremap ýý &
-"noremap áá *
-"noremap íí (
-"noremap éé )
-"noremap úú {
-"noremap ůů :
-"inoremap ěě @
-"inoremap ššš #
-"inoremap čč $
-"inoremap řř %
-"inoremap žž ^
-"inoremap ýý &
-"inoremap áá *
-"inoremap íí (
-"inoremap éé )
-"inoremap úú {
-"inoremap ůů :
-"inoremap §§ ' 
-
+" fix numeric keys in tmux
 noremap Oj *
 inoremap Oj *
-
+noremap Ok +
+inoremap Ok +
+noremap Oq 1
+inoremap Oq 1
+noremap Or 2
+inoremap Or 2
+noremap Os 3
+inoremap Os 3
+noremap Ot 4
+inoremap Ot 4
+noremap Ou 5
+inoremap Ou 5
+noremap Ov 6
+inoremap Ov 6
+noremap Ow 7
+inoremap Ow 7
+noremap Ox 8
+inoremap Ox 8
+noremap Oy 9
+inoremap Oy 9
+noremap Oo /
+inoremap Oo /
+noremap Om -
+inoremap Om -

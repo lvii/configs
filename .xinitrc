@@ -6,12 +6,10 @@
 #
 
 export GTK2_RC_FILES="/home/ok/.gtkrc-2.0"
-export LIBOVERLAY_SCROLLBAR=1
 export MOZ_DISABLE_PANGO=1
 export OPERAPLUGINWRAPPER_PRIORITY=0
 export OPERA_KEEP_BLOCKED_PLUGIN=1
 export GDK_NATIVE_WINDOWS=1
-#export INTEL_BATCH=1
 
 xrdb .Xdefaults
 
@@ -24,11 +22,6 @@ if [ "x${CRT}x" = "xx" ]; then
    xcalib ~/.icc/eeePC.icc
    xcompmgr -a &
 fi
-
-# lirc
-sudo lircd -H audio_alsa -d default
-irexec & 
-irxevent &
 
 # automount drives
 ck-launch-session dbus-launch devmon --unmount-on-exit &
@@ -50,9 +43,6 @@ dropboxd &
 
 # wallpaper
 nitrogen --restore &
-
-# weather
-#conky &
 
 # dwm
 exec ck-launch-session dbus-launch /home/ok/Scripts/dwm-start

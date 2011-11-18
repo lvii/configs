@@ -9,9 +9,10 @@
 
 !-- urxvt --!
 urxvt*scrollBar:          false
-!urxvt*font:               -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
 urxvt*font:               -*-gohufont-medium-*-*-*-11-*-*-*-*-*-iso10646-*
 urxvt*boldFont:           -*-gohufont-medium-*-*-*-11-*-*-*-*-*-iso10646-*
+!urxvt*font:               -*-tamsyn-medium-*-*-*-11-*-*-*-*-*-*-*
+!urxvt*boldFont:           -*-tamsyn-medium-*-*-*-11-*-*-*-*-*-*-*
 urxvt*borderLess:         false
 urxvt*buffered:           true
 urxvt*urgentOnBell:       true

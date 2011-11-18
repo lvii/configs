@@ -20,7 +20,7 @@ set print_command       = /usr/bin/enscript                     # print with ens
 
 # main options
 set mbox_type           = Maildir                               # mailbox type
-set folder              = ~/Mail                                # mailbox location
+set folder              = ~/mail                                # mailbox location
 set spoolfile           = "+GMail/INBOX"                        # JWR is default inbox
 set timeout             = 3                                     # idle time before scanning
 set mail_check          = 0                                     # minimum time between scans

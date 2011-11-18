@@ -9,7 +9,6 @@ export GTK2_RC_FILES="/home/ok/.gtkrc-2.0"
 export MOZ_DISABLE_PANGO=1
 export OPERAPLUGINWRAPPER_PRIORITY=0
 export OPERA_KEEP_BLOCKED_PLUGIN=1
-export GDK_NATIVE_WINDOWS=1
 
 xrdb .Xdefaults
 
@@ -45,4 +44,4 @@ dropboxd &
 nitrogen --restore &
 
 # dwm
-exec ck-launch-session dbus-launch /home/ok/Scripts/dwm-start
+exec ck-launch-session dbus-launch /home/ok/bin/dwm-start

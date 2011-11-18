@@ -1,9 +1,9 @@
 # storage
 directory = /media/StoreJet/Torrents/
-session = ~/Downloads/Torrents/.session/
+session = ~/downloads/torrents/.session/
 
 # watch a directory for new torrents
-schedule = watch_directory,10,30,load_start=~/Downloads/*.torrent
+schedule = watch_directory,10,30,load_start=~/downloads/*.torrent
 
 # stop torrents that have been deleted
 schedule = untied_directory,10,30,stop_untied=

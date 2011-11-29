@@ -7,7 +7,7 @@
 include ~/.newsbeuter/darkcourses.theme
 
 auto-reload         yes
-browser             "opera-next -noargb -nolirc"
+browser             "/home/ok/bin/browser"
 max-items           500
 confirm-exit        yes
 refresh-on-startup  yes

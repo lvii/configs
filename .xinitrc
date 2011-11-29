@@ -5,11 +5,6 @@
 ## website : https://github.com/ok100
 #
 
-export GTK2_RC_FILES="/home/ok/.gtkrc-2.0"
-export MOZ_DISABLE_PANGO=1
-export OPERAPLUGINWRAPPER_PRIORITY=0
-export OPERA_KEEP_BLOCKED_PLUGIN=1
-
 xrdb .Xdefaults
 
 # switch to external monitor or start xcompmgr 

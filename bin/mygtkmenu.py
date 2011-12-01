@@ -20,7 +20,7 @@ __version__ = "0.1"
 CONFIG = {
 "Terminal": "urxvtc",
 "Editor" : "geany",
-"FileManager" : "thunar",
+"FileManager" : "/home/ok/bin/file_manager",
 "RunCommand" : "dmenu-launch",
 "ExitCommand" : "/home/ok/bin/pygtk-shutdown"
 }

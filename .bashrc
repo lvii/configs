@@ -143,6 +143,11 @@ cleanup () {
 	rm -rf ~/.macromedia
 	rm -rf ~/.thumbnails
 	rm -rf ~/.subversion
+	rm -rf ~/.cmus/search-history
+	rm -rf ~/.cmus/command-history
+	rm -rf ~/.newsbeuter/history.cmdline
+	rm -rf ~/.newsbeuter/history.search
+	rm -rf ~/.qalculate/qalc.history
 	sudo rm -rf /usr/share/doc
 	sudo rm -rf /usr/share/ghostscript/*/doc
 	sudo rm -rf /usr/share/ghostscript/*/examples

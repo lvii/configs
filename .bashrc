@@ -49,6 +49,7 @@ alias rip='cdparanoia -B -w -d /dev/sr0'
 alias ydl='youtube-dl'
 alias yvi='youtube-viewer'
 alias iotop='sudo iotop'
+alias diff='colordiff'
 # pacman
 alias pacman='sudo pacman-color'
 alias pac='sudo pacman-color'

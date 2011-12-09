@@ -4,9 +4,9 @@ Global {
     margin = 0
     widthtype = request
     width = 36
-    height = 12
+    height = 13
     transparent = true
-    tintcolor = #0d131a
+    tintcolor = #020202
     alpha = 255
     setdocktype = true
     setpartialstrut = true
@@ -15,7 +15,7 @@ Global {
     roundcorners = false
     roundcornersradius = 7
     layer = above
-    MaxElemHeight = 12
+    MaxElemHeight = 13
     setlayer = false
 }
 Plugin {

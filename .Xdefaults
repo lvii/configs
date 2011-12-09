@@ -5,13 +5,14 @@
 !
 
 !-- colors --!
-#include "/home/ok/.colors/dc3"
+#include "/home/ok/.colors/dc2"
 
 !-- urxvt --!
 urxvt.scrollBar:          false
 urxvt.font:               -ok100-tamsyn-medium-*-*-*-11-*-*-*-*-*-*-*
 urxvt.boldFont:           -ok100-tamsyn-medium-*-*-*-11-*-*-*-*-*-*-*
 urxvt.borderLess:         false
+urxvt.internalBorder:     1
 urxvt.buffered:           true
 urxvt.urgentOnBell:       true
 urxvt.geometry:           81x21
@@ -22,7 +23,6 @@ URxvt.matcher.button:     1
 URxvt.matcher.pattern.1:  \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 
 !-- dzen2 --!
-dzen2.font:               -*-glisp-medium-*-*-*-11-*-*-*-*-*-*-*
-!dzen2.font:               -ok100-tamsyn-medium-*-*-*-11-*-*-*-*-*-*-*
-dzen2.foreground:         #44484C
-dzen2.background:         #0D131A
+dzen2.font:               -*-termsyn.icons-medium-*-*-*-11-*-*-*-*-*-*-*
+dzen2.foreground:         #999999
+dzen2.background:         #020202

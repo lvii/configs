@@ -20,7 +20,7 @@ if [ "$AC" = "1" ]; then
 	if [ $STATE -gt 100 ]; then STATE=100; fi
 	if [ $STATE -lt 0 ]; then STATE=0; fi
 
-	echo "Â ^fg(\#606060)$STATE"
+	echo "Â ^fg(\#808080)$STATE"
 else
 	let DIVIDER=($BAT_MAX_mV-$BAT_MIN_mV)/100
 	let STATE=($CUR_mV-$BAT_MIN_mV)/$DIVIDER
@@ -28,6 +28,6 @@ else
 	if [ $STATE -gt 100 ]; then STATE=100; fi
 	if [ $STATE -lt 0 ]; then STATE=0; fi
 
-	echo "ð ^fg(\#606060)$STATE"
+	echo "ð ^fg(\#808080)$STATE"
 fi
 

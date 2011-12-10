@@ -24,5 +24,5 @@ URxvt.matcher.pattern.1:  \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 
 !-- dzen2 --!
 dzen2.font:               -*-termsyn.icons-medium-*-*-*-11-*-*-*-*-*-*-*
-dzen2.foreground:         #999999
+dzen2.foreground:         #B3B3B3
 dzen2.background:         #020202

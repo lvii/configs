@@ -38,6 +38,8 @@ dropboxd &
 # wallpaper
 nitrogen --restore &
 
+# lirc
+irexec &
+
 # dwm
-#exec ck-launch-session dbus-launch /home/ok/bin/dwm-start
-exec ck-launch-session dbus-launch /home/ok/bin/monsterwm-start
+exec ck-launch-session dbus-launch /home/ok/bin/dwm-start

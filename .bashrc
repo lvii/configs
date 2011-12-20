@@ -50,6 +50,8 @@ alias ydl='youtube-dl'
 alias yvi='youtube-viewer'
 alias iotop='sudo iotop'
 alias diff='colordiff'
+alias rc.d='sudo rc.d'
+alias ll='ls -l'
 # pacman
 alias pacman='sudo pacman-color'
 alias pac='sudo pacman-color'
@@ -518,3 +520,6 @@ backup () {
 # auto-completion
 complete -cf sudo
 complete -cf man
+
+# dir colors
+eval `dircolors ~/.dircolors`

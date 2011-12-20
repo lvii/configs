@@ -1,5 +1,5 @@
 # storage
-directory = /media/StoreJet/Torrents/
+directory = ~/downloads/torrents/
 session = ~/downloads/torrents/.session/
 
 # watch a directory for new torrents

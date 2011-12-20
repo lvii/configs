@@ -122,7 +122,7 @@ style "clearlooks-default"
 
   engine "clearlooks" 
   {
-    scrollbar_color   = @bg_color #"#E0D6BA"
+    scrollbar_color   = "#494949"
     colorize_scrollbar = TRUE
     menubarstyle      = 0       # 0 = flat, 1 = sunken, 2 = flat gradient
     toolbarstyle = 0 # 0 = flat

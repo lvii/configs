@@ -39,4 +39,5 @@ dropboxd &
 nitrogen --restore &
 
 # dwm
-exec ck-launch-session dbus-launch /home/ok/bin/dwm-start
+#exec ck-launch-session dbus-launch /home/ok/bin/dwm-start
+exec ck-launch-session dbus-launch /home/ok/bin/monsterwm-start

@@ -21,7 +21,7 @@ CONFIG = {
 "Terminal": "urxvtc",
 "Editor" : "geany",
 "FileManager" : "/home/ok/bin/file_manager",
-"RunCommand" : "dmenu-launch",
+"RunCommand" : "dmenu_run",
 "ExitCommand" : "/home/ok/bin/pygtk-shutdown"
 }
 
@@ -65,9 +65,9 @@ CATEGORIES_PRIORITY = ["01System", "02Settings", "03Development", "04Education",
                        "09Graphics", "10Network", "11Utility", "12Viewer",
                        "13Game"]
 
+#MENU_TOP
+#SEPARATOR
 MENU_TEMPLATE = """
-MENU_TOP
-SEPARATOR
 MENU_ACCESORIES
 MENU_GRAPHICS
 MENU_EDUCATION

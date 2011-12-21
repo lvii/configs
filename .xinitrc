@@ -43,3 +43,6 @@ irexec &
 
 # dwm
 exec ck-launch-session dbus-launch /home/ok/bin/dwm-start
+
+# monsterwm
+#exec ck-launch-session dbus-launch monsterwm

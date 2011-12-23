@@ -23,8 +23,14 @@ export HISTCONTROL=ignoreboth
 # grep color
 export GREP_COLOR="1;33"
 
+# auto-completion
+complete -cf sudo
+complete -cf man
+
+# dir colors
+eval `dircolors ~/.dircolors`
+
 # aliases
-alias openports='netstat --all --numeric --programs --inet'
 alias svi='sudo vim'
 alias svim='sudo vim'
 alias vi='vim'
@@ -37,8 +43,6 @@ alias ....='cd ../../..'
 alias more='less'
 alias df='df -h'
 alias du='du -c -h'
-alias connect='sudo dhcpcd'
-alias locate='sudo updatedb && slocate -i'
 alias cmatrix='cmatrix -bx -u8'
 alias cl='clear'
 alias :q='clear; exit'
@@ -52,6 +56,7 @@ alias iotop='sudo iotop'
 alias diff='colordiff'
 alias rc.d='sudo rc.d'
 alias ll='ls -l'
+alias freq='/home/ok/bin/eeecpufreq -p'
 # pacman
 alias pacman='sudo pacman-color'
 alias pac='sudo pacman-color'
@@ -506,20 +511,17 @@ cleanup () {
 
 backup () {
 	backup_dir=/media/StoreJet/bkp
+	echo -e "\e[1;34m::\e[0m Backing up pacman database..."
+		sudo pacman-color -Qqe | grep -v "$(pacman-color -Qmq)" > ~/dropbox/pklist.txt
+		echo -e "\e[1;34m::\e[0m Done."
 	if [ -d $backup_dir ]; then
 		echo -e "\e[1;34m::\e[0m Backing up SD..."
-		rsync -a --delete --exclude 'mail' /mnt/SD/ $backup_dir/SD/
+			rsync -a --delete --exclude 'mail' /mnt/SD/ $backup_dir/SD/
+			echo -e "\e[1;34m::\e[0m Done."
 		echo -e "\e[1;34m::\e[0m Backing up home..."
-		rsync -a --delete /home/ok/ $backup_dir/home/
-		echo -e "\e[1;34m::\e[0m Done."
+			rsync -a --delete /home/ok/ $backup_dir/home/
+			echo -e "\e[1;34m::\e[0m Done."
 	else
 		echo -e "\e[1;31merror:\e[0m backup directory not found"
 	fi
 }
-
-# auto-completion
-complete -cf sudo
-complete -cf man
-
-# dir colors
-eval `dircolors ~/.dircolors`

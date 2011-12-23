@@ -11,7 +11,7 @@ if_up_strictness address
 
 TEXT
   \
-^fg()Ñ ^fg(\#808080)${cpu}%\
+^fg()^ca(3, /home/ok/bin/cpu_control.sh)Ñ ^fg(\#808080)${cpu}%^ca()\
 ^fg()${if_up eth0} ß ^fg(\#808080)${downspeedf eth0}k${else}${if_up wlan0} À ^fg(\#808080)${wireless_link_qual_perc wlan0}% ^fg()ß ^fg(\#808080)${downspeedf wlan0}k${endif}${endif} \
 ^fg()^ca(3, /home/ok/bin/fan_control.sh)± ^fg(\#808080)${hwmon 0 temp 1}° ${hwmon 1 fan 1}^ca() \
 ^fg()¶ ^fg(\#808080)${memperc}% \

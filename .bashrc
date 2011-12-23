@@ -156,6 +156,12 @@ cleanup () {
 	rm -rf ~/.newsbeuter/history.cmdline
 	rm -rf ~/.newsbeuter/history.search
 	rm -rf ~/.qalculate/qalc.history
+	rm -rf ~/.gvfs
+	rm -rf ~/.local/share/Trash
+	rm -rf ~/.local/share/gvfs-metadata
+	rm -rf ~/.local/share/parcellite/history
+	rm -rf ~/Desktop
+
 	sudo rm -rf /usr/share/doc
 	sudo rm -rf /usr/share/ghostscript/*/doc
 	sudo rm -rf /usr/share/ghostscript/*/examples
@@ -500,6 +506,7 @@ cleanup () {
 	sudo rm -rf /usr/share/applications/gvim.desktop
 	sudo rm -rf /usr/share/applications/7zFM.desktop
 	sudo rm -rf /usr/share/applications/mplayer.desktop
+	sudo rm -rf /usr/share/applications/cr3.desktop
 
 
 	echo -e "\e[1;34m::\e[0m Cleaning with BleachBit..."

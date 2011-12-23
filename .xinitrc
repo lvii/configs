@@ -41,6 +41,9 @@ nitrogen --restore &
 # lirc
 irexec &
 
+# hide cursor
+unclutter -noevents &
+
 # dwm
 exec ck-launch-session dbus-launch /home/ok/bin/dwm-start
 

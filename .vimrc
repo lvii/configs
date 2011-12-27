@@ -10,24 +10,25 @@ filetype plugin on
 
 colorscheme dc3
 
-set mouse=a             " enable mouse
-set wrap                " wrap lines
-set nobackup            " disable backup files (filename~)
-set number              " show line numbers
-set linebreak           " attempt to wrap lines cleanly
-set wildmenu            " enhanced tab-completion shows all matching cmds in a popup menu
-set spelllang=sk        " default spelling language
+set mouse=a                " enable mouse
+set wrap                   " wrap lines
+set nobackup               " disable backup files (filename~)
+set number                 " show line numbers
+set linebreak              " attempt to wrap lines cleanly
+set wildmenu               " enhanced tab-completion shows all matching cmds in a popup menu
+set spelllang=sk           " default spelling language
+set clipboard=unnamedplus  " yank to X clipboard
 
-set tabstop=4           " tabs appear as n number of columns
-set shiftwidth=4        " n cols for auto-indenting
-set autoindent          " auto indents next new line
+set tabstop=4              " tabs appear as n number of columns
+set shiftwidth=4           " n cols for auto-indenting
+set autoindent             " auto indents next new line
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 
-set hlsearch            " highlight all search results
-set incsearch           " increment search
-set ignorecase          " case-insensitive search
-set smartcase           " uppercase causes case-sensitive search
+set hlsearch               " highlight all search results
+set incsearch              " increment search
+set ignorecase             " case-insensitive search
+set smartcase              " uppercase causes case-sensitive search
 
 " status bar
 set statusline=\ \%F%m%r%h%w\ ::\ %y\ [%{&ff}]\%=\ [%p%%:\ %l/%L]\ 

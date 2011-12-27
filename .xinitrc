@@ -30,7 +30,7 @@ setxkbmap -option caps:escape
 urxvtd -q -o -f &
 
 # clipboard manager
-parcellite &
+parcellite -n &
 
 # dropbox
 dropboxd &
@@ -48,4 +48,4 @@ unclutter -noevents &
 exec ck-launch-session dbus-launch /home/ok/bin/dwm-start
 
 # monsterwm
-#exec ck-launch-session dbus-launch monsterwm
+#exec ck-launch-session dbus-launch /home/ok/bin/monsterwm-start

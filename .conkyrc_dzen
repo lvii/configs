@@ -16,6 +16,6 @@ TEXT
 ^fg()± ^fg(\#808080)${hwmon 0 temp 1}° \
 ^fg()^ca(3, /home/ok/bin/fan_control.sh)Ç ^fg(\#808080)${hwmon 1 fan 1}^ca() \
 ^fg()¶ ^fg(\#808080)${memperc}% \
-^fg()${execpi 30 /home/ok/bin/battery.sh} \
+^fg()${if_existing /sys/class/power_supply/AC0/online 1}¡ ^fg(\#808080)${battery_percent}%${else}${execpi 30 /home/ok/bin/battery.sh}${endif} \
 ^fg()^ca(1,amixer set Master toggle)^ca(3,urxvtc -e alsamixer)^ca(4,amixer set Master 2dB+)^ca(5,amixer set Master 2dB-)${if_mixer_mute}ì ^fg(\#808080)M${else}í ^fg(\#808080)${mixer}%${endif}^ca()^ca()^ca()^ca() \
 ^fg()^ca(1,gsimplecal)É ^fg(\#808080)${time %H:%M}^ca()     

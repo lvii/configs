@@ -17,7 +17,7 @@ set number                 " show line numbers
 set linebreak              " attempt to wrap lines cleanly
 set wildmenu               " enhanced tab-completion shows all matching cmds in a popup menu
 set spelllang=sk           " default spelling language
-set clipboard=unnamedplus  " yank to X clipboard
+set clipboard=unnamed      " yank to X clipboard
 
 set tabstop=4              " tabs appear as n number of columns
 set shiftwidth=4           " n cols for auto-indenting

@@ -9,12 +9,12 @@ out_to_console yes
 update_interval 1.0
 if_up_strictness address
 
+
 TEXT
   \
 ^fg()^ca(3, /home/ok/bin/cpu_control.sh)Ñ ^fg(\#808080)${cpu}%^ca()\
 ^fg()${if_up eth0} ß ^fg(\#808080)${downspeedf eth0}k ^fg()Þ ^fg(\#808080)${upspeedf eth0}k${else}${if_up wlan0} À ^fg(\#808080)${wireless_link_qual_perc wlan0}% ^fg()ß ^fg(\#808080)${downspeedf wlan0}k ^fg()Þ ^fg(\#808080)${upspeedf wlan0}k${endif}${endif} \
-^fg()± ^fg(\#808080)${hwmon 0 temp 1}° \
-^fg()^ca(3, /home/ok/bin/fan_control.sh)Ç ^fg(\#808080)${hwmon 1 fan 1}^ca() \
+^fg()^ca(3, /home/ok/bin/fan_control.sh)± ^fg(\#808080)${hwmon 0 temp 1}°^ca() \
 ^fg()¶ ^fg(\#808080)${memperc}% \
 ^fg()${if_existing /sys/class/power_supply/AC0/online 1}¡ ^fg(\#808080)${battery_percent}%${else}${execpi 30 /home/ok/bin/battery.sh}${endif} \
 ^fg()^ca(1,amixer set Master toggle)^ca(3,urxvtc -e alsamixer)^ca(4,amixer set Master 2dB+)^ca(5,amixer set Master 2dB-)${if_mixer_mute}ì ^fg(\#808080)M${else}í ^fg(\#808080)${mixer}%${endif}^ca()^ca()^ca()^ca() \

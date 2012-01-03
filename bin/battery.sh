@@ -1,6 +1,6 @@
 #!/bin/sh
 
-MAX_mV=7900
+MAX_mV=7771
 MIN_mV=6171
 CRITBAT=20
 

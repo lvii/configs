@@ -7,8 +7,8 @@
 include ~/.newsbeuter/darkcourses.theme
 
 auto-reload         yes
-browser             "/home/ok/bin/browser"
-max-items           500
-confirm-exit        yes
-refresh-on-startup  yes
 reload-time         15
+refresh-on-startup  yes
+browser             "/home/ok/bin/browser"
+confirm-exit        yes
+max-items           500

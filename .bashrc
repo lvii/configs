@@ -144,6 +144,7 @@ mp3 () {
 cleanup () {
 	echo -e "\e[1;34m::\e[0m Cleaning pacman cache..."
 	sudo rm /var/cache/pacman/pkg/* &> /dev/null
+	yaourt -Scc --noconfirm &> /dev/null
 
 	echo -e "\e[1;34m::\e[0m Deleting unneeded files..."
 	rm -rf ~/.adobe
@@ -523,10 +524,13 @@ backup () {
 		sudo pacman-color -Qqe | grep -v "$(pacman-color -Qmq)" > ~/dropbox/pklist.txt
 		echo -e "\e[1;34m::\e[0m Done."
 	if [ -d $backup_dir ]; then
-		echo -e "\e[1;34m::\e[0m Backing up SD..."
+		echo -e "\e[1;34m::\e[0m Backing up /mnt/SD..."
 			rsync -a --delete --exclude 'mail' /mnt/SD/ $backup_dir/SD/
 			echo -e "\e[1;34m::\e[0m Done."
-		echo -e "\e[1;34m::\e[0m Backing up home..."
+		echo -e "\e[1;34m::\e[0m Backing up /etc..."
+			sudo rsync -a --delete /etc/ $backup_dir/etc/
+			echo -e "\e[1;34m::\e[0m Done."
+		echo -e "\e[1;34m::\e[0m Backing up /home..."
 			rsync -a --delete /home/ok/ $backup_dir/home/
 			echo -e "\e[1;34m::\e[0m Done."
 	else

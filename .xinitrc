@@ -17,9 +17,6 @@ if [ "x${CRT}x" = "xx" ]; then
    xcompmgr -a &
 fi
 
-# automount drives
-ck-launch-session dbus-launch devmon --unmount-on-exit &
-
 # keyboard map
 setxkbmap cz
 
@@ -45,7 +42,7 @@ irexec &
 unclutter -noevents &
 
 # dwm
-exec ck-launch-session dbus-launch /home/ok/bin/dwm-start
+exec dbus-launch /home/ok/bin/dwm-start
 
 # monsterwm
-#exec ck-launch-session dbus-launch /home/ok/bin/monsterwm-start
+#exec dbus-launch /home/ok/bin/monsterwm-start

@@ -36,7 +36,7 @@ set_freq () {
 			else
 				echo "$new_fsb 24 0" > /proc/eee/fsb
 			fi
-			sleep 0.1s
+			sleep 0.05s
 			get_fsb
 		done
 	else
@@ -47,7 +47,7 @@ set_freq () {
 			else
 				echo "$new_fsb 24 0" > /proc/eee/fsb
 			fi
-			sleep 0.1s
+			sleep 0.05s
 			get_fsb
 		done
 	fi

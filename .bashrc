@@ -475,6 +475,8 @@ cleanup () {
 	sudo rm -rf /usr/share/opera-next/locale/tl
 	sudo rm -rf /usr/share/opera-next/locale/uz
 	sudo rm -rf /usr/share/opera-next/locale/zu
+	sudo rm -rf /usr/share/lazarus/examples
+	sudo rm -rf /usr/share/lazarus/languages
 	sudo rm -rf /usr/share/applications/gparted.desktop
 	sudo rm -rf /usr/share/applications/assistant.desktop
 	sudo rm -rf /usr/share/applications/parcellite.desktop

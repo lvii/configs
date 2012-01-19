@@ -5,7 +5,7 @@
 ## website : https://github.com/ok100
 #
 
-xrdb .Xdefaults
+xrdb .Xresources
 
 # switch to external monitor or start xcompmgr 
 CRT=`xrandr | grep "VGA1 connected"`

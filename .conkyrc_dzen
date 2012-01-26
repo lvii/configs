@@ -18,4 +18,5 @@ TEXT
 ^fg()¶ ^fg(\#808080)${memperc}% \
 ^fg()${if_existing /sys/class/power_supply/AC0/online 1}¡ ^fg(\#808080)${battery_percent}%${else}${execpi 30 /home/ok/bin/battery.sh}${endif} \
 ^fg()^ca(1,amixer set Master toggle)^ca(3,urxvtc -e alsamixer)^ca(4,amixer set Master 2dB+)^ca(5,amixer set Master 2dB-)${if_mixer_mute}ì ^fg(\#808080)M${else}í ^fg(\#808080)${mixer}%${endif}^ca()^ca()^ca()^ca() \
+^fg()ê ^fg(\#808080)^ca(1,cmus-remote --prev)â^ca() ^ca(1,/home/ok/bin/cmus-toggle.sh)æç^ca() ^ca(1,cmus-remote --next)é^ca() \
 ^fg()^ca(1,gsimplecal)É ^fg(\#808080)${time %H:%M}^ca()     

@@ -164,6 +164,7 @@ cleanup () {
 	rm -rf ~/.local/share/gvfs-metadata
 	rm -rf ~/.local/share/parcellite/history
 	rm -rf ~/Desktop
+	rm -rf ~/.opera/icons
 
 	sudo rm -rf /usr/share/doc
 	sudo rm -rf /usr/share/ghostscript/*/doc

@@ -47,15 +47,15 @@ scrobbler_config = [
 ]
 
 # set this to False if you don't like to use the 'now playing' function
-do_now_playing = True
+do_now_playing = False
 
 # to get yout passwort start python and enter:
 # >>> from hashlib import md5
 # >>> md5('password').hexdigest()
 # '5f4dcc3b5aa765d61d8327deb882cf99'
 
-debug = False
-debuglogfile = '/home/ok/.cmus/last.fm/logfile'
+debug = True
+debuglogfile = '/tmp/cmuscrobbler.log'
 
 # --- end of configuration variables ---
 logger = logging.getLogger('cmuscrobbler')

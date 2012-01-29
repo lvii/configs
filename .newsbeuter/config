@@ -12,3 +12,9 @@ refresh-on-startup  yes
 browser             "/home/ok/bin/browser"
 confirm-exit        yes
 max-items           500
+
+feedlist-title-format     " Feeds (%u unread)"
+articlelist-title-format  " %T (%u unread)"
+itemview-title-format     "%T"
+feedlist-format           " %n %8u %t"
+articlelist-format        " %f %?T?|%-17T|  ?%t"

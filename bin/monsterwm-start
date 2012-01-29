@@ -11,7 +11,7 @@ sleep 3 && fbpanel &
 while read -r; do
     [[ $REPLY =~ ^(([[:digit:]]+:)+[[:digit:]]+ ?)+$ ]] && read -ra desktops <<< "$REPLY" || continue
     for desktop in "${desktops[@]}"; do
-        IFS=':' read -r d w m c <<< "$desktop"
+        IFS=':' read -r d w m c u <<< "$desktop"
         case $d in
             0) d="sys" s="" ;;
             1) d="web" s="" ;;
@@ -26,6 +26,7 @@ while read -r; do
             2) i="^i(/home/ok/build/dwm/icons/bstack.xbm)"  ;;
             3) i="^i(/home/ok/build/dwm/icons/grid.xbm)"    ;;
         esac || f="#808080"
+		((u)) && f="#B3354C"
         ((w)) && r+="$s^fg($f)^i(/home/ok/.dzen/icons/has_win_nv.xbm)$d^fg() " || r+="$s^fg($f) $d^fg() "
     done
     printf "%s%s\n" "$r" "^fg(#808080)$i" && unset r

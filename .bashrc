@@ -165,6 +165,7 @@ cleanup () {
 	rm -rf ~/.local/share/parcellite/history
 	rm -rf ~/Desktop
 	rm -rf ~/.opera/icons
+	rm -rf ~/.sxiv/*
 
 	sudo rm -rf /usr/share/doc
 	sudo rm -rf /usr/share/ghostscript/*/doc

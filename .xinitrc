@@ -33,7 +33,7 @@ parcellite -n &
 dropboxd &
 
 # wallpaper
-nitrogen --restore &
+eval $(cat ~/.fehbg)
 
 # lirc
 irexec &

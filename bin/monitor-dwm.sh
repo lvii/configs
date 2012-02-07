@@ -12,6 +12,6 @@ if [ "x${CRT}x" = "xx" ]; then
 fi
 killall dwm
 setxkbmap cz
-nitrogen --restore
+gempaper set &
 conky -c ~/.conkyrc_dzen | dzen2 -e 'button3=' -p -expand left &>/dev/null &
 sleep 1 && fbpanel &

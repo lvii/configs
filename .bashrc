@@ -166,6 +166,7 @@ cleanup () {
 	rm -rf ~/Desktop
 	rm -rf ~/.opera/icons
 	rm -rf ~/.sxiv/*
+	rm -rf ~/.bzr.log
 
 	sudo rm -rf /usr/share/doc
 	sudo rm -rf /usr/share/ghostscript/*/doc

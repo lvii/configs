@@ -1,0 +1,12 @@
+double_buffer yes
+alignment top_right
+gap_y 33
+gap_x 20
+use_xft yes
+xftfont Roboto:size=24
+draw_shades no
+default_color black
+if_up_strictness address
+
+TEXT
+${if_up eth0}${execpi 900 /home/ok/bin/conky_accuweather}${else}${if_up wlan0}${execpi 900 /home/ok/bin/conky_accuweather}${endif}${endif}

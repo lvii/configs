@@ -41,6 +41,9 @@ irexec &
 # hide cursor
 unclutter -noevents &
 
+# weather
+conky -c ~/.conky/conkyrc &
+
 # dwm
 exec dbus-launch /home/ok/bin/dwm-start
 

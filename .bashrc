@@ -59,6 +59,7 @@ alias ll='ls -l'
 alias freq='/home/ok/bin/eeecpufreq -p'
 alias webcam='mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0 -fps 15 -vf screenshot'
 alias alsi='alsi -a'
+alias deskon='sudo wol -i 192.168.0.102 08:00:20:C2:1E:F6'
 # pacman
 alias pacman='sudo pacman-color'
 alias pac='sudo pacman-color'

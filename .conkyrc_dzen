@@ -9,7 +9,6 @@ out_to_console yes
 update_interval 1.0
 if_up_strictness address
 
-
 TEXT
   \
 ^fg()^ca(3, /home/ok/bin/cpu_control.sh)Ñ ^fg(\#808080)${cpu}%^ca()\

@@ -91,6 +91,7 @@ alias tmuxrc='vim ~/.tmux.conf'
 alias statusrc='vim ~/.conkyrc_dzen'
 alias vimrc='vim ~/.vimrc'
 alias virc='vim ~/.vimrc'
+alias mimirc='vim ~/.config/mimi/mime.conf'
 
 # coloured repo search
 pacse () {

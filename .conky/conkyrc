@@ -1,11 +1,11 @@
 double_buffer yes
-alignment top_right
+alignment top_left
 gap_y 33
 gap_x 20
 use_xft yes
 xftfont Roboto:size=24
 draw_shades no
-default_color black
+default_color 020202
 if_up_strictness address
 
 TEXT

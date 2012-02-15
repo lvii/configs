@@ -26,3 +26,11 @@ URxvt.matcher.pattern.1:  \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 dzen2.font:               -*-termsyn.icons-medium-*-*-*-11-*-*-*-*-*-*-*
 dzen2.foreground:         #B3B3B3
 dzen2.background:         #020202
+
+!-- xft --!
+Xft.autohint:             0
+Xft.lcdfilter:            lcddefault
+Xft.hintstyle:            hintslight
+Xft.hinting:              1
+Xft.antialias:            1
+Xft.rgba:                 rgb

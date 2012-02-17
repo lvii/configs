@@ -1,4 +1,4 @@
-set aaa_mode=album
+set aaa_mode=all
 set altformat_current= %F 
 set altformat_playlist= %f%= %d 
 set altformat_title=%f
@@ -34,11 +34,11 @@ set display_artist_sort_name=false
 set dsp.alsa.device=default
 set dsp.oss.device=
 set format_current= %a - %t%= %l (%y)
-set format_playlist= %-6%d %-45%t %a - %l (%y) %= %d 
-set format_playlist_va= %-6%d %-45%t %a - %l (%y) %= %d 
+set format_playlist= %-5%d %-45%t %a - %l (%y) %= 
+set format_playlist_va= %-5%d %-45%t %a - %l (%y) %= 
 set format_title=%a - %t
-set format_trackwin=%3n. %t %= %y %d 
-set format_trackwin_va=%3n. %t %= %y %d 
+set format_trackwin=%3n. %t %= %d 
+set format_trackwin_va=%3n. %t %= %d 
 set id3_default_charset=ISO-8859-1
 set lib_sort=albumartist date album discnumber tracknumber title filename
 set mixer.alsa.channel=PCM
@@ -59,11 +59,11 @@ set resume=false
 set set_term_title=true
 set show_hidden=false
 set show_remaining_time=false
-set shuffle=false
+set shuffle=true
 set smart_artist_sort=true
 set softvol=false
 set softvol_state=0 0
-set status_display_program=/home/ok/.cmus/cmuscrobbler.py
+set status_display_program=cmusfm
 bind browser backspace browser-up
 bind browser i toggle show_hidden
 bind browser space win-activate

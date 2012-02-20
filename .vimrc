@@ -22,13 +22,13 @@ set clipboard=unnamed      " yank to X clipboard
 set tabstop=4              " tabs appear as n number of columns
 set shiftwidth=4           " n cols for auto-indenting
 set autoindent             " auto indents next new line
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
-autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 
 set hlsearch               " highlight all search results
 set incsearch              " increment search
 set ignorecase             " case-insensitive search
 set smartcase              " uppercase causes case-sensitive search
+let g:loaded_matchparen = 1
+let g:acp_behaviorKeywordLength = 4
 
 " status bar
 set statusline=\ \%F%m%r%h%w\ ::\ %y\ [%{&ff}]\%=\ [%p%%:\ %l/%L]\ 
@@ -36,12 +36,15 @@ set laststatus=2
 set cmdheight=1
 
 if has("autocmd")
-        " always jump to the last cursor position
-        autocmd BufReadPost * if line("'\"")>0 && line("'\"")<=line("$")|exe "normal g`\""|endif
+    " always jump to the last cursor position
+    autocmd BufReadPost * if line("'\"")>0 && line("'\"")<=line("$")|exe "normal g`\""|endif
 
-        autocmd BufRead *.txt set tw=80                                         " limit width to n cols for txt files
-        autocmd BufRead ~/.mutt/temp/mutt-* set tw=80 ft=mail nocindent spell   " width, mail syntax hilight, spellcheck
-    autocmd FileType tex set tw=80                                              " wrap at 80 chars for LaTeX files
+    autocmd BufRead *.txt set tw=80                                         " limit width to n cols for txt files
+    autocmd BufRead ~/.mutt/temp/mutt-* set tw=80 ft=mail nocindent spell   " width, mail syntax hilight, spellcheck
+    autocmd FileType tex set tw=80                                          " wrap at 80 chars for LaTeX files
+	autocmd FileType html setlocal shiftwidth=2 tabstop=2
+	autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
+	let g:pydiction_location = '/usr/share/pydiction/complete-dict'
 endif
 
 " Map keys to toggle functions
@@ -105,3 +108,4 @@ noremap Oo /
 inoremap Oo /
 noremap Om -
 inoremap Om -
+

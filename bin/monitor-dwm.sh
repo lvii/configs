@@ -1,6 +1,6 @@
 #!/bin/sh
 
-killall dzen2 fbpanel dcompmgr
+killall dzen2 fbpanel dcompmgr conky
 CRT=`xrandr | grep "VGA1 connected"`
 if [ "x${CRT}x" != "xx" ]; then
    xrandr --output LVDS1 --off --output VGA1 --auto

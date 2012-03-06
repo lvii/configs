@@ -88,7 +88,7 @@ unignore from: to: cc: date: subject:                           # show only thes
 hdr_order from: to: cc: date: subject:                          # and in this order
 
 # boxes
-mailboxes +GMail/INBOX +GMail/sent +GMail/drafts +GMail/spam +GMail/trash
+mailboxes +GMail/INBOX +GMail/Sent +GMail/Drafts +GMail/Spam +GMail/Trash
 
 # always sourced
 source $alias_file                                              # required for functionality

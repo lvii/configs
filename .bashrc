@@ -61,6 +61,7 @@ alias webcam='mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/vid
 alias alsi='alsi -a'
 alias deskon='sudo wol -i 192.168.0.102 08:00:20:C2:1E:F6'
 alias cmus='~/bin/music'
+alias ft='findtorrent'
 # pacman
 alias pacman='sudo pacman-color'
 alias pac='sudo pacman-color'

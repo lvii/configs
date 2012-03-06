@@ -26,6 +26,9 @@ export GREP_COLOR="1;33"
 # auto-completion
 complete -cf sudo
 complete -cf man
+source /etc/bash_completion.d/git
+source /etc/bash_completion.d/netcfg
+source /etc/bash_completion.d/tmux
 
 # dir colors
 eval `dircolors ~/.dircolors`

@@ -4,3 +4,4 @@ killall cmusfm
 urxvtc -e cmus &
 sleep 0.5s && urxvtc -e cmus-lyrics &
 sleep 1s && xdotool key "Alt+Shift+Down"
+xdotool key "Alt+Down"

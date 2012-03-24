@@ -27,8 +27,9 @@ export GREP_COLOR="1;33"
 complete -cf sudo
 complete -cf man
 source /etc/bash_completion.d/git
-source /etc/bash_completion.d/netcfg
 source /etc/bash_completion.d/tmux
+source ~/.todo/todo_completion
+complete -F _todo t
 
 # dir colors
 eval `dircolors ~/.dircolors`
@@ -64,6 +65,8 @@ alias webcam='mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/vid
 alias alsi='alsi -a'
 alias deskon='sudo wol -i 192.168.0.102 08:00:20:C2:1E:F6'
 alias ft='findtorrent'
+alias nas='ssh root@192.168.0.100'
+alias t='todo.sh'
 # pacman
 alias pacman='sudo pacman-color'
 alias pac='sudo pacman-color'
@@ -155,7 +158,6 @@ cleanup () {
 
 	echo -e "\e[1;34m::\e[0m Deleting unneeded files..."
 	rm -rf ~/.adobe
-	rm -rf ~/.cache
 	rm -rf ~/.local/share/recently-used.xbel
 	rm -rf ~/.macromedia
 	rm -rf ~/.thumbnails

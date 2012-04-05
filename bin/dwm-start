@@ -1,7 +1,6 @@
 #!/bin/sh
 
-sleep 2 && conky -c ~/.conkyrc_dzen | dzen2 -e 'button3=' -p -expand left &>/dev/null &
-sleep 3 && fbpanel &
+conky | while read -r; do xsetroot -name "$REPLY"; done &
 
 while true; do 
     dwm > /dev/null

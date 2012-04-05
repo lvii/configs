@@ -93,7 +93,7 @@ address="http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR
 
 rm ~/.conky/weather_raw
 
-wget -O ~/.conky/weather_raw $address
+wget -O ~/.conky/weather_raw $address 2> /dev/null
 
 if [ -s ~/.conky/weather_raw ]; then
 	temp=`grep "Currently:" ~/.conky/weather_raw | cut -d ":" -f3 | cut -d "<" -f1 | cut -d "C" -f1`°C

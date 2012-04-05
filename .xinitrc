@@ -5,7 +5,7 @@
 ## website : https://github.com/ok100
 #
 
-xrdb .Xresources
+xrdb ~/.Xresources
 
 # switch to external monitor or start xcompmgr 
 CRT=`xrandr | grep "VGA1 connected"`
@@ -42,7 +42,7 @@ irexec &
 unclutter -noevents &
 
 # weather
-conky -c ~/.conky/conkyrc &
+#conky -c ~/.conky/conkyrc &
 
 # ytmp
 ytmpc &

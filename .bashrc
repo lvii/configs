@@ -27,6 +27,7 @@ export GREP_COLOR="1;33"
 complete -cf sudo
 complete -cf man
 source /etc/bash_completion.d/git
+source /usr/share/bash-completion/completions/rc.d
 source /etc/bash_completion.d/tmux
 source ~/.todo/todo_completion
 complete -F _todo t
@@ -95,7 +96,7 @@ alias dwmrc='curr_dir=`pwd`; cd ~/build/dwm; vim config.h; ./recompile.sh; ~/bin
 alias rcrc='sudo vim /etc/rc.conf'
 alias rssrc='vim ~/.newsbeuter/urls'
 alias tmuxrc='vim ~/.tmux.conf'
-alias statusrc='vim ~/.conkyrc_dzen'
+alias statusrc='vim ~/.conkyrc'
 alias vimrc='vim ~/.vimrc'
 alias virc='vim ~/.vimrc'
 alias mimirc='vim ~/.config/mimi/mime.conf'

@@ -22,7 +22,7 @@ CONFIG = {
 "Editor" : "geany",
 "FileManager" : "/home/ok/bin/file_manager",
 "RunCommand" : "dmenu_run",
-"ExitCommand" : "/home/ok/bin/pygtk-shutdown"
+"ExitCommand" : "/home/ok/bin/dmenu-powerbutton"
 }
 
 MY_GTK_MENU_BINARY="/usr/bin/mygtkmenu"

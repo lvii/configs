@@ -10,11 +10,10 @@ update_interval 2.0
 if_up_strictness address
 
 TEXT
-${execi 10000 echo -e "\x02"}Ñ${execi 10000 echo -e "\x01"}${cpu}%\
-${if_up eth0}${execi 10000 echo -e "\x02"}ß${execi 10000 echo -e "\x01"}${downspeedf eth0}k${execi 10000 echo -e "\x02"}Þ${execi 10000 echo -e "\x01"}${upspeedf eth0}k${execi 10000 echo -e "\x02"}º${execi 10000 echo -e "\x01"}${execpi 900 /home/ok/bin/pacman-up.pl}${else}${if_up wlan0}${execi 10000 echo -e "\x02"}À${execi 10000 echo -e "\x01"}${wireless_link_qual_perc wlan0}%${execi 10000 echo -e "\x02"}ß${execi 10000 echo -e "\x01"}${downspeedf wlan0}k${execi 10000 echo -e "\x02"}Þ${execi 10000 echo -e "\x01"}${upspeedf wlan0}k${execi 10000 echo -e "\x02"}º${execi 10000 echo -e "\x01"}${execpi 900 /home/ok/bin/pacman-up.pl}${endif}${endif}\
-${execi 10000 echo -e "\x02"}±${if_match ${hwmon 0 temp 1} >= 69}${execi 10000 echo -e "\x03"}${else}${execi 10000 echo -e "\x01"}${endif}${hwmon 0 temp 1}°\
-${execi 10000 echo -e "\x02"}¶${if_match ${memperc} >= 90}${execi 10000 echo -e "\x03"}${else}${execi 10000 echo -e "\x01"}${endif}${memperc}%\
-${if_existing /sys/class/power_supply/AC0/online 1}${execi 10000 echo -e "\x02"}¡${execi 10000 echo -e "\x01"}${battery_percent}%${else}${execpi 30 /home/ok/bin/battery.sh}${endif}\
-${if_mixer_mute}${execi 10000 echo -e "\x02"}ì${execi 10000 echo -e "\x01"}M${else}${execi 10000 echo -e "\x02"}í${execi 10000 echo -e "\x01"}${mixer}%${endif}\
-${if_up eth0}${execi 10000 echo -e "\x02"}Ò${execi 10000 echo -e "\x01"}${execpi 900 /home/ok/bin/accuweather.sh "EUR|SK|LO000|BZOVIK"}°${else}${if_up wlan0}${execi 10000 echo -e "\x02"}Ò${execi 10000 echo -e "\x01"}${execpi 900 /home/ok/bin/accuweather.sh "EUR|SK|LO000|BZOVIK"}°${endif}${endif}\
-${execi 10000 echo -e "\x02"}É${execi 10000 echo -e "\x01"}${time %H:%M}
+${execpi 10 /home/ok/bin/conky-nowplaying} \
+${execi 10000 echo -e "\x01"}Ñ${execi 10000 echo -e "\x06"}${cpu}%\
+${if_up eth0}${execi 10000 echo -e "\x01"}ß${execi 10000 echo -e "\x08"}${downspeedf eth0}k${execi 10000 echo -e "\x01"}º${execi 10000 echo -e "\x06"}${execpi 900 /home/ok/bin/pacman-up.pl}${else}${if_up wlan0}${execi 10000 echo -e "\x01"}À${execi 10000 echo -e "\x08"}${downspeedf wlan0}k${execi 10000 echo -e "\x01"}º${execi 10000 echo -e "\x06"}${execpi 900 /home/ok/bin/pacman-up.pl}${endif}${endif}\
+${execi 10000 echo -e "\x01"}¶${if_match ${memperc} >= 90}${execi 10000 echo -e "\x03"}${else}${execi 10000 echo -e "\x04"}${endif}${memperc}%\
+${if_existing /sys/class/power_supply/AC0/online 1}${execi 10000 echo -e "\x01"}¡${execi 10000 echo -e "\x05"}${battery_percent}%${else}${execpi 30 /home/ok/bin/battery.sh}${endif}\
+${if_mixer_mute}${execi 10000 echo -e "\x01"}ì${execi 10000 echo -e "\x07"}M${else}${execi 10000 echo -e "\x01"}í${execi 10000 echo -e "\x07"}${mixer}%${endif}\
+${execi 10000 echo -e "\x01"}É${execi 10000 echo -e "\x02"}${time %H:%M}

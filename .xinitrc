@@ -45,7 +45,7 @@ unclutter -noevents &
 #conky -c ~/.conky/conkyrc &
 
 # ytmp
-ytmpc &
+#ytmpc &
 
 # dwm
 exec dbus-launch /home/ok/bin/dwm-start

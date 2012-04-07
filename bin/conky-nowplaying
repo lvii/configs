@@ -1,0 +1,21 @@
+#!/bin/sh
+
+if [ -e ~/.shell-fm/nowplaying ]; then
+	artist=`cut -d "|" -f1 ~/.shell-fm/nowplaying`
+	title=`cut -d "|" -f2 ~/.shell-fm/nowplaying`
+
+	echo -e "\x05$artist\x04$title"
+
+elif [ -e ~/.cmus/socket ]; then
+	artist=`cmus-remote -Q | grep "tag artist" | cut -d " " -f3-`
+	title=`cmus-remote -Q | grep "tag title" | cut -d " " -f3-`
+
+	echo -e "\x05$artist\x04$title"
+
+elif [ -e ~/.config/pianobar/nowplaying ]; then
+	artist=`cut -d "|" -f1 ~/.config/pianobar/nowplaying`
+	title=`cut -d "|" -f2 ~/.config/pianobar/nowplaying`
+
+	echo -e "\x05$artist\x04$title"
+fi
+

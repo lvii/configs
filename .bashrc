@@ -28,7 +28,7 @@ complete -cf sudo
 complete -cf man
 source /etc/bash_completion.d/git
 source /usr/share/bash-completion/completions/rc.d
-source /etc/bash_completion.d/tmux
+source /usr/share/bash-completion/completions/tmux
 source ~/.todo/todo_completion
 complete -F _todo t
 
@@ -81,6 +81,8 @@ alias pacback='sudo pacman-color -Qqe | grep -v "$(pacman-color -Qmq)" > ~/dropb
 alias powerdown='sudo powerdown'
 alias pianobar='pianobar; rm ~/.config/pianobar/nowplaying'
 alias powertop='sudo powertop'
+alias netcfg='sudo netcfg'
+alias ly='python2 /home/ok/bin/cmus-lyrics'
 # git
 alias gitco='git commit -m'
 alias gitst='git status'

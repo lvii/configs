@@ -20,105 +20,48 @@ begin
 	config = amixer -q set Master toggle
 end
 
-### MODES ###
-begin
-	remote = CD
-	button = 1
-	mode   = cmus
-	flags  = startup_mode
-	repeat = 0
-end
-begin
-	remote = CD
-	button = 2
-	mode   = mplayer
-	repeat = 0
-end
-
-
-### CMUS ###
-begin cmus
-	begin
-		remote = CD
-		button = PLAY
-		prog   = irexec
-		repeat = 0
-		config = cmus-remote -p
-	end
-	begin
-		remote = CD
-		button = PAUSE
-		prog   = irexec
-		repeat = 0
-		config = cmus-remote -u
-	end
-	begin
-		remote = CD
-		button = NEXT
-		prog   = irexec
-		repeat = 0
-		config = cmus-remote -n
-	end
-	begin
-		remote = CD
-		button = PREVIOUS
-		prog   = irexec
-		repeat = 0
-		config = cmus-remote -r
-	end
-	begin
-		remote = CD
-		button = STOP
-		prog   = irexec
-		repeat = 0
-		config = cmus-remote -s
-	end
-end cmus
-
 ### MPLAYER ###
-begin mplayer
-	begin
-		remote = CD
-		button = PLAY
-		prog   = mplayer
-		repeat = 0
-		config = pause
-	end
-	begin
-		remote = CD
-		button = PAUSE
-		prog   = mplayer
-		repeat = 0
-		config = pause
-	end
-	begin
-		remote = CD
-		button = PREVIOUS
-		prog   = mplayer
-		repeat = 1
-		delay  = 5
-		config = seek -10
-	end
-	begin
-		remote = CD
-		button = NEXT
-		prog   = mplayer
-		repeat = 1
-		delay  = 5
-		config = seek 10
-	end
-	begin
-		remote = CD
-		button = STOP
-		prog   = mplayer
-		repeat = 0
-		config = stop
-	end
-	begin
-		remote = CD
-		button = 0
-		prog   = mplayer
-		repeat = 0
-		config = osd\nosd
-	end
-end mplayer
+begin
+   remote = CD
+   button = PLAY
+   prog   = mplayer
+   repeat = 0
+   config = pause
+end
+begin
+   remote = CD
+   button = PAUSE
+   prog   = mplayer
+   repeat = 0
+   config = pause
+end
+begin
+   remote = CD
+   button = PREVIOUS
+   prog   = mplayer
+   repeat = 1
+   delay  = 5
+   config = seek -10
+end
+begin
+   remote = CD
+   button = NEXT
+   prog   = mplayer
+   repeat = 1
+   delay  = 5
+   config = seek 10
+end
+begin
+   remote = CD
+   button = STOP
+   prog   = mplayer
+   repeat = 0
+   config = stop
+end
+begin
+   remote = CD
+   button = 0
+   prog   = mplayer
+   repeat = 0
+   config = osd\nosd
+end

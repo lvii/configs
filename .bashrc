@@ -66,7 +66,7 @@ alias webcam='mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/vid
 alias alsi='alsi -a'
 alias deskon='sudo wol -i 192.168.0.102 08:00:20:C2:1E:F6'
 alias ft='findtorrent'
-alias nas='ssh root@192.168.0.100'
+alias nas='ssh root@192.168.1.147'
 alias router='ssh root@192.168.1.1'
 alias t='todo.sh'
 # pacman

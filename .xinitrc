@@ -1,21 +1,27 @@
 #!/bin/sh
 #
 ## ~/.xinitrc
-## author  : OK <ok100.ok100.ok100@gmail.com>
+## author  : OK100 <ok100.ok100.ok100@gmail.com>
 ## website : https://github.com/ok100
 #
 
+# read Xresources
 xrdb ~/.Xresources
 
-# switch to external monitor or start xcompmgr 
+# switch to external monitor if connected
 CRT=`xrandr | grep "VGA1 connected"`
 if [ "x${CRT}x" != "xx" ]; then
    xrandr --output LVDS1 --off --output VGA1 --auto
 fi
 if [ "x${CRT}x" = "xx" ]; then
    xcalib ~/.icc/eeePC.icc
-   xcompmgr -a &
 fi
+
+# redshift
+redshift -l 48.346438:19.150887 &
+
+# xcompmgr
+xcompmgr -a &
 
 # keyboard map
 setxkbmap cz
@@ -37,6 +43,7 @@ eval $(cat ~/.fehbg)
 
 # lirc
 irexec &
+irxevent &
 
 # hide cursor
 unclutter -noevents &

@@ -65,3 +65,69 @@ begin
    repeat = 0
    config = osd\nosd
 end
+begin
+   remote = CD
+   button = -_--
+   prog   = mplayer
+   repeat = 0
+   config = vo_fullscreen
+end
+
+### IRXEVENT ###
+begin
+	prog = irxevent
+	repeat = 1
+	delay  = 5
+	button = 2
+	config = Key Up CurrentWindow
+end
+
+begin
+	prog = irxevent
+	repeat = 1
+	delay  = 5
+	button = 8
+	config = Key Down CurrentWindow
+end
+
+begin
+	prog = irxevent
+	repeat = 1
+	delay  = 5
+	button = 4
+	config = Key Left CurrentWindow
+end
+
+begin
+	prog = irxevent
+	repeat = 1
+	delay  = 5
+	button = 6
+	config = Key Right CurrentWindow
+end
+
+begin
+	prog = irxevent
+	button = 5
+	config = Key Return CurrentWindow
+end
+
+begin
+	prog = irxevent
+	button = 0
+	config = Key Tab CurrentWindow
+end
+
+begin
+	prog = irxevent
+	button = 1
+	config = Key q CurrentWindow
+end
+
+### ###
+begin
+	prog = irexec
+	button = 3
+	config = xdotool key ctrl+x s
+end
+

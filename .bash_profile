@@ -13,6 +13,6 @@ export EDITOR='vim'
 export VIEWER='vim -R'
 export BROWSER='/home/ok/bin/browser'
 
-export PATH="/usr/lib/cw:$PATH:/home/ok/bin/:/mnt/SD/texlive/bin/i386-linux/:/mnt/SD/.WorldOfGoo/:/mnt/SD/.AngryBirds/"
+export PATH="/usr/lib/cw:$PATH:/home/ok/bin/:/mnt/SD/texlive/bin/i386-linux/:/mnt/SD/eagle/bin/:/mnt/SD/.WorldOfGoo/"
 
 export NOCOLOR_PIPE=1

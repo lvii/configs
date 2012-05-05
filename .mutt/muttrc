@@ -21,7 +21,7 @@ set print_command       = /usr/bin/enscript                     # print with ens
 # main options
 set mbox_type           = Maildir                               # mailbox type
 set folder              = ~/mail                                # mailbox location
-set spoolfile           = "+GMail/INBOX"                        # JWR is default inbox
+set spoolfile           = "+gmail/INBOX"                        # default inbox
 set timeout             = 3                                     # idle time before scanning
 set mail_check          = 0                                     # minimum time between scans
 set sort_alias          = alias                                 # sort alias file by alias
@@ -65,13 +65,13 @@ set status_format       = " %?M?%M/?%m Mails %?n?%n new, ?%?u?%u unread, ?%?p?%p
 set alias_format        = "%4n %t %-20a  %r"
 
 # composing mail
-set realname            = "OK"                                  # who am i?
+set realname            = "Ondrej Kipila"                       # who am i?
 set envelope_from                                               # which from?
 set sig_dashes                                                  # dashes before my sig... sweet
 set edit_headers                                                # show headers when composing
 set fast_reply                                                  # skip to compose when replying
 #set sendmail_wait       = -1                                    # don't wait for sending... to complete
-set askcc                                                       # ask for CC:
+#set askcc                                                       # ask for CC:
 set fcc_attach                                                  # save attachments with the body
 unset mime_forward                                              # forward attachments as part of body
 set forward_format      = "Fwd: %s"                             # format for subject when forwarding
@@ -88,7 +88,7 @@ unignore from: to: cc: date: subject:                           # show only thes
 hdr_order from: to: cc: date: subject:                          # and in this order
 
 # boxes
-mailboxes +GMail/INBOX +GMail/Sent +GMail/Drafts +GMail/Spam +GMail/Trash
+source ~/.mutt/mailboxes
 
 # always sourced
 source $alias_file                                              # required for functionality
@@ -96,7 +96,7 @@ source ~/.mutt/colors/darkcourses                               # source colors 
 source ~/.mutt/gmail.muttrc                                     # source gmail as default
 
 # account specific sources
-folder-hook GMail/* source ~/.mutt/gmail.muttrc
+folder-hook gmail/* source ~/.mutt/gmail.muttrc
 
 # Mailing lists
 lists arch-announce@archlinux.org                               # Arch announcements
@@ -133,7 +133,7 @@ bind index,pager R      group-reply
 bind compose p          pgp-menu
 
 # macros
-macro index gl   "<change-folder> =GMail/INBOX<enter>"     "go to Gmail inbox"
+macro index gl   "<change-folder> =gmail/INBOX<enter>"     "go to Gmail inbox"
 macro index \Cr  "<tag-prefix><clear-flag>N"               "mark tagged messages as read"
 macro index \Cp  "<pipe-message>cat > ~/"                  "save message as" 
 macro index B    "<limit>~b "                              "search message bodies"
@@ -151,8 +151,8 @@ macro pager \Cu   <pipe-entry>'urlview'<enter> 'Follow links with urlview'
 # Address book ----------------------------------------------------------------------------------------
 set query_command= "abook --mutt-query '%s'"
 # sync abook and alias
-macro index A      "!~/Scripts/abook-autoexport\n:source ~/.mutt/alias\n"          "Start abook"
-macro index \Ca    "|~/Scripts/abook-autoexport --add-email-quiet\n:source ~/.mutt/alias\n" "Create new alias from the actual message"
+macro index A      "!~/bin/abook-autoexport\n:source ~/.mutt/alias\n"          "Start abook"
+macro index \Ca    "|~/bin/abook-autoexport --add-email-quiet\n:source ~/.mutt/alias\n" "Create new alias from the actual message"
 
 # quick-sync ~/Mail immediately with offlineimap
 macro index Z   "<shell-escape>/usr/bin/offlineimap -q -o<enter>" "sync IMAP"

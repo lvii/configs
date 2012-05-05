@@ -18,7 +18,7 @@ if [ "x${CRT}x" = "xx" ]; then
 fi
 
 # redshift
-redshift -l 48.346438:19.150887 &
+redshift -l 48.346438:19.150887 -b 0.9 &
 
 # xcompmgr
 xcompmgr -a &

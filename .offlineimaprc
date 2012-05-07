@@ -1,0 +1,28 @@
+[general]
+accounts = gmail
+
+[Account gmail]
+localrepository = gmail-local
+remoterepository = gmail-remote
+
+[Repository gmail-local]
+type = Maildir
+localfolders = ~/mail/gmail
+
+[Repository gmail-remote]
+type = Gmail
+remoteuser = ok100.ok100.ok100@gmail.com
+realdelete = no
+nametrans = lambda folder: re.sub('^inbox$', 'INBOX',
+		                   re.sub(r'.*/(.*)$', r'\1', folder).lower())
+folderfilter = lambda foldername: foldername not in [ 'sent mail', 'drafts', 'spam']
+
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
+
+# vim: ft=cfg

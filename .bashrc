@@ -82,6 +82,7 @@ alias pacback='sudo pacman-color -Qqe | grep -v "$(pacman-color -Qmq)" > ~/dropb
 alias powerdown='sudo powerdown'
 alias pianobar='pianobar; rm ~/.config/pianobar/nowplaying'
 alias powertop='sudo powertop'
+alias ptop='sudo powertop'
 alias netcfg='sudo netcfg'
 alias ly='python2 ~/bin/cmus-lyrics'
 # git
@@ -387,151 +388,8 @@ cleanup () {
 	sudo rm -rf /usr/share/skype/lang/skype_zh_t.qm
 	sudo rm -rf /usr/share/skype/lang/skype_zh_t.ts
 	sudo rm -rf /usr/share/qt/translations
-	sudo rm -rf /usr/share/opera/locale/be
-	sudo rm -rf /usr/share/opera/locale/bg
-	sudo rm -rf /usr/share/opera/locale/da
-	sudo rm -rf /usr/share/opera/locale/de
-	sudo rm -rf /usr/share/opera/locale/el
-	sudo rm -rf /usr/share/opera/locale/es-ES
-	sudo rm -rf /usr/share/opera/locale/es-LA
-	sudo rm -rf /usr/share/opera/locale/et
-	sudo rm -rf /usr/share/opera/locale/fi
-	sudo rm -rf /usr/share/opera/locale/fr
-	sudo rm -rf /usr/share/opera/locale/fr-CA
-	sudo rm -rf /usr/share/opera/locale/fy
-	sudo rm -rf /usr/share/opera/locale/hi
-	sudo rm -rf /usr/share/opera/locale/hr
-	sudo rm -rf /usr/share/opera/locale/hu
-	sudo rm -rf /usr/share/opera/locale/id
-	sudo rm -rf /usr/share/opera/locale/it
-	sudo rm -rf /usr/share/opera/locale/ja
-	sudo rm -rf /usr/share/opera/locale/ka
-	sudo rm -rf /usr/share/opera/locale/ko
-	sudo rm -rf /usr/share/opera/locale/lt
-	sudo rm -rf /usr/share/opera/locale/mk
-	sudo rm -rf /usr/share/opera/locale/nb
-	sudo rm -rf /usr/share/opera/locale/nl
-	sudo rm -rf /usr/share/opera/locale/nn
-	sudo rm -rf /usr/share/opera/locale/pl
-	sudo rm -rf /usr/share/opera/locale/pt
-	sudo rm -rf /usr/share/opera/locale/pt-BR
-	sudo rm -rf /usr/share/opera/locale/ro
-	sudo rm -rf /usr/share/opera/locale/ru
-	sudo rm -rf /usr/share/opera/locale/sr
-	sudo rm -rf /usr/share/opera/locale/sv
-	sudo rm -rf /usr/share/opera/locale/ta
-	sudo rm -rf /usr/share/opera/locale/te
-	sudo rm -rf /usr/share/opera/locale/tr
-	sudo rm -rf /usr/share/opera/locale/uk
-	sudo rm -rf /usr/share/opera/locale/vi
-	sudo rm -rf /usr/share/opera/locale/zh-cn
-	sudo rm -rf /usr/share/opera/locale/zh-hk
-	sudo rm -rf /usr/share/opera/locale/zh-tw
-	sudo rm -rf /usr/share/opera/locale/af
-	sudo rm -rf /usr/share/opera/locale/az
-	sudo rm -rf /usr/share/opera/locale/bn
-	sudo rm -rf /usr/share/opera/locale/en-GB
-	sudo rm -rf /usr/share/opera/locale/gd
-	sudo rm -rf /usr/share/opera/locale/me
-	sudo rm -rf /usr/share/opera/locale/ms
-	sudo rm -rf /usr/share/opera/locale/pa
-	sudo rm -rf /usr/share/opera/locale/sk
-	sudo rm -rf /usr/share/opera/locale/sw
-	sudo rm -rf /usr/share/opera/locale/th
-	sudo rm -rf /usr/share/opera/locale/tl
-	sudo rm -rf /usr/share/opera/locale/uz
-	sudo rm -rf /usr/share/opera/locale/zu
-	sudo rm -rf /usr/share/opera-next/locale/be
-	sudo rm -rf /usr/share/opera-next/locale/bg
-	sudo rm -rf /usr/share/opera-next/locale/da
-	sudo rm -rf /usr/share/opera-next/locale/de
-	sudo rm -rf /usr/share/opera-next/locale/el
-	sudo rm -rf /usr/share/opera-next/locale/es-ES
-	sudo rm -rf /usr/share/opera-next/locale/es-LA
-	sudo rm -rf /usr/share/opera-next/locale/et
-	sudo rm -rf /usr/share/opera-next/locale/fi
-	sudo rm -rf /usr/share/opera-next/locale/fr
-	sudo rm -rf /usr/share/opera-next/locale/fr-CA
-	sudo rm -rf /usr/share/opera-next/locale/fy
-	sudo rm -rf /usr/share/opera-next/locale/hi
-	sudo rm -rf /usr/share/opera-next/locale/hr
-	sudo rm -rf /usr/share/opera-next/locale/hu
-	sudo rm -rf /usr/share/opera-next/locale/id
-	sudo rm -rf /usr/share/opera-next/locale/it
-	sudo rm -rf /usr/share/opera-next/locale/ja
-	sudo rm -rf /usr/share/opera-next/locale/ka
-	sudo rm -rf /usr/share/opera-next/locale/ko
-	sudo rm -rf /usr/share/opera-next/locale/lt
-	sudo rm -rf /usr/share/opera-next/locale/mk
-	sudo rm -rf /usr/share/opera-next/locale/nb
-	sudo rm -rf /usr/share/opera-next/locale/nl
-	sudo rm -rf /usr/share/opera-next/locale/nn
-	sudo rm -rf /usr/share/opera-next/locale/pl
-	sudo rm -rf /usr/share/opera-next/locale/pt
-	sudo rm -rf /usr/share/opera-next/locale/pt-BR
-	sudo rm -rf /usr/share/opera-next/locale/ro
-	sudo rm -rf /usr/share/opera-next/locale/ru
-	sudo rm -rf /usr/share/opera-next/locale/sr
-	sudo rm -rf /usr/share/opera-next/locale/sv
-	sudo rm -rf /usr/share/opera-next/locale/ta
-	sudo rm -rf /usr/share/opera-next/locale/te
-	sudo rm -rf /usr/share/opera-next/locale/tr
-	sudo rm -rf /usr/share/opera-next/locale/uk
-	sudo rm -rf /usr/share/opera-next/locale/vi
-	sudo rm -rf /usr/share/opera-next/locale/zh-cn
-	sudo rm -rf /usr/share/opera-next/locale/zh-hk
-	sudo rm -rf /usr/share/opera-next/locale/zh-tw
-	sudo rm -rf /usr/share/opera-next/locale/af
-	sudo rm -rf /usr/share/opera-next/locale/az
-	sudo rm -rf /usr/share/opera-next/locale/bn
-	sudo rm -rf /usr/share/opera-next/locale/en-GB
-	sudo rm -rf /usr/share/opera-next/locale/gd
-	sudo rm -rf /usr/share/opera-next/locale/me
-	sudo rm -rf /usr/share/opera-next/locale/ms
-	sudo rm -rf /usr/share/opera-next/locale/pa
-	sudo rm -rf /usr/share/opera-next/locale/sk
-	sudo rm -rf /usr/share/opera-next/locale/sw
-	sudo rm -rf /usr/share/opera-next/locale/th
-	sudo rm -rf /usr/share/opera-next/locale/tl
-	sudo rm -rf /usr/share/opera-next/locale/uz
-	sudo rm -rf /usr/share/opera-next/locale/zu
 	sudo rm -rf /usr/share/lazarus/examples
 	sudo rm -rf /usr/share/lazarus/languages
-	sudo rm -rf /usr/share/applications/gparted.desktop
-	sudo rm -rf /usr/share/applications/assistant.desktop
-	sudo rm -rf /usr/share/applications/parcellite.desktop
-	sudo rm -rf /usr/share/applications/dconf-editor.desktop
-	sudo rm -rf /usr/share/applications/htop.desktop
-	sudo rm -rf /usr/share/applications/rxvt-unicode.desktop
-	sudo rm -rf /usr/share/applications/avahi-discover.desktop
-	sudo rm -rf /usr/share/applications/bssh.desktop
-	sudo rm -rf /usr/share/applications/bvnc.desktop
-	sudo rm -rf /usr/share/applications/designer.desktop
-	sudo rm -rf /usr/share/applications/linguist.desktop
-	sudo rm -rf /usr/share/applications/base.desktop
-	sudo rm -rf /usr/share/applications/cups.desktop
-	sudo rm -rf /usr/share/applications/exo-file-manager.desktop
-	sudo rm -rf /usr/share/applications/exo-mail-reader.desktop
-	sudo rm -rf /usr/share/applications/exo-preferred-applications.desktop
-	sudo rm -rf /usr/share/applications/exo-terminal-emulator.desktop
-	sudo rm -rf /usr/share/applications/exo-web-browser.desktop
-	sudo rm -rf /usr/share/applications/gksu.desktop
-	sudo rm -rf /usr/share/applications/gksu-properties.desktop
-	sudo rm -rf /usr/share/applications/gthumb-import.desktop
-	sudo rm -rf /usr/share/applications/javafilter.desktop
-	sudo rm -rf /usr/share/applications/mimeinfo.cache
-	sudo rm -rf /usr/share/applications/qstart.desktop
-	sudo rm -rf /usr/share/applications/startcenter.desktop
-	sudo rm -rf /usr/share/applications/template.desktop
-	sudo rm -rf /usr/share/applications/Thunar-folder-handler.desktop
-	sudo rm -rf /usr/share/applications/thunar-settings.desktop
-	sudo rm -rf /usr/share/applications/wine.desktop
-	sudo rm -rf /usr/share/applications/qv4l2.desktop
-	sudo rm -rf /usr/share/applications/gvim.desktop
-	sudo rm -rf /usr/share/applications/7zFM.desktop
-	sudo rm -rf /usr/share/applications/mplayer.desktop
-	sudo rm -rf /usr/share/applications/cr3.desktop
-
 
 	echo -e "\e[1;34m::\e[0m Cleaning with BleachBit..."
 	bleachbit -c deepscan.backup deepscan.ds_store deepscan.thumbs_db deepscan.tmp firefox.cache firefox.cookies firefox.dom firefox.download_history firefox.forms firefox.passwords firefox.session_restore firefox.site_preferences firefox.url_history firefox.vacuum flash.cache flash.cookies gimp.tmp midnightcommander.history openofficeorg.cache openofficeorg.recent_documents opera.cache opera.current_session opera.dom opera.download_history opera.search_history opera.url_history skype.chat_logs system.cache system.clipboard system.desktop_entry system.localizations system.recent_documents system.rotated_logs system.trash thumbnails.cache vim.history wine.tmp x11.debug_logs &> /dev/null

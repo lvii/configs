@@ -31,23 +31,23 @@ set_freq () {
 	if [ $current_fsb -lt $target_fsb ]; then
 		while [ $current_fsb -lt $target_fsb ]; do
 			let new_fsb=$current_fsb+1
-			if [ $new_fsb -gt 78 ]; then
+			if [ $new_fsb -gt 75 ]; then
 				echo "$new_fsb 24 1" > /proc/eee/fsb
 			else
 				echo "$new_fsb 24 0" > /proc/eee/fsb
 			fi
-			sleep 0.1s
+			sleep 0.05s
 			get_fsb
 		done
 	else
 		while [ $current_fsb -gt $target_fsb ]; do
 			let new_fsb=$current_fsb-1
-			if [ $new_fsb -gt 78 ]; then
+			if [ $new_fsb -gt 75 ]; then
 				echo "$new_fsb 24 1" > /proc/eee/fsb
 			else
 				echo "$new_fsb 24 0" > /proc/eee/fsb
 			fi
-			sleep 0.1s
+			sleep 0.05s
 			get_fsb
 		done
 	fi

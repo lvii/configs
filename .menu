@@ -1,0 +1,247 @@
+item = Dwb
+cmd = dwb
+icon = null
+
+item = Terminal
+cmd = urxvtc
+icon = null
+
+item = Tmux
+cmd = urxvtc -e /home/ok/bin/tmux.sh
+icon = null
+
+SEPARATOR
+
+submenu = Accessories
+	icon = null
+
+	item = File Manager
+	cmd = urxvtc -e mc
+	icon = null
+
+	item = GdMap
+	cmd = gdmap
+	icon = null
+
+	item = Qalculate!
+	cmd = qalculate
+	icon = null
+
+	item = Qpass
+	cmd = qpass
+	icon = null
+
+	item = Stardict
+	cmd = stardict
+	icon = null
+	
+	item = Xarchiver
+	cmd = xarchiver
+	icon = null
+
+
+submenu = Development
+	icon = null
+
+	item = Eagle
+	cmd = eagle
+	icon = null
+
+	item = Geany
+	cmd = geany
+	icon = null
+
+	item = Meld
+	cmd = meld
+	icon = null
+
+	item = Lazarus
+	cmd = lazarus
+	icon = null
+
+
+submenu = Graphics
+	icon = null
+
+	item = Color Selection
+	cmd = zenity --color-selection
+	icon = null
+
+	item = Gbdfed
+	cmd = gbdfed
+	icon = null
+
+	item = GIMP
+	cmd = gimp
+	icon = null
+
+	item = XSane
+	cmd = xsane
+	icon = null
+
+
+submenu = Internet
+	icon = null
+
+	item = Dwb
+	cmd = dwb
+	icon = null
+
+	item = Firefox
+	cmd = firefox
+	icon = null
+
+	item = Skype
+	cmd = skype
+	icon = null
+
+	item = WeeChat
+	cmd = urxvtc -title WeeChat -e weechat-curses
+	icon = null
+
+	SEPARATOR
+
+	item = Wifi-menu
+	cmd = urxvtc -e sudo wifi-menu
+	icon = null
+
+
+submenu = Multimedia
+	icon = null
+	
+	item = Ex Falso
+	cmd = exfalso
+	icon = null
+
+	item = Mplayer2
+	cmd = /home/ok/bin/mplayer_zenity
+	icon = null
+
+
+submenu = Office
+	icon = null
+
+	item=LibreOffice Calc
+	cmd=localc
+	icon=null
+
+	item=LibreOffice Impress
+	cmd=loimpress
+	icon=null
+
+	item=LibreOffice Writer
+	cmd=lowriter
+	icon=null
+
+	item = Scan Tailor
+	cmd = scantailor
+	icon = null
+
+	item=Zathura
+	cmd=zathura
+	icon=null
+
+
+SEPARATOR
+
+submenu = Settings
+	icon = false
+
+	submenu = CPU Frequency
+		icon = false
+
+		item = High
+		cmd = sudo /home/ok/bin/eeecpufreq -f 900
+		icon = null
+
+		item = Low
+		cmd = sudo /home/ok/bin/eeecpufreq -f 630
+		icon = null
+
+	submenu = Display
+		icon = false
+
+		item = Clone (640x480)
+		cmd = sh -c "xrandr --output LVDS1 --mode 640x480 --output VGA1 --mode 640x480 --same-as LVDS1 && gempaper set"
+		icon = null
+
+		item = Clone (800x600)
+		cmd = sh -c "xrandr --fb 800x600 --output LVDS1 --mode 800x480 --scale 1x1.25 --panning 0x0 --output VGA1 --mode 800x600 --same-as LVDS1 && gempaper set"
+		icon = null
+
+		submenu = Extend
+			icon = false
+
+			item = Left
+			cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --auto --left-of LVDS1 && gempaper set"
+			icon = null
+
+			item = Right
+			cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --auto --right-of LVDS1 && gempaper set"
+			icon = null
+
+			item = Above
+			cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --auto --above LVDS1 && gempaper set"
+			icon = null
+
+			item = Below
+			cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --auto --below LVDS1 && gempaper set"
+			icon = null
+
+		item = LVDS only
+		cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --off && gempaper set"
+		icon = null
+
+		item = LVDS only (800x600 compress)
+		cmd = sh -c "xrandr --fb 800x600 --output LVDS1 --mode 800x480 --scale 1x1.25 --panning 0x0 --output VGA1 --off && gempaper set"
+		icon = null
+
+		item = VGA only
+		cmd = sh -c "xrandr --output LVDS1 --off --output VGA1 --auto && gempaper set"
+		icon = null
+
+	submenu = dwm
+		icon = false
+
+		item = Edit config.h
+		cmd = urxvtc -e /home/ok/bin/dwmrc
+		icon = null
+
+	submenu = Keyboard layout
+		icon = false
+
+		item = CZ
+		cmd = setxkbmap cz
+		icon = null
+
+		item = SK
+		cmd = setxkbmap sk
+		icon = null
+
+		item = US
+		cmd = setxkbmap us
+		icon = null
+
+	submenu = Redshift
+		icon = false
+
+		item = Toggle on/off
+		cmd = pkill -USR1 redshift
+		icon = null
+	
+	item = User Interface Settings
+	cmd = lxappearance
+	icon = null
+	
+	SEPARATOR
+	
+	item=Edit menu
+	cmd=urxvtc -e vim /home/ok/.menu
+	icon=null
+
+
+SEPARATOR
+
+item = Logout...
+cmd = /home/ok/bin/dmenu-powerbutton
+icon = null

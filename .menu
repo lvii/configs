@@ -95,6 +95,10 @@ submenu = Internet
 	cmd = skype
 	icon = null
 
+	item = WebHTTrack
+	cmd = webhttrack
+	icon = null
+
 	item = WeeChat
 	cmd = urxvtc -title WeeChat -e weechat-curses
 	icon = null

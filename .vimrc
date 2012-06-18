@@ -31,9 +31,9 @@ let g:loaded_matchparen = 1
 let g:acp_behaviorKeywordLength = 4
 
 " status bar
-set statusline=\ \%F%m%r%h%w\ ::\ %y\ [%{&ff}]\%=\ [%p%%:\ %l/%L]\ 
-set laststatus=2
-set cmdheight=1
+"set statusline=\ \%F%m%r%h%w\ ::\ %y\ [%{&ff}]\%=\ [%p%%:\ %l/%L]\ 
+"set laststatus=2
+"set cmdheight=1
 
 if has("autocmd")
     " always jump to the last cursor position

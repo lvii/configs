@@ -85,6 +85,7 @@ alias powertop='sudo powertop'
 alias ptop='sudo powertop'
 alias netcfg='sudo netcfg'
 alias ly='python2 ~/bin/cmus-lyrics'
+alias free='free -m'
 # git
 alias git='hub'
 alias gitco='hub commit -m'
@@ -108,6 +109,7 @@ alias statusrc='vim ~/.conkyrc'
 alias vimrc='vim ~/.vimrc'
 alias virc='vim ~/.vimrc'
 alias mimirc='vim ~/.config/mimi/mime.conf'
+alias homerc='dir=`pwd`; cd ~/build/homepage; vim homepage.py; ./homepage.py; cd $dir'
 
 # coloured repo search
 pacse () {

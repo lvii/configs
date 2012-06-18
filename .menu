@@ -75,6 +75,10 @@ submenu = Graphics
 	cmd = gimp
 	icon = null
 
+	item = Gpick
+	cmd = gpick
+	icon = null
+
 	item = XSane
 	cmd = xsane
 	icon = null

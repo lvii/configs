@@ -12,6 +12,7 @@ localfolders = ~/mail/gmail
 [Repository gmail-remote]
 type = Gmail
 remoteuser = ok100.ok100.ok100@gmail.com
+cert_fingerprint = f3043dd689a2e7dddfbef82703a6c65ea9b634c1
 realdelete = no
 nametrans = lambda folder: re.sub('^inbox$', 'INBOX',
 		                   re.sub(r'.*/(.*)$', r'\1', folder).lower())

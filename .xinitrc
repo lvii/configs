@@ -53,6 +53,7 @@ unclutter -noevents &
 
 # dwm
 exec dbus-launch /home/ok/bin/dwm-start
+#exec dbus-launch spectrwm
 
 # monsterwm
 #exec dbus-launch /home/ok/bin/monsterwm-start

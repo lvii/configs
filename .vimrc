@@ -109,3 +109,19 @@ inoremap Oo /
 noremap Om -
 inoremap Om -
 
+" Strip the newline from the end of a string
+function! Chomp(str)
+  return substitute(a:str, '\n$', '', '')
+endfunction
+
+" Find a file and pass it to cmd
+function! DmenuOpen(cmd)
+  let fname = Chomp(system("git ls-files | dmenu -i -fn -*-termsyn-medium-*-*-*-11-*-*-*-*-*-*-* -nb '#1A1A1A' -nf '#999999' -sb '#4C4C4C' -sf '#B3B3B3' -l 20 -p " . a:cmd))
+  if empty(fname)
+    return
+  endif
+  execute a:cmd . " " . fname
+endfunction
+
+map <c-t> :call DmenuOpen("tabe")<cr>
+map <c-f> :call DmenuOpen("e")<cr>

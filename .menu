@@ -125,9 +125,17 @@ submenu = Multimedia
 	cmd = /home/ok/bin/mplayer_zenity
 	icon = null
 
+	item = TuxGuitar
+	cmd = tuxguitar
+	icon = null
+
 
 submenu = Office
 	icon = null
+
+	item=ePDFView
+	cmd=epdfview
+	icon=null
 
 	item=LibreOffice Calc
 	cmd=localc
@@ -170,42 +178,42 @@ submenu = Settings
 		icon = false
 
 		item = Clone (640x480)
-		cmd = sh -c "xrandr --output LVDS1 --mode 640x480 --output VGA1 --mode 640x480 --same-as LVDS1 && gempaper set"
+		cmd = sh -c "xrandr --output LVDS1 --mode 640x480 --output VGA1 --mode 640x480 --same-as LVDS1 && sh ~/.fehbg"
 		icon = null
 
 		item = Clone (800x600)
-		cmd = sh -c "xrandr --fb 800x600 --output LVDS1 --mode 800x480 --scale 1x1.25 --panning 0x0 --output VGA1 --mode 800x600 --same-as LVDS1 && gempaper set"
+		cmd = sh -c "xrandr --fb 800x600 --output LVDS1 --mode 800x480 --scale 1x1.25 --panning 0x0 --output VGA1 --mode 800x600 --same-as LVDS1 && sh ~/.fehbg"
 		icon = null
 
 		submenu = Extend
 			icon = false
 
 			item = Left
-			cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --auto --left-of LVDS1 && gempaper set"
+			cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --auto --left-of LVDS1 && sh ~/.fehbg"
 			icon = null
 
 			item = Right
-			cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --auto --right-of LVDS1 && gempaper set"
+			cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --auto --right-of LVDS1 && sh ~/.fehbg"
 			icon = null
 
 			item = Above
-			cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --auto --above LVDS1 && gempaper set"
+			cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --auto --above LVDS1 && sh ~/.fehbg"
 			icon = null
 
 			item = Below
-			cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --auto --below LVDS1 && gempaper set"
+			cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --auto --below LVDS1 && sh ~/.fehbg"
 			icon = null
 
 		item = LVDS only
-		cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --off && gempaper set"
+		cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --off && sh ~/.fehbg"
 		icon = null
 
 		item = LVDS only (800x600 compress)
-		cmd = sh -c "xrandr --fb 800x600 --output LVDS1 --mode 800x480 --scale 1x1.25 --panning 0x0 --output VGA1 --off && gempaper set"
+		cmd = sh -c "xrandr --fb 800x600 --output LVDS1 --mode 800x480 --scale 1x1.25 --panning 0x0 --output VGA1 --off && sh ~/.fehbg"
 		icon = null
 
 		item = VGA only
-		cmd = sh -c "xrandr --output LVDS1 --off --output VGA1 --auto && gempaper set"
+		cmd = sh -c "xrandr --output LVDS1 --off --output VGA1 --auto && sh ~/.fehbg"
 		icon = null
 
 	submenu = dwm

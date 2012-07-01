@@ -5,12 +5,12 @@
 !
 
 !-- colors --!
-#include "/home/ok/.colors/dc2"
+#include "/home/ok/.colors/gutter"
 
 !-- urxvt --!
 urxvt.scrollBar:          false
-urxvt.font:               -*-termsynu-medium-*-*-*-11-*-*-*-*-*-*-*
-urxvt.boldFont:           -*-termsynu-bold-*-*-*-11-*-*-*-*-*-*-*
+urxvt.font:               -*-lime-medium-*-*-*-10-*-*-*-*-*-*-*
+urxvt.boldFont:           -*-lime-medium-*-*-*-10-*-*-*-*-*-*-*
 urxvt.borderLess:         false
 urxvt.internalBorder:     0
 urxvt.buffered:           true

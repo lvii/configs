@@ -4,7 +4,7 @@
 ## website : https://github.com/ok100
 #
 
-include ~/.newsbeuter/darkcourses.theme
+include ~/.newsbeuter/colors/gutter.theme
 
 auto-reload         yes
 reload-time         15

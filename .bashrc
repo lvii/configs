@@ -419,3 +419,7 @@ backup () {
 		echo -e "\e[1;31merror:\e[0m backup directory not found"
 	fi
 }
+
+die () {
+	kill -s 9 $(pidof $1)
+}

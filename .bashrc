@@ -29,8 +29,6 @@ complete -cf man
 source /etc/bash_completion.d/git
 source /usr/share/bash-completion/completions/rc.d
 source /usr/share/bash-completion/completions/tmux
-source ~/.todo/todo_completion
-complete -F _todo t
 
 # dir colors
 eval `dircolors ~/.dircolors`
@@ -87,18 +85,17 @@ alias netcfg='sudo netcfg'
 alias ly='python2 ~/bin/cmus-lyrics'
 alias free='free -m'
 # git
-alias git='hub'
-alias gitco='hub commit -m'
-alias gitst='hub status'
-alias gitpu='hub push -u origin master'
-alias gitdi='hub diff'
+alias gitco='git commit -m'
+alias gitst='git status'
+alias gitpu='git push -u origin master'
+alias gitdi='git diff'
 alias gitig='vim .gitignore'
-alias gitad='hub add'
-alias gitcl='hub clone'
-alias gitlo='hub log'
-alias gitpl='hub pull'
-alias gitin='hub init'
-alias gitrm='hub rm'
+alias gitad='git add'
+alias gitcl='git clone'
+alias gitlo='git log'
+alias gitpl='git pull'
+alias gitin='git init'
+alias gitrm='git rm'
 # config
 alias bashrc='vim ~/.bashrc'
 alias dwmrc='dir=`pwd`; cd ~/build/dwm; vim config.h; ./recompile.sh; killall dwm; cd $dir'

@@ -1,0 +1,27 @@
+*background:	    	#000000
+*foreground:    		#bbbbbb
+
+! Black
+*color0:			    #000000
+*color8:			    #404040
+! Red
+*color1:			    #996666
+*color9:			    #cc9999
+! Green
+*color2:			    #669966
+*color10:			    #98cc98
+! Yellow
+*color3:			    #989966
+*color11:			    #cccb97
+! Blue
+*color4:			    #666699
+*color12:			    #9898cc
+! Magenta
+*color5:			    #996697
+*color13:			    #cb97cc
+! Cyan
+*color6:			    #669899
+*color14:			    #98cccc
+! White
+*color7:			    #bbbbbb
+*color15:			    #eeeeee

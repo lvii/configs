@@ -1,0 +1,20 @@
+URxvt*foreground: #d0d0d0
+URxvt*background: #1c1c1c
+
+!Brew
+URxvt*color0:    #1b1b1b
+URxvt*color1:     #aa2a2a
+URxvt*color2:    #878700
+URxvt*color3:     #aa552a
+URxvt*color4:    #005f87
+URxvt*color5:    #af8787
+URxvt*color6:    #83b0d5
+URxvt*color7:    #808080
+URxvt*color8:    #665c64
+URxvt*color9:    #af5f5f
+URxvt*color10:    #00af87
+URxvt*color11:    #af8700
+URxvt*color12:    #415769
+URxvt*color14:     #008787
+URxvt*color13:     #af87af
+URxvt*color15:    #c3c2c5

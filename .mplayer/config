@@ -1,0 +1,18 @@
+# colored output
+msgcolor=yes
+
+# video
+stop-xscreensaver=yes
+vo=xv:ck-method=auto
+
+# audio
+af=scaletempo
+
+# subtitles
+double=yes
+subfont-text-scale=5
+subcp=enca:cs:cp1250
+ass-use-margins=yes
+
+# fifo
+input=file=/home/ok/.mplayer/fifo

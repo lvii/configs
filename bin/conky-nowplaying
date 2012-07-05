@@ -15,5 +15,5 @@ if [ ! -z "$artist" ] || [ ! -z "$title"]; then
 	if [ ${#title} -gt 45 ]; then
 		title=$(echo $title | cut -c1-45)...
 	fi
-	echo -e "\x01$artist\x02$title\x04//"
+	echo -e "\x01$artist\x02$title\x0D//"
 fi

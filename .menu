@@ -153,10 +153,6 @@ submenu = Office
 	cmd = scantailor
 	icon = null
 
-	item=Zathura
-	cmd=zathura
-	icon=null
-
 
 SEPARATOR
 
@@ -177,12 +173,8 @@ submenu = Settings
 	submenu = Display
 		icon = false
 
-		item = Clone (640x480)
-		cmd = sh -c "xrandr --output LVDS1 --mode 640x480 --output VGA1 --mode 640x480 --same-as LVDS1 && sh ~/.fehbg"
-		icon = null
-
 		item = Clone (800x600)
-		cmd = sh -c "xrandr --fb 800x600 --output LVDS1 --mode 800x480 --scale 1x1.25 --panning 0x0 --output VGA1 --mode 800x600 --same-as LVDS1 && sh ~/.fehbg"
+		cmd = sh -c "xrandr --output LVDS1 --mode 800x600 --output VGA1 --mode 800x600 --same-as LVDS1 && sh ~/.fehbg"
 		icon = null
 
 		submenu = Extend
@@ -208,8 +200,8 @@ submenu = Settings
 		cmd = sh -c "xrandr --output LVDS1 --auto --scale 1x1 --output VGA1 --off && sh ~/.fehbg"
 		icon = null
 
-		item = LVDS only (800x600 compress)
-		cmd = sh -c "xrandr --fb 800x600 --output LVDS1 --mode 800x480 --scale 1x1.25 --panning 0x0 --output VGA1 --off && sh ~/.fehbg"
+		item = LVDS only (1024x768 compress)
+		cmd = sh -c "xrandr --fb 1024x768 --output LVDS1 --mode 1024x600 --scale 1x1.25 --panning 0x0 --output VGA1 --off && sh ~/.fehbg"
 		icon = null
 
 		item = VGA only

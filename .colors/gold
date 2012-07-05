@@ -1,0 +1,31 @@
+urxvt*cursorColor: #afa72e
+urxvt*underlineColor: #afa72e
+urxvt*highlightColor: #afa72e
+urxvt*highlightTextColor: #050505
+
+*background: #050505
+*foreground: #ecedee
+!Black
+*color0:    #343639
+*color8:    #404040
+! Red
+*color1:    #B28284
+*color9:    #BD8A8C
+! Green
+*color2:    #82B284
+*color10:   #8ABD8C
+! Yellow
+*color3:    #B2B282
+*color11:   #BDBD8A
+! Blue
+*color4:    #8292B2
+*color12:   #8A9BBD
+! Magenta
+*color5:    #A082B2
+*color13:   #A183C2
+! Cyan
+*color6:    #82B2A6
+*color14:   #8ABDB0
+! White
+*color7:    #B2B2B2
+*color15:   #BDBDBD

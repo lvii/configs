@@ -1,0 +1,9 @@
+#text/html; lynx -display-charset=UTF-8 -dump %s -assume_charset=%{charset}; nametemplate=%s.html; copiousoutput
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+image/*; sxiv %s
+video; mplayer %s
+text/*; vim %s
+application/pdf; llpp %s
+application/vnd.ms-powerpoint; soffice %s
+application/vnd.ms-excel; soffice %s
+application/msword; antiword %s; copiousoutput

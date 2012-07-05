@@ -9,12 +9,9 @@
 xrdb ~/.Xresources
 
 # switch to external monitor if connected
-CRT=`xrandr | grep "VGA1 connected"`
-if [ "x${CRT}x" != "xx" ]; then
+CRT=$(xrandr | grep "VGA1 connected")
+if [ -n "$CRT" ]; then
    xrandr --output LVDS1 --off --output VGA1 --auto
-fi
-if [ "x${CRT}x" = "xx" ]; then
-   xcalib ~/.icc/eeePC.icc
 fi
 
 # redshift
@@ -48,12 +45,5 @@ irxevent &
 # hide cursor
 unclutter -noevents &
 
-# weather
-#conky -c ~/.conky/conkyrc &
-
-# dwm
+# start dwm
 exec dbus-launch /home/ok/bin/dwm-start
-#exec dbus-launch spectrwm
-
-# monsterwm
-#exec dbus-launch /home/ok/bin/monsterwm-start

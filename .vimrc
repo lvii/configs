@@ -3,6 +3,10 @@
 """ author  : OK <ok100.ok100.ok100@gmail.com>
 ""  website : https://github.com/ok100
 "
+
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
 set nocompatible
 
 syntax on
@@ -16,7 +20,6 @@ set nobackup               " disable backup files (filename~)
 set number                 " show line numbers
 set linebreak              " attempt to wrap lines cleanly
 set wildmenu               " enhanced tab-completion shows all matching cmds in a popup menu
-set spelllang=sk           " default spelling language
 set clipboard=unnamed      " yank to X clipboard
 
 set tabstop=4              " tabs appear as n number of columns
@@ -40,7 +43,7 @@ if has("autocmd")
     autocmd BufReadPost * if line("'\"")>0 && line("'\"")<=line("$")|exe "normal g`\""|endif
 
     autocmd BufRead *.txt set tw=80                                         " limit width to n cols for txt files
-    autocmd BufRead ~/.mutt/temp/mutt-* set tw=80 ft=mail nocindent spell   " width, mail syntax hilight, spellcheck
+    autocmd BufRead ~/.mutt/temp/mutt-* set tw=80 ft=mail nocindent         " width, mail syntax hilight
     autocmd FileType tex set tw=80                                          " wrap at 80 chars for LaTeX files
 	autocmd FileType html setlocal shiftwidth=2 tabstop=2
 	autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete

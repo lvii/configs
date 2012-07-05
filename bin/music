@@ -1,7 +1,0 @@
-#!/bin/sh
-
-killall cmusfm
-urxvtc -e cmus &
-sleep 0.5s && urxvtc -e /home/ok/bin/lyrics &
-sleep 1s && xdotool key "Alt+Shift+Down"
-xdotool key "Alt+Down"

@@ -82,7 +82,7 @@ alias pianobar='pianobar; rm ~/.config/pianobar/nowplaying'
 alias powertop='sudo powertop'
 alias ptop='sudo powertop'
 alias netcfg='sudo netcfg'
-alias ly='python2 ~/bin/cmus-lyrics'
+alias ly='python2 ~/bin/lyvi'
 alias free='free -m'
 # git
 alias gitco='git commit -m'

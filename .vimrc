@@ -59,6 +59,7 @@ endfunction
 
 command! -nargs=+ MapToggle call MapToggle(<f-args>)
 " Keys & functions
+nnoremap <F3> :NumbersToggle<CR>
 MapToggle <F6> number
 MapToggle <F7> spell
 MapToggle <F8> paste

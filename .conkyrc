@@ -1,9 +1,3 @@
-#
-## ~/.conkyrc_dzen
-## author  : OK <ok100.ok100.ok100@gmail.com>
-## website : https:/github.com/ok100
-#
-
 out_to_x no
 out_to_console yes
 update_interval 2.0
@@ -14,8 +8,7 @@ ${execi 8 /home/ok/bin/conky-nowplaying}\
 ${execi 10000 echo -e "\x01"}Cpu${execi 10000 echo -e "\x02"}${cpu}${execi 10000 echo -e "\x0D"}>\
 ${execi 10000 echo -e "\x01"}Tmp${execi 10000 echo -e "\x02"}${hwmon 0 temp 1}${execi 10000 echo -e "\x0D"}>\
 ${execi 10000 echo -e "\x01"}Mem${execi 10000 echo -e "\x02"}${memperc}${execi 10000 echo -e "\x0D"}>\
-${if_up wlan0}${execi 10000 echo -e "\x01"}WiFi${execi 10000 echo -e "\x02"}${wireless_link_qual_perc wlan0}${execi 10000 echo -e "\x0D"}>${endif}\
-${if_up eth0}${execi 10000 echo -e "\x01"}Dl${execi 10000 echo -e "\x02"}${downspeedf eth0}${execi 10000 echo -e "\x0D"}>${execi 10000 echo -e "\x01"}Ul${execi 10000 echo -e "\x02"}${upspeedf eth0}${execi 10000 echo -e "\x0D"}>${endif}\
+${if_up wlan0}${execi 10000 echo -e "\x01"}WiFi${execi 10000 echo -e "\x02"}${wireless_link_qual_perc wlan0}${execi 10000 echo -e "\x0D"}>${execi 10000 echo -e "\x01"}Dl${execi 10000 echo -e "\x02"}${downspeedf wlan0}${execi 10000 echo -e "\x0D"}>${execi 10000 echo -e "\x01"}Ul${execi 10000 echo -e "\x02"}${upspeedf wlan0}${execi 10000 echo -e "\x0D"}>${else}${if_up eth0}${execi 10000 echo -e "\x01"}Dl${execi 10000 echo -e "\x02"}${downspeedf eth0}${execi 10000 echo -e "\x0D"}>${execi 10000 echo -e "\x01"}Ul${execi 10000 echo -e "\x02"}${upspeedf eth0}${execi 10000 echo -e "\x0D"}>${endif}${endif}\
 ${if_existing /sys/class/power_supply/AC0/online 1}${execi 10000 echo -e "\x01"}Bat${execi 10000 echo -e "\x02"}Ac${else}${execi 10000 echo -e "\x01"}Bat${execi 10000 echo -e "\x02"}${battery_percent}${endif}${execi 10000 echo -e "\x0D"}>\
 ${execi 10000 echo -e "\x01"}Vol${execi 10000 echo -e "\x02"}${if_mixer_mute}M${else}${mixer}${endif}${execi 10000 echo -e "\x0D"}>\
 ${execi 10000 echo -e "\x02"}${time %H:%M}

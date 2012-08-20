@@ -16,3 +16,6 @@ ass-use-margins=yes
 
 # fifo
 input=file=/home/ok/.mplayer/fifo
+
+# multithreaded decoding of H264/MPEG-1/2
+lavdopts=threads=2

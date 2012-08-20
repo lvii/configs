@@ -1,5 +1,5 @@
 [general]
-accounts = gmail
+accounts = lavabit, gmail
 
 [Account gmail]
 localrepository = gmail-local
@@ -17,6 +17,20 @@ realdelete = no
 nametrans = lambda folder: re.sub('^inbox$', 'INBOX',
 		                   re.sub(r'.*/(.*)$', r'\1', folder).lower())
 folderfilter = lambda foldername: foldername not in [ 'sent mail', 'drafts', 'spam']
+
+[Account lavabit]
+localrepository = lavabit-local
+remoterepository = lavabit-remote
+
+[Repository lavabit-local]
+type = Maildir
+localfolders = ~/mail/lavabit
+
+[Repository lavabit-remote]
+type = IMAP
+remotehost = lavabit.com
+remoteuser = ok100@lavabit.com
+realdelete = no
 
 [mbnames]
 enabled = yes

@@ -21,13 +21,13 @@ set print_command       = /usr/bin/enscript                     # print with ens
 # main options
 set mbox_type           = Maildir                               # mailbox type
 set folder              = ~/mail                                # mailbox location
-set spoolfile           = "+gmail/INBOX"                        # default inbox
+set spoolfile           = "+lavabit/Inbox"                      # default inbox
 set timeout             = 3                                     # idle time before scanning
 set mail_check          = 0                                     # minimum time between scans
 set sort_alias          = alias                                 # sort alias file by alias
 set reverse_alias                                               # show names from alias file in index
 unset move                                                      # gmail does that
-#set delete                                                      # don't ask, just do
+set delete                                                      # don't ask, just do
 #unset confirmappend                                             # don't ask, just do!
 set quit                = ask-yes                               # confirm quit
 unset mark_old                                                  # read/new is good enough for me
@@ -93,10 +93,11 @@ source ~/.mutt/mailboxes
 # always sourced
 source $alias_file                                              # required for functionality
 source ~/.mutt/colors/darkcourses                               # source colors file
-source ~/.mutt/gmail.muttrc                                     # source gmail as default
+source ~/.mutt/lavabit.muttrc                                   # source gmail as default
 
 # account specific sources
 folder-hook gmail/* source ~/.mutt/gmail.muttrc
+folder-hook lavabit/* source ~/.mutt/lavabit.muttrc
 
 # Mailing lists
 lists arch-announce@archlinux.org                               # Arch announcements
@@ -133,14 +134,15 @@ bind index,pager R      group-reply
 bind compose p          pgp-menu
 
 # macros
-macro index gl   "<change-folder> =gmail/INBOX<enter>"     "go to Gmail inbox"
-macro index \Cr  "<tag-prefix><clear-flag>N"               "mark tagged messages as read"
-macro index \Cp  "<pipe-message>cat > ~/"                  "save message as" 
-macro index B    "<limit>~b "                              "search message bodies"
+macro index li   "<change-folder> =lavabit/Inbox<enter>"    "go to Lavabit inbox"
+macro index ls   "<change-folder> =lavabit/Sent<enter>"     "go to Lavabit sent"
+macro index gi   "<change-folder> =gmail/INBOX<enter>"      "go to Gmail inbox"
+macro index \Cr  "<tag-prefix><clear-flag>N"                "mark tagged messages as read"
+macro index \Cp  "<pipe-message>cat > ~/"                   "save message as" 
+macro index B    "<limit>~b "                               "search message bodies"
 
-macro index,pager <F1> "<shell-escape>less /usr/share/doc/mutt/manual.txt<enter>" "Show Mutt documentation"
-macro index,pager <F2> ":toggle help<enter>:set ?help<enter>"    "toggle help status line"
-macro index,pager <F5> ":source ~/.mutt/muttrc\n"          "Reload the muttrc"
+macro index,pager <F2> ":toggle help<enter>:set ?help<enter>"  "toggle help status line"
+macro index,pager <F5> ":source ~/.mutt/muttrc\n"              "Reload the muttrc"
 
 macro compose \Cg "Fgpg --clearsign\ny"
 macro compose \Cp "Fgpg --clearsign\ny^T^Uapplication/pgp; format=text; x-action=sign\n"

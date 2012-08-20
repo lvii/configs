@@ -16,7 +16,7 @@ echo -e "\e[01;31m $ALL\e[0;0m" installed packages altogether;
 
 echo -e "\e[01;33m $EXPL\e[0;0m" explicitly installed packages;
 
-echo -e "\e[01;32m $LOCAL\e[0;0m" localy installed packages.
+echo -e "\e[01;32m $LOCAL\e[0;0m" locally installed packages.
 
 echo -e Your system was originally set up "\e[00;37m$SETUP\e[0;0m"
 

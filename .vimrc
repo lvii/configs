@@ -81,10 +81,6 @@ cmap w!! w !sudo tee % > /dev/null
 nnoremap  ggVG
 inoremap  ggVG
 
-" C-w to quit
-nnoremap  :confirm quit<CR>
-inoremap  :confirm quit<CR>
-
 " fix numeric keys in tmux
 noremap Oj *
 inoremap Oj *
@@ -120,7 +116,7 @@ endfunction
 
 " Find a file and pass it to cmd
 function! DmenuOpen(cmd)
-  let fname = Chomp(system("git ls-files | dmenu -i -fn -*-termsyn-medium-*-*-*-11-*-*-*-*-*-*-* -nb '#1A1A1A' -nf '#999999' -sb '#4C4C4C' -sf '#B3B3B3' -l 20 -p " . a:cmd))
+  let fname = Chomp(system("git ls-files | dmenu -i -l 20 -p " . a:cmd))
   if empty(fname)
     return
   endif

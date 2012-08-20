@@ -19,6 +19,10 @@ submenu = Accessories
 	cmd = urxvtc -e mc
 	icon = null
 
+	item = File Roller
+	cmd = file-roller
+	icon = null
+
 	item = GdMap
 	cmd = gdmap
 	icon = null
@@ -35,10 +39,6 @@ submenu = Accessories
 	cmd = stardict
 	icon = null
 	
-	item = Xarchiver
-	cmd = xarchiver
-	icon = null
-
 
 submenu = Development
 	icon = null
@@ -47,16 +47,16 @@ submenu = Development
 	cmd = eagle
 	icon = null
 
-	item = Geany
-	cmd = geany
+	item = Lazarus
+	cmd = lazarus
 	icon = null
 
 	item = Meld
 	cmd = meld
 	icon = null
 
-	item = Lazarus
-	cmd = lazarus
+	item = Sublime Text
+	cmd = subl
 	icon = null
 
 
@@ -99,6 +99,10 @@ submenu = Internet
 	cmd = skype
 	icon = null
 
+	item = Transmission
+	cmd = transmission-gtk
+	icon = null
+
 	item = WeeChat
 	cmd = urxvtc -title WeeChat -e weechat-curses
 	icon = null
@@ -115,6 +119,10 @@ submenu = Multimedia
 	
 	item = Ex Falso
 	cmd = exfalso
+	icon = null
+
+	item = Gaupol
+	cmd = gaupol 
 	icon = null
 
 	item = Mplayer2
@@ -154,17 +162,6 @@ SEPARATOR
 
 submenu = Settings
 	icon = false
-
-	submenu = CPU Frequency
-		icon = false
-
-		item = High
-		cmd = sudo /home/ok/bin/eeecpufreq -f 900
-		icon = null
-
-		item = Low
-		cmd = sudo /home/ok/bin/eeecpufreq -f 630
-		icon = null
 
 	submenu = Display
 		icon = false

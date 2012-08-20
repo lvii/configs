@@ -25,8 +25,8 @@ style "clearlooks-default"
 
 #  GtkRange       ::slider_width      = 15
 #  GtkRange       ::stepper_size      = 15
-  GtkRange       ::slider_width      = 7  #more compact but needs patch
-  GtkRange       ::stepper_size      = 7 #more compact but needs patch
+  GtkRange       ::slider_width      = 10  #more compact but needs patch
+  GtkRange       ::stepper_size      = 10 #more compact but needs patch
 
   GtkOptionMenu::indicator_spacing = { 2, 2, 4, 4 }
   GtkOptionMenu::indicator_size = { 12, 10 }

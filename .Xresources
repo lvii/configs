@@ -1,6 +1,6 @@
 !
 !! ~/.Xdefaults
-!! author  : OK100 <ok100.ok100.ok100@gmail.com>
+!! author  : OK100 <ok100@lavabit.com>
 !! website : https://github.com/ok100
 !
 
@@ -9,10 +9,10 @@
 
 !-- urxvt --!
 urxvt.scrollBar:          false
-urxvt.font:               -*-termsynu-medium-*-*-*-11-*-*-*-*-*-*-*
-urxvt.boldFont:           -*-termsynu-bold-*-*-*-11-*-*-*-*-*-*-*
+urxvt.font:               -*-termsynu-medium-*-*-*-13-*-*-*-*-*-*-*
+urxvt.boldFont:           -*-termsynu-bold-*-*-*-13-*-*-*-*-*-*-*
 urxvt.borderLess:         false
-urxvt.internalBorder:     1
+urxvt.internalBorder:     0
 urxvt.buffered:           true
 urxvt.urgentOnBell:       true
 urxvt.geometry:           81x21

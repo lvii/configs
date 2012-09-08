@@ -30,24 +30,27 @@ set hlsearch               " highlight all search results
 set incsearch              " increment search
 set ignorecase             " case-insensitive search
 set smartcase              " uppercase causes case-sensitive search
+
+set ttyfast 			   " u got a fast terminal
+set ttyscroll=3
+set lazyredraw 			   " to avoid scrolling problems
+
 let g:loaded_matchparen = 1
-let g:acp_behaviorKeywordLength = 4
+let g:acp_behaviorKeywordLength = 4    " autocomplete words with at least 4 characters
 
 " status bar
-"set statusline=\ \%F%m%r%h%w\ ::\ %y\ [%{&ff}]\%=\ [%p%%:\ %l/%L]\ 
-"set laststatus=2
-"set cmdheight=1
+set laststatus=2	       " always show the statusline
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 if has("autocmd")
     " always jump to the last cursor position
     autocmd BufReadPost * if line("'\"")>0 && line("'\"")<=line("$")|exe "normal g`\""|endif
 
-    autocmd BufRead *.txt set tw=80                                         " limit width to n cols for txt files
-    autocmd BufRead ~/.mutt/temp/mutt-* set tw=80 ft=mail nocindent         " width, mail syntax hilight
-    autocmd FileType tex set tw=80                                          " wrap at 80 chars for LaTeX files
+    autocmd BufRead *.txt set tw=80                                   " limit width to n cols for txt files
+    autocmd BufRead ~/.mutt/temp/mutt-* set tw=80 ft=mail nocindent   " width, mail syntax hilight
+    autocmd FileType tex set tw=80                                    " wrap at 80 chars for LaTeX files
 	autocmd FileType html setlocal shiftwidth=2 tabstop=2
 	autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
-	let g:pydiction_location = '/usr/share/pydiction/complete-dict'
 endif
 
 " Map keys to toggle functions
@@ -59,11 +62,10 @@ endfunction
 
 command! -nargs=+ MapToggle call MapToggle(<f-args>)
 " Keys & functions
-nnoremap <F3> :NumbersToggle<CR>
-MapToggle <F6> number
-MapToggle <F7> spell
-MapToggle <F8> paste
-MapToggle <F9> hlsearch
+MapToggle <F6>  number
+MapToggle <F7>  spell
+MapToggle <F8>  paste
+MapToggle <F9>  hlsearch
 MapToggle <F10> wrap
 
 " LaTeX settings
@@ -109,6 +111,9 @@ inoremap Oo /
 noremap Om -
 inoremap Om -
 
+"------------------------------------------------------------------------------ 
+" DmenuOpen
+"------------------------------------------------------------------------------ 
 " Strip the newline from the end of a string
 function! Chomp(str)
   return substitute(a:str, '\n$', '', '')
@@ -125,3 +130,16 @@ endfunction
 
 map <c-t> :call DmenuOpen("tabe")<cr>
 map <c-f> :call DmenuOpen("e")<cr>
+
+"------------------------------------------------------------------------------ 
+" Tagbar
+"------------------------------------------------------------------------------ 
+autocmd VimEnter * nested :call tagbar#autoopen(1)
+nmap <F2> :TagbarToggle<CR>
+
+highlight TagbarHighlight ctermbg=yellow ctermfg=black
+
+let g:tagbar_width = 30
+let g:tagbar_compact = 1
+let g:tagbar_iconchars = ['→', '▼']
+let g:tagbar_autoshowtag = 0

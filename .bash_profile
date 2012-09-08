@@ -11,7 +11,7 @@ export EDITOR='vim'
 export VIEWER='vim -R'
 export BROWSER='/home/ok/bin/browser'
 
-export PATH="/usr/lib/cw:/home/ok/bin/:/mnt/stuff/apps/texlive/2012/bin/i386-linux/:/mnt/stuff/apps/eagle/bin/:$PATH"
+export PATH="/usr/lib/cw:/usr/local/texlive/2012/bin/i386-linux/:/home/ok/bin/:$PATH"
 
 export NOCOLOR_PIPE=1
 

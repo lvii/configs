@@ -10,8 +10,13 @@
 # pathname expansion will be treated as case-insensitive
 shopt -s nocaseglob
 
+# get current git branch
+parse_git_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\[\1\] /'
+}
+
 # bash prompt
-PS1=" \[\e[0;32m\]\W \[\e[1;30m\]$ \[\e[0m\]"
+PS1="\[\e[0;34m\]\$(parse_git_branch)\[\e[0;32m\]\W \[\e[1;30m\]$ \[\e[0m\]"
 
 # share history across all terminals
 shopt -s histappend
@@ -26,8 +31,7 @@ export GREP_COLOR="1;33"
 # auto-completion
 complete -cf man
 complete -cf sudo
-. ~/.bash_completion.d/c
-. /etc/bash_completion.d/git
+. /usr/share/bash-completion/completions/git
 . /usr/share/bash-completion/completions/pacman
 . /usr/share/bash-completion/completions/systemctl
 . /usr/share/bash-completion/completions/tmux
@@ -64,7 +68,6 @@ alias pacback='sudo pacman-color -Qqe | grep -v "$(pacman-color -Qmq)" > ~/dropb
 alias pacclean='sudo pacman-color -Rs $(pacman-color -Qqtd)'
 alias pacin='yaourt -S'
 alias pacman='sudo pacman-color'
-alias pacrc='sudo vim /etc/pacman.conf'
 alias pacrm='yaourt -R'
 alias pacup='yaourt -Syu --aur'
 alias pianobar='pianobar; rm ~/.config/pianobar/nowplaying'
@@ -77,6 +80,7 @@ alias smc='sudo mc'
 alias svi='sudo vim'
 alias svim='sudo vim'
 alias t='todo.sh'
+alias tlmgr='sudo tlmgr'
 alias vi='vim'
 alias webcam='mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0 -fps 15 -vf screenshot'
 alias ydl='youtube-dl'
@@ -93,7 +97,7 @@ alias gitpu='git push -u origin master'
 alias gitrm='git rm'
 alias gitst='git status'
 
-c () {
+conf() {
 	case $1 in
 		bash)		vim ~/.bashrc ;;
 		conky)		vim ~/.conkyrc ;;
@@ -106,12 +110,13 @@ c () {
 		syslinux) 	sudo vim /boot/syslinux/syslinux.cfg ;;
 		tmux)		vim ~/.tmux.conf ;;
 		vim)		vim ~/.vimrc ;;
+		xinitrc)	vim ~/.xinitrc ;;
 		xresources)	vim ~/.Xresources && xrdb ~/.Xresources ;;
 	esac
 }
 
 # coloured repo search
-pacse () {
+pacse() {
        echo -e "$(yaourt -Ss $@ | sed \
        -e 's#core/.*#\\033[1;31m&\\033[0;37m#g' \
        -e 's#extra/.*#\\033[0;32m&\\033[0;37m#g' \
@@ -120,7 +125,7 @@ pacse () {
 }
 
 # extract function
-extract () {
+extract() {
   if [ -f $1 ] ; then
       case $1 in
           *.tar.bz2)   tar xvjf $1    ;;
@@ -147,21 +152,34 @@ extract () {
 }
 
 # simple notes
-n () {
-	vim ~/.notes/"$*".txt
-}
-nls () {
-	tree -CR --noreport ~/.notes | awk '{ if ((NR > 1) gsub(/.txt/,"")); if (NF==1) print $1; else if (NF==2) print $2; else if (NF==3) printf " %s\n", $3 }' ;
+n() {
+local arg files=(); for arg; do files+=( ~/".notes/$arg" ); done
+${EDITOR:-vi} "${files[@]}"
 }
 
+nls() {
+tree -CR --noreport $HOME/.notes | awk '{ 
+    if (NF==1) print $1; 
+    else if (NF==2) print $2; 
+    else if (NF==3) printf "  %s\n", $3 
+    }'
+}
+
+ # TAB completion for notes
+_notes() {
+local files=($HOME/.notes/**/"$2"*)
+    [[ -e ${files[0]} ]] && COMPREPLY=( "${files[@]##~/.notes/}" )
+}
+complete -o default -F _notes n
+
 # encode mp3
-mp3 () {
+mp3() {
     for file in $1; do
         lame --preset standard $file $file.mp3
     done
 }
 
-cleanup () {
+cleanup() {
 	echo -e "\e[1;34m::\e[0m Cleaning pacman cache..."
 	sudo rm /var/cache/pacman/pkg/* &> /dev/null
 	yaourt -Scc --noconfirm &> /dev/null
@@ -196,7 +214,6 @@ cleanup () {
 	sudo rm -rf /usr/share/qt/translations
 	sudo rm -rf /usr/share/lazarus/{examples,languages}
 	sudo rm -rf /usr/share/skype/avatars
-	sudo rm -rf /usr/share/fonts/TTF/{DroidSansArabic.ttf,DroidSansFallback.ttf,DroidSansFallbackLegacy.ttf,DroidSansHebrew.ttf,DroidSansJapanese.ttf,DroidSansThai.ttf}
 	for file in $(ls /usr/share/vim/vim73/lang/ | grep -v README.txt); do
 		sudo rm -rf /usr/share/vim/vim73/lang/$file
 	done
@@ -211,7 +228,7 @@ cleanup () {
 	echo -e "\e[1;34m::\e[0m Done."
 }
 
-backup () {
+backup() {
 	backup_dir=/media/store/bkp
 	echo -e "\e[1;34m::\e[0m Backing up pacman database..."
 		sudo pacman-color -Qqe | grep -v "$(pacman-color -Qmq)" > ~/Dropbox/pklist.txt
@@ -231,13 +248,24 @@ backup () {
 	fi
 }
 
-die () {
+die() {
 	kill -s 9 $(pidof $1)
 }
 
-vbox_recompile () {
+vbox-recompile() {
 	virtualbox_version=$(yaourt -Qi virtualbox-source | grep Version | cut -d " " -f10 | cut -d "-" -f1)
-	kernel_version=$(cut -d "'" -f2 < /usr/share/linux-ok100/currver"'")
+	kernel_version=$(cut -d "'" -f2 < /usr/share/linux-ok100/currver)
 
 	sudo dkms install vboxhost/$virtualbox_version -k $kernel_version/i686
+}
+
+# update vim plugins
+vim-update() {
+	wd=$(pwd)
+	for dir in ~/.vim/bundle/*; do
+		echo -e "\033[1;34m:: \033[1;37m${dir##*/}\033[0m"
+		cd $dir
+		git pull
+	done
+	cd $wd
 }

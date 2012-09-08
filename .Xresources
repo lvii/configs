@@ -9,10 +9,10 @@
 
 !-- urxvt --!
 urxvt.scrollBar:          false
-urxvt.font:               -*-termsynu-medium-*-*-*-13-*-*-*-*-*-*-*
-urxvt.boldFont:           -*-termsynu-bold-*-*-*-13-*-*-*-*-*-*-*
+urxvt.font:               -*-tamsynu-medium-*-*-*-14-*-*-*-*-*-*-*
+urxvt.boldFont:           -*-tamsynu-bold-*-*-*-14-*-*-*-*-*-*-*
 urxvt.borderLess:         false
-urxvt.internalBorder:     0
+urxvt.internalBorder:     2
 urxvt.buffered:           true
 urxvt.urgentOnBell:       true
 urxvt.geometry:           81x21

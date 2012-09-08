@@ -52,5 +52,8 @@ irxevent &
 # hide cursor
 unclutter -noevents &
 
+# start tmux
+urxvtc -e ~/bin/tmux.sh &
+
 # start dwm
-exec /home/ok/bin/dwm-start
+exec dbus-launch /home/ok/bin/dwm-start

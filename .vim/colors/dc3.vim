@@ -77,7 +77,7 @@ hi Todo                    ctermfg=10  ctermbg=0
 hi Typedef                 ctermfg=4
 hi Type                    ctermfg=5
 hi Underlined              ctermfg=7
-hi VertSplit               ctermfg=65  ctermbg=235
+hi VertSplit               ctermfg=0  ctermbg=8
 hi Visual                  ctermfg=210 ctermbg=235
 hi VisualNOS               ctermfg=10  ctermbg=235  cterm=bold
 hi WarningMsg              ctermfg=9   

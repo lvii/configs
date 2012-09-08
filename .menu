@@ -55,6 +55,10 @@ submenu = Development
 	cmd = meld
 	icon = null
 
+	item = qtResistors
+	cmd = qtResistors
+	icon = null
+
 	item = Sublime Text
 	cmd = subl
 	icon = null
@@ -110,7 +114,7 @@ submenu = Internet
 	SEPARATOR
 
 	item = Wifi-menu
-	cmd = urxvtc -e sudo wifi-menu
+	cmd = urxvtc -title wifi-menu -e sudo wifi-menu
 	icon = null
 
 
@@ -137,8 +141,8 @@ submenu = Multimedia
 submenu = Office
 	icon = null
 
-	item=ePDFView
-	cmd=epdfview
+	item=Evince
+	cmd=evince
 	icon=null
 
 	item=LibreOffice Calc

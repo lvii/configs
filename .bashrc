@@ -1,7 +1,7 @@
 #
 ## ~/.bashrc
 ## author  : OK100 <ok100@lavabit.com>
-## website : https://github.com/ok100
+## website : https://gitgit.com/ok100
 #
 
 # check for an interactive session
@@ -50,6 +50,7 @@ alias cl='clear'
 alias cmatrix='cmatrix -bx -u8'
 alias df='df -h'
 alias diff='colordiff'
+alias die='killall -9'
 alias du='du -c -h'
 alias exit="clear; exit"
 alias free='free -m'
@@ -105,9 +106,9 @@ conf() {
 		homepage)	dir=$(pwd) && cd ~/build/homepage.py && vim homepage.py && ./homepage.py && cd $dir ;;
 		mime)		vim ~/.config/mimi/mime.conf ;;
 		mutt)		vim ~/.mutt/muttrc ;;
-		pacman)		sudo vim /etc/pacman.conf ;;
+		pacman)		vim /etc/pacman.conf ;;
 		rss)		vim ~/.newsbeuter/urls ;;
-		syslinux) 	sudo vim /boot/syslinux/syslinux.cfg ;;
+		syslinux) 	vim /boot/syslinux/syslinux.cfg ;;
 		tmux)		vim ~/.tmux.conf ;;
 		vim)		vim ~/.vimrc ;;
 		xinitrc)	vim ~/.xinitrc ;;
@@ -153,22 +154,22 @@ extract() {
 
 # simple notes
 n() {
-local arg files=(); for arg; do files+=( ~/".notes/$arg" ); done
-${EDITOR:-vi} "${files[@]}"
+	local arg files=(); for arg; do files+=( ~/".notes/$arg" ); done
+	${EDITOR:-vi} "${files[@]}"
 }
 
 nls() {
-tree -CR --noreport $HOME/.notes | awk '{ 
-    if (NF==1) print $1; 
-    else if (NF==2) print $2; 
-    else if (NF==3) printf "  %s\n", $3 
-    }'
+	tree -CR --noreport $HOME/.notes | awk '{ 
+    	if (NF==1) print $1; 
+    	else if (NF==2) print $2; 
+    	else if (NF==3) printf "  %s\n", $3 
+    	}'
 }
 
- # TAB completion for notes
+# TAB completion for notes
 _notes() {
-local files=($HOME/.notes/**/"$2"*)
-    [[ -e ${files[0]} ]] && COMPREPLY=( "${files[@]##~/.notes/}" )
+	local files=($HOME/.notes/**/"$2"*)
+    	[[ -e ${files[0]} ]] && COMPREPLY=( "${files[@]##~/.notes/}" )
 }
 complete -o default -F _notes n
 
@@ -179,12 +180,13 @@ mp3() {
     done
 }
 
+# cleanup
 cleanup() {
-	echo -e "\e[1;34m::\e[0m Cleaning pacman cache..."
+	echo -e "\033[1;34m::\033[1;37m Cleaning pacman cache...\033[0m"
 	sudo rm /var/cache/pacman/pkg/* &> /dev/null
 	yaourt -Scc --noconfirm &> /dev/null
 
-	echo -e "\e[1;34m::\e[0m Deleting unneeded files..."
+	echo -e "\033[1;34m::\033[1;37m Deleting unneeded files...\033[0m"
 	rm -rf ~/.adobe
 	rm -rf ~/.bzr.log
 	rm -rf ~/.cmus/command-history
@@ -221,11 +223,11 @@ cleanup() {
 		sudo rm -rf /usr/share/skype/lang/$file
 	done
 
-	echo -e "\e[1;34m::\e[0m Cleaning with BleachBit..."
+	echo -e "\033[1;34m::\033[1;37m Cleaning with BleachBit...\033[0m"
 	bleachbit -c --preset &> /dev/null
 	sudo bleachbit -c --preset &> /dev/null
 
-	echo -e "\e[1;34m::\e[0m Done."
+	echo -e "\033[1;32m=>\033[1;37m Done\033[0m"
 }
 
 backup() {
@@ -248,10 +250,7 @@ backup() {
 	fi
 }
 
-die() {
-	kill -s 9 $(pidof $1)
-}
-
+# recompile virtualbox kernel module
 vbox-recompile() {
 	virtualbox_version=$(yaourt -Qi virtualbox-source | grep Version | cut -d " " -f10 | cut -d "-" -f1)
 	kernel_version=$(cut -d "'" -f2 < /usr/share/linux-ok100/currver)

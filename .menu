@@ -27,6 +27,10 @@ submenu = Accessories
 	cmd = gdmap
 	icon = null
 
+	item = Gucharmap
+	cmd = gucharmap
+	icon = null
+
 	item = Qalculate!
 	cmd = qalculate
 	icon = null

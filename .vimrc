@@ -1,6 +1,6 @@
 "
 ""  ~/.vimrc
-""" author  : OK <ok100.ok100.ok100@gmail.com>
+""" author  : OK100 <ok100@lavabit.com>
 ""  website : https://github.com/ok100
 "
 
@@ -14,33 +14,36 @@ filetype plugin on
 
 colorscheme dc3
 
-set mouse=a                " enable mouse
-set wrap                   " wrap lines
-set nobackup               " disable backup files (filename~)
-set number                 " show line numbers
-set linebreak              " attempt to wrap lines cleanly
-set wildmenu               " enhanced tab-completion shows all matching cmds in a popup menu
-set clipboard=unnamed      " yank to X clipboard
+set mouse=a                            " enable mouse
+set wrap                               " wrap lines
+set nobackup                           " disable backup files (filename~)
+set number                             " show line numbers
+set linebreak                          " attempt to wrap lines cleanly
+set wildmenu                           " enhanced tab-completion shows all matching cmds in a popup menu
+set clipboard=unnamed                  " yank to X clipboard
 
-set tabstop=4              " tabs appear as n number of columns
-set shiftwidth=4           " n cols for auto-indenting
-set autoindent             " auto indents next new line
+set tabstop=4                          " tabs appear as n number of columns
+set shiftwidth=4                       " n cols for auto-indenting
+set autoindent                         " auto indents next new line
 
-set hlsearch               " highlight all search results
-set incsearch              " increment search
-set ignorecase             " case-insensitive search
-set smartcase              " uppercase causes case-sensitive search
+set hlsearch                           " highlight all search results
+set incsearch                          " increment search
+set ignorecase                         " case-insensitive search
+set smartcase                          " uppercase causes case-sensitive search
 
-set ttyfast 			   " u got a fast terminal
+set ttyfast 			               " u got a fast terminal
 set ttyscroll=3
-set lazyredraw 			   " to avoid scrolling problems
+set lazyredraw 			               " to avoid scrolling problems
+
+set hidden                             " current buffer can be put to the background without writing to disk
 
 let g:loaded_matchparen = 1
 let g:acp_behaviorKeywordLength = 4    " autocomplete words with at least 4 characters
 
 " status bar
-set laststatus=2	       " always show the statusline
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set laststatus=2	                   " always show the statusline
+"set statusline=%<%f\ %y\ &ff\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
 
 if has("autocmd")
     " always jump to the last cursor position
@@ -67,6 +70,9 @@ MapToggle <F7>  spell
 MapToggle <F8>  paste
 MapToggle <F9>  hlsearch
 MapToggle <F10> wrap
+
+" <leader> character
+let mapleader = ","
 
 " LaTeX settings
 set grepprg=grep\ -nH\ $*
@@ -134,7 +140,7 @@ map <c-f> :call DmenuOpen("e")<cr>
 "------------------------------------------------------------------------------ 
 " Tagbar
 "------------------------------------------------------------------------------ 
-autocmd VimEnter * nested :call tagbar#autoopen(1)
+"autocmd VimEnter * nested :call tagbar#autoopen(1)
 nmap <F2> :TagbarToggle<CR>
 
 highlight TagbarHighlight ctermbg=yellow ctermfg=black
@@ -143,3 +149,20 @@ let g:tagbar_width = 30
 let g:tagbar_compact = 1
 let g:tagbar_iconchars = ['→', '▼']
 let g:tagbar_autoshowtag = 0
+
+"------------------------------------------------------------------------------ 
+" Syntastic
+"------------------------------------------------------------------------------ 
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height = 4
+let g:syntastic_python_checker_args = '--ignore=E501'
+
+"------------------------------------------------------------------------------ 
+" Powerline
+"------------------------------------------------------------------------------ 
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_mode_V = 'V.LINE'
+let g:Powerline_mode_cv = 'V.BLOCK'
+let g:Powerline_mode_S = 'S.LINE'
+let g:Powerline_mode_cs = 'S.BLOCK'
+let g:Powerline_colorscheme = 'darkcourses'

@@ -130,4 +130,3 @@ hi MBEVisibleChangedActive ctermfg=9
 
 " rst
 hi rstEmphasis             ctermfg=7   cterm=underline
-

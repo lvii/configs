@@ -42,7 +42,9 @@ let g:acp_behaviorKeywordLength = 4    " autocomplete words with at least 4 char
 
 " status bar
 set laststatus=2	                   " always show the statusline
-"set statusline=%<%f\ %y\ &ff\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set showmode                           " show mode in status line
+set showcmd                            " show partial commands in status line
+set statusline=%{&ff}\ \%{&fenc}\ \%#StatusFTP#\%Y\ \%#StatusRO#\%R\ \%#StatusHLP#\%H\ \%#StatusPRV#\%W\ \%#StatusModFlag#\%M\ \%#StatusLine#\%f\%=\%1.7c\ \%1.7l/%L\ \%p%%
 
 
 if has("autocmd")
@@ -156,13 +158,3 @@ let g:tagbar_autoshowtag = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 4
 let g:syntastic_python_checker_args = '--ignore=E501'
-
-"------------------------------------------------------------------------------ 
-" Powerline
-"------------------------------------------------------------------------------ 
-let g:Powerline_symbols = 'fancy'
-let g:Powerline_mode_V = 'V.LINE'
-let g:Powerline_mode_cv = 'V.BLOCK'
-let g:Powerline_mode_S = 'S.LINE'
-let g:Powerline_mode_cs = 'S.BLOCK'
-let g:Powerline_colorscheme = 'darkcourses'

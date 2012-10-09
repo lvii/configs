@@ -9,7 +9,7 @@ include ~/.newsbeuter/colors/darkcourses.theme
 auto-reload         yes
 reload-time         15
 refresh-on-startup  yes
-browser             "/home/ok/bin/browser"
+browser             "dwb"
 confirm-exit        yes
 max-items           500
 show-read-feeds		no

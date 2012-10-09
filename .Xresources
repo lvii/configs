@@ -5,7 +5,7 @@
 !
 
 !-- colors --!
-#include "/home/ok/.colors/dc2"
+#include "/home/ok/.colors/dc2a"
 
 !-- urxvt --!
 urxvt.scrollBar:          false

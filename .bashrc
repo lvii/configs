@@ -104,6 +104,7 @@ conf() {
 		conky)		vim ~/.conkyrc ;;
 		dwm)		dir=$(pwd) && cd ~/build/dwm && vim config.h && ./recompile.sh && killall dwm && cd $dir ;;
 		homepage)	dir=$(pwd) && cd ~/build/homepage.py && vim homepage.py && ./homepage.py && cd $dir ;;
+		lyvi)		vim ~/.config/lyvi/rc ;;
 		mime)		vim ~/.config/mimi/mime.conf ;;
 		mutt)		vim ~/.mutt/muttrc ;;
 		pacman)		vim /etc/pacman.conf ;;

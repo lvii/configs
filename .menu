@@ -133,12 +133,12 @@ submenu = Multimedia
 	cmd = gaupol 
 	icon = null
 
-	item = Mplayer2
-	cmd = /home/ok/bin/mplayer_zenity
+	item = Guitar Pro 6
+	cmd = GuitarPro
 	icon = null
 
-	item = TuxGuitar
-	cmd = tuxguitar
+	item = Mplayer2
+	cmd = /home/ok/bin/mplayer_zenity
 	icon = null
 
 

@@ -60,6 +60,7 @@ alias ll='ls -l'
 alias log='journalctl'
 alias ls='ls --color=auto'
 alias ly='lyvi'
+alias lc='lyvi -c ~/.config/lyvi/cover'
 alias mc="mc -x"
 alias mem='sudo ~/bin/ps_mem.py'
 alias nas='ssh root@192.168.1.147'

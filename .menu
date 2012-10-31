@@ -7,7 +7,7 @@ cmd = urxvtc
 icon = null
 
 item = Tmux
-cmd = urxvtc -e /home/ok/bin/tmux.sh
+cmd = urxvtc -e tmux -2 attach
 icon = null
 
 SEPARATOR
@@ -107,10 +107,6 @@ submenu = Internet
 	cmd = skype
 	icon = null
 
-	item = Transmission
-	cmd = transmission-gtk
-	icon = null
-
 	item = WeeChat
 	cmd = urxvtc -title WeeChat -e weechat-curses
 	icon = null
@@ -137,8 +133,16 @@ submenu = Multimedia
 	cmd = GuitarPro
 	icon = null
 
+	item = Guitar Rig 5
+	cmd = GuitarRig
+	icon = null
+
 	item = Mplayer2
 	cmd = /home/ok/bin/mplayer_zenity
+	icon = null
+
+	item = QjackCtl
+	cmd = qjackctl
 	icon = null
 
 

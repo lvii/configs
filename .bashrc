@@ -106,6 +106,7 @@ conf() {
 		dwm)		dir=$(pwd) && cd ~/build/dwm && vim config.h && ./recompile.sh && killall dwm && cd $dir ;;
 		homepage)	dir=$(pwd) && cd ~/build/homepage.py && vim homepage.py && ./homepage.py && cd $dir ;;
 		lyvi)		vim ~/.config/lyvi/rc ;;
+		menu)		vim ~/.menu ;;
 		mime)		vim ~/.config/mimi/mime.conf ;;
 		mutt)		vim ~/.mutt/muttrc ;;
 		pacman)		vim /etc/pacman.conf ;;
@@ -191,12 +192,19 @@ cleanup() {
 	echo -e "\033[1;34m::\033[1;37m Deleting unneeded files...\033[0m"
 	rm -rf ~/.adobe
 	rm -rf ~/.bzr.log
+	rm -rf ~/.cache
 	rm -rf ~/.cmus/command-history
 	rm -rf ~/.cmus/search-history
+	rm -rf ~/.config/autostart
+	rm -rf ~/.config/menus
 	rm -rf ~/.gvfs
 	rm -rf ~/.local/share/Trash
+	rm -rf ~/.local/share/applications
+	rm -rf ~/.local/share/desktop-directories
 	rm -rf ~/.local/share/gvfs-metadata
+	rm -rf ~/.local/share/icons
 	rm -rf ~/.local/share/loliclip
+	rm -rf ~/.local/share/mime
 	rm -rf ~/.local/share/recently-used.xbel
 	rm -rf ~/.macromedia
 	rm -rf ~/.newsbeuter/history.cmdline

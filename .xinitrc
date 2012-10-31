@@ -43,7 +43,7 @@ irxevent &
 unclutter -noevents &
 
 # start tmux
-urxvtc -e ~/bin/tmux.sh &
+urxvtc -e tmux -2 attach &
 
 # start dwm
 exec dbus-launch /home/ok/bin/dwm-start

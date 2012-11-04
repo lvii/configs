@@ -108,13 +108,15 @@ conf() {
 		lyvi)		vim ~/.config/lyvi/rc ;;
 		menu)		vim ~/.menu ;;
 		mime)		vim ~/.config/mimi/mime.conf ;;
+		mpd)		vim ~/.mpdconf ;;
 		mutt)		vim ~/.mutt/muttrc ;;
+		ncmpcpp)	vim ~/.ncmpcpp/config ;;
 		pacman)		vim /etc/pacman.conf ;;
 		rss)		vim ~/.newsbeuter/urls ;;
 		syslinux) 	vim /boot/syslinux/syslinux.cfg ;;
 		tmux)		vim ~/.tmux.conf ;;
 		vim)		vim ~/.vimrc ;;
-		xinitrc)	vim ~/.xinitrc ;;
+		xinit)		vim ~/.xinitrc ;;
 		xresources)	vim ~/.Xresources && xrdb ~/.Xresources ;;
 	esac
 }

@@ -29,11 +29,12 @@ urxvtd -q -o -f &
 # clipboard manager
 loliclip --daemon
 
-# dropbox
-dropboxd &
-
-# wallpaper
-eval $(cat ~/.fehbg)
+# mpd
+mpd
+pidof mpdscribble >& /dev/null
+if [ $? -ne 0 ]; then
+	mpdscribble &
+fi
 
 # lirc
 irexec &
@@ -44,6 +45,9 @@ unclutter -noevents &
 
 # start tmux
 urxvtc -e tmux -2 attach &
+
+# set wallpaper
+eval $(cat ~/.fehbg)
 
 # start dwm
 exec dbus-launch /home/ok/bin/dwm-start

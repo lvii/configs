@@ -7,7 +7,7 @@ TEXT
 ${execi 8 /home/ok/bin/conky-nowplaying}\
 ${execi 10000 echo -e "\x01"}Cpu${execi 10000 echo -e "\x02"}${cpu}% \
 ${execi 10000 echo -e "\x01"}Mem${execi 10000 echo -e "\x02"}${memperc}% \
-${if_up wlan0}${execi 10000 echo -e "\x01"}Net${execi 10000 echo -e "\x02"}${wireless_link_qual_perc wlan0}% ${downspeedf wlan0}/${upspeedf wlan0}k ${else}${if_up eth0}${execi 10000 echo -e "\x01"}Net${execi 10000 echo -e "\x02"}${downspeedf eth0}/${upspeedf eth0}k ${endif}${endif}\
-${if_existing /sys/class/power_supply/AC0/online 1}${execi 10000 echo -e "\x01"}Bat${execi 10000 echo -e "\x02"}Ac${else}${execi 10000 echo -e "\x01"}Bat${execi 10000 echo -e "\x02"}${battery_percent}%${endif} \
+${execi 10000 echo -e "\x01"}Net${execi 10000 echo -e "\x02"}${if_up wlan0}${wireless_link_qual_perc wlan0}%${else}${if_up eth0}On${else}No${endif}${endif} \
+${execi 10000 echo -e "\x01"}Bat${execi 10000 echo -e "\x02"}${if_existing /sys/class/power_supply/AC0/online 1}Ac${else}${battery_percent}%${endif} \
 ${execi 10000 echo -e "\x01"}Vol${execi 10000 echo -e "\x02"}${if_mixer_mute}M${else}${mixer}%${endif} \
 ${execi 10000 echo -e "\x02"}${time %H:%M}

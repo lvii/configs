@@ -2,7 +2,7 @@
 if [ -f $HOME/.dmenurc ]; then
 	. $HOME/.dmenurc
 else
-	DMENU='dmenu -i -fn -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-* -nb #020202 -nf #808080 -sb #020202 -sf #B3B3B3'
+	DMENU='dmenu -i -fn -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-* -nb #000c1a -nf #77858c -sb #000c1a -sf #c0c0c0'
 fi
 cmd=$(echo -e "shutdown\nreboot\nlogout" | $DMENU)
 case $cmd in

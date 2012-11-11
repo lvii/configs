@@ -4,7 +4,7 @@ update_interval 2.0
 if_up_strictness address
 
 TEXT
-${execi 8 /home/ok/bin/conky-nowplaying}\
+${if_mpd_playing}${execi 10000 echo -e "\x01"}${mpd_artist}${execi 10000 echo -e "\x02"}${mpd_title} ${endif}\
 ${execi 10000 echo -e "\x01"}Cpu${execi 10000 echo -e "\x02"}${cpu}% \
 ${execi 10000 echo -e "\x01"}Mem${execi 10000 echo -e "\x02"}${memperc}% \
 ${execi 10000 echo -e "\x01"}Net${execi 10000 echo -e "\x02"}${if_up wlan0}${wireless_link_qual_perc wlan0}%${else}${if_up eth0}On${else}No${endif}${endif} \

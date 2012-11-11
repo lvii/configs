@@ -149,10 +149,6 @@ submenu = Multimedia
 submenu = Office
 	icon = null
 
-	item=Evince
-	cmd=evince
-	icon=null
-
 	item=LibreOffice Calc
 	cmd=localc
 	icon=null
@@ -168,6 +164,10 @@ submenu = Office
 	item = Scan Tailor
 	cmd = scantailor
 	icon = null
+
+	item=Zathura
+	cmd=zathura
+	icon=null
 
 
 SEPARATOR

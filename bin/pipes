@@ -44,7 +44,7 @@ while ! read -t0.0$((1000/$f)) -n1; do
 
     # Print:
     tput cup $y $x
-    echo -ne "\033[1;3${c}m\xe2\x94${v[$l$n]}"
+    echo -ne "\033[0;3${c}m\xe2\x94${v[$l$n]}"
     (($t>$r)) && tput reset && tput civis && t=0 || ((t++))
     l=$n
 done

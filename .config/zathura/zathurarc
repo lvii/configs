@@ -1,0 +1,30 @@
+set font "tamsynu medium 9"
+set completion-bg "#192033"
+set completion-fg "#acb4bf"
+set completion-highlight-bg "#acb4bf"
+set completion-highlight-fg "#000c1a"
+set default-bg "#000c1a"
+set default-fg "#acb4bf"
+set inputbar-bg "#000c1a"
+set inputbar-fg "#acb4bf"
+set statusbar-bg "#192033"
+set statusbar-fg "#77858c"
+set notification-error-bg "#000c1a"
+set notification-error-fg "#f04758"
+set notification-warning-bg "#000c1a"
+set notification-warning-fg "#60c6c8"
+
+set adjust-open width
+set advance-pages-per-row true
+set first-page-column 2
+set highlight-color "#FFFF00"
+set page-padding 5
+set recolor-darkcolor "#8a9199"
+set recolor-lightcolor "#0d131a"
+set zoom-step 5
+
+map <F1> set "pages-per-row 1"
+map <F2> set "pages-per-row 2"
+map b toggle_statusbar
+
+# vim:set ft=conf:

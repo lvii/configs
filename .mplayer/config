@@ -6,6 +6,7 @@ stop-xscreensaver=yes
 vo=xv:ck-method=auto
 
 # audio
+ao=alsa
 af=scaletempo
 
 # subtitles

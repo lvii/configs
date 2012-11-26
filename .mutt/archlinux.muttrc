@@ -1,0 +1,18 @@
+#########################
+# gmail specific options
+#########################
+
+color status     white   black
+
+set from      = "ok100@archlinux.info"
+set mbox      = "+archlinux/INBOX"
+set record    = "+archlinux/Sent"
+set postponed = "+archlinux/Drafts"
+
+set smtp_url=smtps://ok100@archlinux.info@mail.archlinux.info
+set smtp_pass=secret
+set ssl_force_tls = yes
+
+macro index E "<change-folder>+archlinux/INBOX<enter><limit>~B "   "search everything"
+macro index D "<save-message>+archlinux/Trash<enter>"              "move message to the trash"
+

@@ -9,7 +9,8 @@ export MOZ_DISABLE_PANGO=1
 
 export EDITOR='vim'
 export VIEWER='vim -R'
-export BROWSER='/home/ok/bin/browser'
+export PAGER='vimpager'
+export BROWSER='dwb'
 
 export PATH="/usr/lib/cw:/usr/local/texlive/2012/bin/i386-linux/:/home/ok/bin/:$PATH"
 

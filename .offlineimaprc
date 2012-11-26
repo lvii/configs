@@ -1,5 +1,5 @@
 [general]
-accounts = lavabit, gmail
+accounts = lavabit, gmail, archlinux
 
 [Account gmail]
 localrepository = gmail-local
@@ -30,6 +30,20 @@ localfolders = ~/mail/lavabit
 type = IMAP
 remotehost = lavabit.com
 remoteuser = ok100@lavabit.com
+realdelete = no
+
+[Account archlinux]
+localrepository = archlinux-local
+remoterepository = archlinux-remote
+
+[Repository archlinux-local]
+type = Maildir
+localfolders = ~/mail/archlinux
+
+[Repository archlinux-remote]
+type = IMAP
+remotehost = mail.archlinux.info
+remoteuser = ok100@archlinux.info
 realdelete = no
 
 [mbnames]

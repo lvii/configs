@@ -1,0 +1,3 @@
+#!/bin/sh
+
+dst=$(zenity --file-selection --save --filename=$2) && urxvtc -title wget -e wget $1 -O $dst --load-cookies $3

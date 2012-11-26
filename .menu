@@ -23,10 +23,6 @@ submenu = Accessories
 	cmd = file-roller
 	icon = null
 
-	item = GdMap
-	cmd = gdmap
-	icon = null
-
 	item = Gucharmap
 	cmd = gucharmap
 	icon = null
@@ -107,6 +103,10 @@ submenu = Internet
 	cmd = skype
 	icon = null
 
+	item = Transmission
+	cmd = transmission-gtk
+	icon = null
+
 	item = WeeChat
 	cmd = urxvtc -title WeeChat -e weechat-curses
 	icon = null
@@ -125,16 +125,20 @@ submenu = Multimedia
 	cmd = exfalso
 	icon = null
 
-	item = Gaupol
-	cmd = gaupol 
-	icon = null
-
 	item = Guitar Pro 6
 	cmd = GuitarPro
 	icon = null
 
 	item = Guitar Rig 5
 	cmd = GuitarRig
+	icon = null
+
+	item = Lingot
+	cmd = lingot
+	icon = null
+
+	item = Metronome
+	cmd = metronome
 	icon = null
 
 	item = Mplayer2
@@ -175,6 +179,13 @@ SEPARATOR
 submenu = Settings
 	icon = false
 
+	submenu = Compton
+		icon = false
+
+		item = Toggle on/off
+		cmd = pkill -USR1 compton
+		icon = null
+
 	submenu = Display
 		icon = false
 
@@ -213,7 +224,7 @@ submenu = Settings
 		cmd = sh -c "xrandr --output LVDS1 --off --output VGA1 --auto && sh ~/.fehbg"
 		icon = null
 
-	submenu = dwm
+	submenu = DWM
 		icon = false
 
 		item = Edit config.h

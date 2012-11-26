@@ -93,11 +93,12 @@ source ~/.mutt/mailboxes
 # always sourced
 source $alias_file                                              # required for functionality
 source ~/.mutt/colors/darkcourses                               # source colors file
-source ~/.mutt/lavabit.muttrc                                   # source gmail as default
+source ~/.mutt/lavabit.muttrc                                   # source lavabit as default
 
 # account specific sources
 folder-hook gmail/* source ~/.mutt/gmail.muttrc
 folder-hook lavabit/* source ~/.mutt/lavabit.muttrc
+folder-hook archlinux/* source ~/.mutt/archlinux.muttrc
 
 # Mailing lists
 lists arch-announce@archlinux.org                               # Arch announcements
@@ -137,6 +138,8 @@ bind compose p          pgp-menu
 macro index li   "<change-folder> =lavabit/Inbox<enter>"    "go to Lavabit inbox"
 macro index ls   "<change-folder> =lavabit/Sent<enter>"     "go to Lavabit sent"
 macro index gi   "<change-folder> =gmail/INBOX<enter>"      "go to Gmail inbox"
+macro index ai   "<change-folder> =archlinux/INBOX<enter>"  "go to Archlinux inbox"
+macro index as   "<change-folder> =archlinux/Sent<enter>"   "go to Archlinux sent"
 macro index \Cr  "<tag-prefix><clear-flag>N"                "mark tagged messages as read"
 macro index \Cp  "<pipe-message>cat > ~/"                   "save message as" 
 macro index B    "<limit>~b "                               "search message bodies"

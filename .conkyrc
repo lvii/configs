@@ -5,9 +5,9 @@ if_up_strictness address
 
 TEXT
 ${if_mpd_playing}${execi 10000 echo -e "\x01"}${mpd_artist}${execi 10000 echo -e "\x02"}${mpd_title} ${endif}\
-${execi 10000 echo -e "\x01"}Cpu${execi 10000 echo -e "\x02"}${cpu}% \
-${execi 10000 echo -e "\x01"}Mem${execi 10000 echo -e "\x02"}${memperc}% \
-${execi 10000 echo -e "\x01"}Net${execi 10000 echo -e "\x02"}${if_up wlan0}${wireless_link_qual_perc wlan0}%${else}${if_up eth0}On${else}No${endif}${endif} \
-${execi 10000 echo -e "\x01"}Bat${execi 10000 echo -e "\x02"}${if_existing /sys/class/power_supply/AC0/online 1}Ac${else}${battery_percent}%${endif} \
-${execi 10000 echo -e "\x01"}Vol${execi 10000 echo -e "\x02"}${if_mixer_mute}M${else}${mixer}%${endif} \
+${execi 10000 echo -e "\x01"}Cpu${execi 10000 echo -e "\x02"}${if_match ${cpu} < 10}0.0${cpu}${else}${if_match ${cpu} < 99}0.${cpu}${else}${if_match ${cpu cpu0} = 100}1.00${endif}${endif}${endif} \
+${execi 10000 echo -e "\x01"}Mem${execi 10000 echo -e "\x02"}${if_match ${memperc} < 10}0.0${memperc}${else}${if_match ${memperc} < 99}0.${memperc}${else}${if_match ${memperc} = 100}1.00${endif}${endif}${endif} \
+${execi 10000 echo -e "\x01"}Bat${execi 10000 echo -e "\x02"}${battery_percent} \
+${execi 10000 echo -e "\x01"}Net${execi 10000 echo -e "\x02"}${if_up wlan0}${wireless_link_qual_perc wlan0}${else}${if_up eth0}On${else}No${endif}${endif} \
+${execi 10000 echo -e "\x01"}Vol${execi 10000 echo -e "\x02"}${if_mixer_mute}M${else}${mixer}${endif} \
 ${execi 10000 echo -e "\x02"}${time %H:%M}

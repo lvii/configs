@@ -1,5 +1,5 @@
 #!/bin/sh
-cmd=$(echo -e "shutdown\nreboot\nlogout" | dmenu -nb "#00050A" -nf "#5E687D" -sb "#00050A" -sf "#878F96")
+cmd=$(echo -e "shutdown\nreboot\nlogout" | dmenu -nb "#140c0b" -nf "#94928f" -sb "#140c0b" -sf "#cdcdcd")
 case $cmd in
 	shutdown)
 		sudo shutdown -h now

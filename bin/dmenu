@@ -9,10 +9,10 @@ main() {
    local ARGS=
    local FONT=
    [[ "$@" != *-fn ]] && FONT="-*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-*"
-   [[ "$@" != *-nb ]] && ARGS="$ARGS -nb #00050A"
-   [[ "$@" != *-nf ]] && ARGS="$ARGS -nf #5E687D"
-   [[ "$@" != *-sb ]] && ARGS="$ARGS -sb #878F96"
-   [[ "$@" != *-sf ]] && ARGS="$ARGS -sf #00050A"
+   [[ "$@" != *-nb ]] && ARGS="$ARGS -nb #242323"
+   [[ "$@" != *-nf ]] && ARGS="$ARGS -nf #94928f"
+   [[ "$@" != *-sb ]] && ARGS="$ARGS -sb #94928f"
+   [[ "$@" != *-sf ]] && ARGS="$ARGS -sf #242323"
    [[ -n "$FONT" ]] && {
       /usr/bin/dmenu -fn "$FONT" $ARGS "$@"; return;
    } || { /usr/bin/dmenu $ARGS "$@"; return; }

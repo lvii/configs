@@ -23,6 +23,10 @@ submenu = Accessories
 	cmd = file-roller
 	icon = null
 
+	item = Gbdfed
+	cmd = gbdfed
+	icon = null
+
 	item = Gucharmap
 	cmd = gucharmap
 	icon = null
@@ -69,10 +73,6 @@ submenu = Graphics
 
 	item = Color Selection
 	cmd = zenity --color-selection
-	icon = null
-
-	item = Gbdfed
-	cmd = gbdfed
 	icon = null
 
 	item = GIMP

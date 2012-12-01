@@ -18,7 +18,7 @@ xrdb ~/.Xresources
 redshift -l 48.736507:19.14623 -b 0.9 &
 
 # screen compositor
-compton --vsync opengl &
+compton --vsync opengl -b
 
 # set keyboard map, disable CapsLock & map to Escape
 setxkbmap cz -option caps:escape

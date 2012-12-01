@@ -11,7 +11,7 @@ reload-time         15
 refresh-on-startup  yes
 browser             "dwb"
 confirm-exit        yes
-max-items           500
+max-items           100
 show-read-feeds		no
 show-read-articles	no
 

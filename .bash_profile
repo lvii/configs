@@ -11,6 +11,7 @@ export EDITOR='vim'
 export VIEWER='vim -R'
 export PAGER='vimpager'
 export BROWSER='dwb'
+export TERMCMD='urxvtc'
 
 export PATH="/usr/lib/cw:/usr/local/texlive/2012/bin/i386-linux/:/home/ok/bin/:$PATH"
 

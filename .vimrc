@@ -12,7 +12,7 @@ set nocompatible
 syntax on
 filetype plugin on
 
-colorscheme dc3
+colorscheme euphrasia
 
 set mouse=a                            " enable mouse
 set wrap                               " wrap lines

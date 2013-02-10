@@ -1,0 +1,18 @@
+[Unit]
+Description=Dynamic Window Manager
+Requires=mystuff.target
+Requires=xorg.target
+Before=mystuff.target
+After=xorg.target
+
+[Service]
+Type=simple
+GuessMainPID=yes
+Environment=PATH=%h/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/core_perl
+ExecStart=/usr/bin/dwm
+KillSignal=SIGKILL
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=wm.target

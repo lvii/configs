@@ -2,8 +2,6 @@
 # gmail specific options
 #########################
 
-color status     white   black
-
 set from      = "ok100@lavabit.com"
 set mbox      = "+lavabit/Inbox"
 set record    = "+lavabit/Sent"
@@ -15,3 +13,5 @@ set ssl_force_tls = yes
 macro index E "<change-folder>+lavabit/Inbox<enter><limit>~B "   "search everything"
 macro index D "<save-message>+lavabit/Trash<enter>"              "move message to the trash"
 
+# Remove ads
+#set display_filter = /home/ok/.mutt/lavabit-ads

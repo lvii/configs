@@ -1,0 +1,10 @@
+[Unit]
+Description=Irexec
+Requires=lirc.service
+After=lirc.service
+
+[Service]
+ExecStart=/usr/bin/irexec
+
+[Install]
+WantedBy=mystuff.target

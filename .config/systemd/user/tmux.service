@@ -1,0 +1,15 @@
+[Unit]
+Description=Tmux
+Requires=urxvtd.service
+Requires=xorg.target
+Requires=xresources.service
+After=urxvtd.service
+After=xorg.target
+After=xresources.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/urxvtc -e tmux attach
+
+[Install]
+WantedBy=mystuff.target

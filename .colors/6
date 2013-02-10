@@ -1,0 +1,39 @@
+! dc3_dark
+! based on dc3, a.k.a. darkcourses v. 3.1 by bohoomil
+
+*background: #00050A
+*foreground: #7C838A
+
+! black
+*color0:     #0A1724
+*color8:     #303B4A
+
+! red
+*color1:     #7D1A2A
+*color9:     #A33144
+
+! green
+*color2:     #2F753C
+*color10:    #449652
+
+! yellow
+*color3:     #706A2D
+*color11:    #A38262
+
+! blue
+*color4:     #006DBD
+*color12:    #357CB0
+
+! magenta
+*color5:     #535E96
+*color13:    #963576
+
+! cyan
+*color6:     #007575
+*color14:    #2C9696
+
+! white
+*color7:     #5E687D
+*color15:    #878F96
+
+! vim:ft=xdefaults

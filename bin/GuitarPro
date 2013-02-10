@@ -1,0 +1,11 @@
+#!/bin/sh
+
+olddir=$(pwd)
+pulseaudio --start
+amixer -q set Speaker unmute
+amixer -q set Speaker 100
+amixer -q set Headphone unmute
+amixer -q set Headphone 100
+/opt/GuitarPro6/launcher.sh "$*"
+pulseaudio --kill
+cd $olddir

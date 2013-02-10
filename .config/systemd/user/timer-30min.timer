@@ -1,0 +1,10 @@
+[Unit]
+Description=30 Min Timer
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=30min
+Unit=timer-30min.target
+
+[Install]
+WantedBy=default.target

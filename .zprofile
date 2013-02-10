@@ -1,0 +1,15 @@
+export PATH="/usr/lib/cw:/usr/local/texlive/2012/bin/i386-linux/:/home/ok/bin:$PATH"
+export EDITOR="vim"
+export VIEWER="vim -R"
+export PAGER="vimpager"
+export BROWSER="dwb"
+export TERMCMD="urxvtc"
+export PYTHONOPTIMIZE=2
+export MPD_HOST="/home/ok/.mpd/socket"
+export GTK2_RC_FILES="/home/ok/.gtkrc-2.0"
+export MOZ_DISABLE_PANGO=1
+export NOCOLOR_PIPE=1
+export HISTSIZE=2000
+export HISTFILE="$HOME/.history"
+export SAVEHIST=$HISTSIZE
+export GREP_COLOR="1;33"

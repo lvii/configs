@@ -2,14 +2,12 @@
 # gmail specific options
 #########################
 
-color status     white   black
-
 set from      = "ok100.ok100.ok100@gmail.com"
 set mbox      = "+gmail/archive"
 set record    = "+gmail/sent mail"
 set postponed = "+gmail/drafts"
 
-set smtp_url=smtps://ok100.ok100.ok100@gmail.com:pAssWoRD@smtp.gmail.com
+set smtp_url=smtps://ok100.ok100.ok100@gmail.com:mypass@smtp.gmail.com
 set ssl_force_tls = yes
 
 macro index E "<change-folder>+gmail/archive<enter><limit>~B "   "search everything"

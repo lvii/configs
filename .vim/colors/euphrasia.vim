@@ -48,14 +48,14 @@ if &t_Co > 255
 	hi Exception               ctermfg=13
 	hi Float                   ctermfg=14
 	hi FoldColumn              ctermfg=14   ctermbg=none
-	hi Folded                  ctermfg=14   ctermbg=0
+	hi Folded                  ctermfg=14   ctermbg=235
 	hi Function                ctermfg=3
 	hi Identifier              ctermfg=11                cterm=none
 	hi IncSearch               ctermfg=15   ctermbg=1
 	hi Keyword                 ctermfg=4
 	hi Label                   ctermfg=5
 	hi LineNr                  ctermfg=8
-	hi CursorLine              ctermfg=15   ctermbg=0    cterm=bold
+	hi CursorLine              ctermfg=15   ctermbg=235    cterm=bold
 	hi CursorLineNr            ctermfg=15   ctermbg=4
 	hi Macro                   ctermfg=3                 cterm=none
 	hi MatchParen              ctermfg=0    ctermbg=14
@@ -79,7 +79,7 @@ if &t_Co > 255
 	hi Structure               ctermfg=67
 	hi Tag                     ctermfg=5
 	hi Title                   ctermfg=7    ctermbg=none cterm=bold
-	hi Todo                    ctermfg=10   ctermbg=0
+	hi Todo                    ctermfg=10   ctermbg=235
 	hi Typedef                 ctermfg=4
 	hi Type                    ctermfg=5
 	hi Underlined              ctermfg=7
@@ -87,16 +87,16 @@ if &t_Co > 255
 	hi Visual                  ctermfg=15   ctermbg=8
 	hi VisualNOS               ctermfg=10   ctermbg=8    cterm=bold
 	hi WarningMsg              ctermfg=9   
-	hi WildMenu                ctermfg=5    ctermbg=0
+	hi WildMenu                ctermfg=5    ctermbg=235
 
 	" statusline
-	hi StatusLine              ctermfg=7    ctermbg=0    cterm=none
+	hi StatusLine              ctermfg=7    ctermbg=235  cterm=none
 	hi StatusLineNC            ctermfg=0    ctermbg=7
-	hi StatusModFlag           ctermfg=9    ctermbg=0    cterm=none
-	hi StatusRO                ctermfg=13   ctermbg=0    cterm=none
-	hi StatusHLP               ctermfg=10   ctermbg=0    cterm=none
-	hi StatusPRV               ctermfg=11   ctermbg=0    cterm=none
-	hi StatusFTP               ctermfg=12   ctermbg=0    cterm=none
+	hi StatusModFlag           ctermfg=9    ctermbg=235  cterm=none
+	hi StatusRO                ctermfg=13   ctermbg=235  cterm=none
+	hi StatusHLP               ctermfg=10   ctermbg=235  cterm=none
+	hi StatusPRV               ctermfg=11   ctermbg=235  cterm=none
+	hi StatusFTP               ctermfg=12   ctermbg=235  cterm=none
 
 	" spellchecking
 	hi SpellLocal              ctermfg=0    ctermbg=14   cterm=underline
@@ -105,7 +105,7 @@ if &t_Co > 255
 	hi SpellRare               ctermfg=0    ctermbg=13   cterm=underline
 
 	" pmenu
-	hi Pmenu                   ctermfg=7    ctermbg=0
+	hi Pmenu                   ctermfg=7    ctermbg=235
 	hi PmenuSel                ctermfg=none ctermbg=8 
 	hi PmenuSbar               ctermfg=8    ctermbg=15
 

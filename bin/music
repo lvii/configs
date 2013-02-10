@@ -1,0 +1,2 @@
+#!/bin/sh
+sleep 1 && exec tmux -f .tmux/tmux-music.conf -L music attach

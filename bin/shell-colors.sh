@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # shell-colors.sh, prints possible fg/bg color combinations
 # using escape sequences.
 #

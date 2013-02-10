@@ -1,0 +1,88 @@
+# ================================================================================
+# archlinux
+# ================================================================================
+IMAPAccount archlinux
+Host mail.archlinux.info
+User ok100@archlinux.info
+Pass mypass
+# Use SSL
+UseIMAPS yes
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore archlinux-remote
+Account archlinux
+
+MaildirStore archlinux-local
+# The trailing "/" is important
+Path ~/.mail/archlinux/
+Inbox ~/.mail/archlinux/INBOX
+
+Channel archlinux
+Master :archlinux-remote:
+Slave :archlinux-local:
+# include everything
+Patterns *
+# Automatically create missing mailboxes, both locally and on the server
+Create Both
+# Save the synchronization state files in the relevant directory
+SyncState *
+
+# ================================================================================
+# lavabit
+# ================================================================================
+IMAPAccount lavabit
+# Address to connect to
+Host lavabit.com
+User ok100@lavabit.com
+Pass mypass 
+# Use SSL
+UseIMAPS yes
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore lavabit-remote
+Account lavabit
+
+MaildirStore lavabit-local
+# The trailing "/" is important
+Path ~/.mail/lavabit/
+Inbox ~/.mail/lavabit/Inbox
+
+Channel lavabit
+Master :lavabit-remote:
+Slave :lavabit-local:
+# include everything
+Patterns *
+# Automatically create missing mailboxes, both locally and on the server
+Create Both
+# Save the synchronization state files in the relevant directory
+SyncState *
+
+# ================================================================================
+# gmail
+# ================================================================================
+IMAPAccount gmail
+# Address to connect to
+Host imap.gmail.com
+User ok100.ok100.ok100@gmail.com
+Pass mypass
+# Use SSL
+UseIMAPS yes
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+# The trailing "/" is important
+Path ~/.mail/gmail/
+Inbox ~/.mail/gmail/INBOX
+
+Channel gmail
+Master :gmail-remote:
+Slave :gmail-local:
+# include everything
+Patterns *
+# Automatically create missing mailboxes, both locally and on the server
+Create Both
+# Save the synchronization state files in the relevant directory
+SyncState *

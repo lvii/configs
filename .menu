@@ -19,16 +19,12 @@ submenu = Accessories
 	cmd = urxvtc -e mc
 	icon = null
 
-	item = File Roller
-	cmd = file-roller
-	icon = null
-
 	item = Gbdfed
 	cmd = gbdfed
 	icon = null
 
-	item = Gucharmap
-	cmd = gucharmap
+	item = Mucharmap
+	cmd = mucharmap
 	icon = null
 
 	item = Qalculate!
@@ -47,10 +43,6 @@ submenu = Accessories
 submenu = Development
 	icon = null
 
-	item = Eagle
-	cmd = eagle
-	icon = null
-
 	item = Lazarus
 	cmd = lazarus
 	icon = null
@@ -59,7 +51,7 @@ submenu = Development
 	cmd = meld
 	icon = null
 
-	item = qtResistors
+	item = QtResistors
 	cmd = qtResistors
 	icon = null
 
@@ -72,7 +64,7 @@ submenu = Graphics
 	icon = null
 
 	item = Color Selection
-	cmd = zenity --color-selection
+	cmd = Xdialog --buttons-style text --colorsel "" 0 0
 	icon = null
 
 	item = GIMP
@@ -100,11 +92,11 @@ submenu = Internet
 	icon = null
 
 	item = Skype
-	cmd = skype
+	cmd = skypetab-ng
 	icon = null
 
 	item = Transmission
-	cmd = transmission-gtk
+	cmd = transmission-qt
 	icon = null
 
 	item = WeeChat
@@ -125,28 +117,20 @@ submenu = Multimedia
 	cmd = exfalso
 	icon = null
 
-	item = Guitar Pro 6
-	cmd = GuitarPro
+	item = GTick
+	cmd = gtick
 	icon = null
 
-	item = Guitar Rig 5
-	cmd = GuitarRig
+	item = Guitar Pro 6
+	cmd = GuitarPro
 	icon = null
 
 	item = Lingot
 	cmd = lingot
 	icon = null
 
-	item = Metronome
-	cmd = metronome
-	icon = null
-
-	item = Mplayer2
-	cmd = /home/ok/bin/mplayer_zenity
-	icon = null
-
-	item = QjackCtl
-	cmd = qjackctl
+	item = Minitube
+	cmd = minitube
 	icon = null
 
 
@@ -178,13 +162,6 @@ SEPARATOR
 
 submenu = Settings
 	icon = false
-
-	submenu = Compton
-		icon = false
-
-		item = Toggle on/off
-		cmd = pkill -USR1 compton
-		icon = null
 
 	submenu = Display
 		icon = false

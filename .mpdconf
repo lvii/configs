@@ -1,0 +1,25 @@
+music_directory      "/mnt/SD/music"
+playlist_directory   "/home/ok/.mpd/playlists"
+db_file              "/home/ok/.mpd/mpd.db"
+log_file             "/home/ok/.mpd/mpd.log"
+pid_file             "/home/ok/.mpd/mpd.pid"
+state_file           "/home/ok/.mpd/mpdstate"
+
+bind_to_address      "/home/ok/.mpd/socket"
+http_proxy_host      "208.111.165.126"
+http_proxy_port      "80"
+
+restore_paused       "yes"
+
+playlist_plugin {
+	name             "lastfm"
+	user             "OK100"
+	password         "mypass"
+}
+
+audio_output {
+	type             "alsa"
+	name             "ALSA"
+}
+
+# vim: set ft=conf:

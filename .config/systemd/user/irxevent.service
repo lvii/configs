@@ -1,0 +1,12 @@
+[Unit]
+Description=Irexec
+Requires=lirc.service
+Requires=xorg.target
+After=lirc.service
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/irxevent
+
+[Install]
+WantedBy=mystuff.target

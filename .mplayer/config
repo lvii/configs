@@ -1,5 +1,5 @@
 # colored output
-msgcolor=yes
+#msgcolor=yes
 
 # video
 stop-xscreensaver=yes

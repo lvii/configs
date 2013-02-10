@@ -1,0 +1,12 @@
+[Unit]
+Description=Statusbar for DWM
+Requires=dwm.service
+After=dwm.service
+
+[Service]
+Environment=MPD_HOST=/home/ok/.mpd/socket
+ExecStart=/home/ok/bin/dwm-status
+Restart=no
+
+[Install]
+WantedBy=wm.target

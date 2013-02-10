@@ -5,48 +5,46 @@
 !
 
 !-- colors --!
-*background:         #140c0b
-*foreground:         #877a70
+URxvt.background:         #140c0b
+URxvt.foreground:         #877a70
 ! black
-!*color0:             #403f3e
-*color0:             #242323
-*color8:             #666362
+URxvt.color0:             #403f3e
+URxvt.color8:             #666362
 ! red
-*color1:             #91444d
-*color9:             #c78186
+URxvt.color1:             #91444d
+URxvt.color9:             #c78186
 ! green
-*color2:             #6b853d
-*color10:            #abbd80
+URxvt.color2:             #6b853d
+URxvt.color10:            #abbd80
 ! yellow
-*color3:             #916949
-*color11:            #cca88b
+URxvt.color3:             #916949
+URxvt.color11:            #cca88b
 ! blue
-*color4:             #557282
-*color12:            #8eabbd
+URxvt.color4:             #557282
+URxvt.color12:            #8eabbd
 ! magenta
-*color5:             #78516d
-*color13:            #a8879f
+URxvt.color5:             #78516d
+URxvt.color13:            #a8879f
 ! cyan
-*color6:             #58756c
-*color14:            #8ca8a2
+URxvt.color6:             #58756c
+URxvt.color14:            #8ca8a2
 ! white
-*color7:             #94928f
-*color15:            #cdcdcd
+URxvt.color7:             #94928f
+URxvt.color15:            #cdcdcd
 
 !-- urxvt --!
-urxvt.scrollBar:          false
-urxvt.font:               -*-tamsynu-medium-*-*-*-14-*-*-*-*-*-*-*
+urxvt.font:               -*-tamsynu-medium-r-*-*-14-*-*-*-*-*-*-*
 urxvt.boldFont:           -*-tamsynu-bold-*-*-*-14-*-*-*-*-*-*-*
-urxvt.borderLess:         false
+urxvt.italicFont:         -*-tamsynu-medium-i-*-*-14-*-*-*-*-*-*-*
+urxvt.boldItalicFont:         -*-tamsynu-medium-i-*-*-14-*-*-*-*-*-*-*
+urxvt.scrollBar:          false
 urxvt.internalBorder:     2
-urxvt.buffered:           true
-urxvt.urgentOnBell:       true
 urxvt.geometry:           81x21
+urxvt.urgentOnBell:       true
 urxvt.cursorBlink:        true
 urxvt.perl-ext-common:    default,matcher
-urxvt.urlLauncher:        dwb
+urxvt.url-launcher:       /usr/bin/dwb
 urxvt.matcher.button:     1
-urxvt.matcher.pattern.1:  \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 
 !-- xft --!
 Xft.autohint:             0

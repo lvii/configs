@@ -1,0 +1,10 @@
+[Unit]
+Description=X Compositing Manager
+Requires=xorg.target
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/xcompmgr
+
+[Install]
+WantedBy=mystuff.target

@@ -1,0 +1,32 @@
+!FG, BG & Misc
+urxvt*background:       	#2E3436
+urxvt*foreground:       	#BDBDBD
+urxvt*cursorColor:      	#CCCCCC
+urxvt*colorBD:          	#FFFFFF
+urxvt*colorUL:#FFFF99
+URxvt*underlineColor:    	#9999FF
+
+!BLACK
+URxvt*color0:           	#5D6063
+URxvt*color8:           	#808080
+!RED
+URxvt*color1:           	#F05194
+URxvt*color9:        	    #FFA1C0
+!GREEN
+URxvt*color2:   	        #91DB5C
+URxvt*color10:          	#D4FCB6
+!YELLOW
+URxvt*color3:           	#E3A34B
+URxvt*color11:          	#F7D6A8
+!BLUE
+URxvt*color4:           	#73BCF0
+URxvt*color12:          	#B2E0FF
+!MAGENTA
+URxvt*color5:           	#D789FD
+URxvt*color13:          	#E2BFFF
+!CYAN
+URxvt*color6:           	#5ED6A4
+URxvt*color14:          	#B3E8D7
+!WHITE
+URxvt*color7:           	#D7D6D4
+URxvt*color15:          	#FFF8F8

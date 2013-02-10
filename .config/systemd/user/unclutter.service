@@ -1,0 +1,12 @@
+[Unit]
+Description=Remove idle cursor image from screen
+Requires=xorg.target
+After=xorg.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/unclutter -noevents
+Restart=always
+
+[Install]
+WantedBy=mystuff.target

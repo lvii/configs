@@ -1,0 +1,11 @@
+[Unit]
+Description=Set wallpaper
+Requires=xorg.target
+After=xorg.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "eval $(cat ~/.fehbg)"
+
+[Install]
+WantedBy=mystuff.target

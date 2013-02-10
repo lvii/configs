@@ -1,7 +1,7 @@
 #---------------------------------------------------------------
 # file:     ~/.mutt/muttrc                         
 # author:   jason ryan - http://jasonwryan.com/    
-# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh
+# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=muttrc
 #---------------------------------------------------------------
 
 # Based on the exemplary work of Pat Brisbin: http://www.pbrisbin.com:8080/
@@ -12,7 +12,6 @@ set header_cache        = ~/.mutt/cache/headers                 # where to store
 set message_cachedir    = ~/.mutt/cache/bodies                  # where to store bodies
 set certificate_file    = ~/.mutt/certificates                  # where to store certs
 set mailcap_path        = ~/.mutt/mailcap                       # entrys for filetypes
-set signature           = ~/.mutt/sig                           # my signature file
 set tmpdir              = ~/.mutt/temp                          # where to keep temp files
 set editor              = "/usr/bin/vim -c 'set tw=80 ft=mail' -c 'set wrap' -c 'set nocp' -c '+/^--.$/-1'"
 set ispell              = "/usr/bin/aspell -e -c"               # use aspell as ispell
@@ -20,7 +19,7 @@ set print_command       = /usr/bin/enscript                     # print with ens
 
 # main options
 set mbox_type           = Maildir                               # mailbox type
-set folder              = ~/mail                                # mailbox location
+set folder              = ~/.mail                                # mailbox location
 set spoolfile           = "+lavabit/Inbox"                      # default inbox
 set timeout             = 3                                     # idle time before scanning
 set mail_check          = 0                                     # minimum time between scans
@@ -28,13 +27,13 @@ set sort_alias          = alias                                 # sort alias fil
 set reverse_alias                                               # show names from alias file in index
 unset move                                                      # gmail does that
 set delete                                                      # don't ask, just do
-#unset confirmappend                                             # don't ask, just do!
 set quit                = ask-yes                               # confirm quit
 unset mark_old                                                  # read/new is good enough for me
 set beep_new                                                    # bell on new mails
 set pipe_decode                                                 # strip headers and eval mimes when piping
 set thorough_search                                             # strip headers and eval mimes before searching
-unset help
+unset help                                                      # hide help
+set sleep_time          = 0                                     # speed up folders switch
 
 # index options
 set sort                = threads                               # like gmail 
@@ -44,7 +43,7 @@ set sort_re                                                     # thread based o
 set reply_regexp        = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 
 # pager options
-set pager_index_lines   = 10                                    # number of index lines to show 
+set pager_index_lines   = 6                                     # number of index lines to show 
 set pager_context       = 5                                     # number of context lines to show
 set pager_stop                                                  # don't go to next message automatically
 set menu_scroll                                                 # scroll in menus 
@@ -54,12 +53,12 @@ unset markers                                                   # no ugly plus s
 auto_view text/html                                             # view html automatically
 alternative_order text/plain text/enriched text/html            # save html for last
 set quote_regexp        = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
-set status_on_top                                              # as you'd expect
+set status_on_top                                               # as you'd expect
 
 # formats
-set date_format         = "%d/%m/%y at %I:%M%P"
-set index_format        = "%3C  %S   %D  •  %-35.35L %s %> %c"
-set pager_format        = "Reading message %C of %m %> %lL [%P]" # pager statusbar
+set date_format         = "%d/%m/%y at %H:%M"
+set index_format        = " %S │ %D │ %-35.35L │ %s"
+set pager_format        = "Reading message %C of %m %> [%P]"    # pager statusbar
 set folder_format       = "%2C %t %N %8s %d %f"                 # mailbox list view
 set status_format       = " %?M?%M/?%m Mails %?n?%n new, ?%?u?%u unread, ?%?p?%p drafts, ?%?t?%t +tagged, ?%?d?%d deleted, ?[%f %l]  %?b?%b unread messages. ?%>  %V   sort by: %s/%S  [%P]"
 set alias_format        = "%4n %t %-20a  %r"
@@ -70,8 +69,6 @@ set envelope_from                                               # which from?
 set sig_dashes                                                  # dashes before my sig... sweet
 set edit_headers                                                # show headers when composing
 set fast_reply                                                  # skip to compose when replying
-#set sendmail_wait       = -1                                    # don't wait for sending... to complete
-#set askcc                                                       # ask for CC:
 set fcc_attach                                                  # save attachments with the body
 unset mime_forward                                              # forward attachments as part of body
 set forward_format      = "Fwd: %s"                             # format for subject when forwarding
@@ -82,17 +79,19 @@ set reverse_name                                                # reply as whome
 set include                                                     # include message in replies
 set forward_quote                                               # include message in forwards
 
+#set display_filter = "/home/ok/bin/mutt-auto-alias.sh"
+
 # headers to show
 ignore *                                                        # ignore all headers
-unignore from: to: cc: date: subject:                           # show only these
-hdr_order from: to: cc: date: subject:                          # and in this order
+#unignore from: to: cc: date: subject:                           # show only these
+#hdr_order from: to: cc: date: subject:                          # and in this order
 
 # boxes
 source ~/.mutt/mailboxes
 
 # always sourced
 source $alias_file                                              # required for functionality
-source ~/.mutt/colors/darkcourses                               # source colors file
+source ~/.mutt/colors/ok100                                     # source colors file
 source ~/.mutt/lavabit.muttrc                                   # source lavabit as default
 
 # account specific sources
@@ -109,6 +108,9 @@ subscribe arch-general@archlinux.org
 
 lists dev@suckless.org                                          # suckless.org
 subscribe dev@suckless.org
+
+lists rss2maildir@localhost                                     # feeds
+subscribe rss2maildir@localhost
 
 # these just give me headaches
 bind index,pager \#     noop
@@ -153,12 +155,5 @@ macro compose Y pfy "send mail without pgp"
 
 macro pager \Cu   <pipe-entry>'urlview'<enter> 'Follow links with urlview'
 
-# Address book ----------------------------------------------------------------------------------------
-set query_command= "abook --mutt-query '%s'"
-# sync abook and alias
-macro index A      "!~/bin/abook-autoexport\n:source ~/.mutt/alias\n"          "Start abook"
-macro index \Ca    "|~/bin/abook-autoexport --add-email-quiet\n:source ~/.mutt/alias\n" "Create new alias from the actual message"
-
-# quick-sync ~/Mail immediately with offlineimap
-macro index Z   "<shell-escape>/usr/bin/offlineimap -q -o<enter>" "sync IMAP"
-
+# quick-sync ~/.mail immediately with mbsync
+macro index Z   "<shell-escape>/usr/bin/mbsync -a<enter>" "Sync IMAP"

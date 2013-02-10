@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 xdef=`cat ~/.Xresources | grep "\.colors" | cut -d '"' -f2`
 

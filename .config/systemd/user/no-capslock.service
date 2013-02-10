@@ -1,0 +1,11 @@
+[Unit]
+Description=Disable CapsLock
+Requires=xorg.target
+After=xorg.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/setxkbmap -option caps:escape
+
+[Install]
+WantedBy=mystuff.target

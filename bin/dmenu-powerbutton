@@ -1,13 +1,8 @@
 #!/bin/sh
-cmd=$(echo -e "shutdown\nreboot\nlogout" | dmenu -nb "#140c0b" -nf "#94928f" -sb "#140c0b" -sf "#cdcdcd")
+
+cmd=$(echo -e "shutdown\nreboot" | dmenu -nb "#140c0b" -nf "#94928f" -sb "#140c0b" -sf "#cdcdcd")
+
 case $cmd in
-	shutdown)
-		sudo shutdown -h now
-		;;
-	reboot)
-		sudo shutdown -r now
-		;;
-	logout)
-		sudo killall X
-		;;
+	shutdown)  sudo poweroff ;;
+	reboot)    sudo reboot ;;
 esac

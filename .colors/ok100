@@ -1,39 +1,38 @@
 ! OK100
-! based on dc3, a.k.a. darkcourses v. 3.1 by bohoomil
 
 *background: #00050A
 *foreground: #7C838A
 
 ! black
 *color0:     #0A1724
-*color8:     #303B4A
+*color8:     #3F4D61
 
 ! red
-*color1:     #701726
-*color9:     #A33144
+*color1:     #9D616A
+*color9:     #B87B83
 
 ! green
-*color2:     #286332
-*color10:    #449652
+*color2:     #4E7D45
+*color10:    #68975D
 
 ! yellow
-*color3:     #706A2D
-*color11:    #A38262
+*color3:     #767609
+*color11:    #928F2A
 
 ! blue
-*color4:     #00508A
-*color12:    #357CB0
+*color4:     #3A72B2
+*color12:    #588BCC
 
 ! magenta
-*color5:     #454E7D
-*color13:    #963576
+*color5:     #676FA1
+*color13:    #8188BC
 
 ! cyan
-*color6:     #007070
-*color14:    #2C9696
+*color6:     #1F7E7E
+*color14:    #409898
 
 ! white
 *color7:     #5E687D
-*color15:    #878F96
+*color15:    #8A9299
 
 ! vim:ft=xdefaults

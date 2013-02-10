@@ -1,5 +1,0 @@
-# faster completion
-set show-all-if-ambiguous on
-
-# disable control echo
-set echo-control-characters off

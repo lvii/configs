@@ -1,0 +1,8 @@
+[Unit]
+Description=Synchronize IMAP4 and Maildir mailboxes
+
+[Service]
+ExecStart=/usr/bin/mbsync -a
+
+[Install]
+WantedBy=timer-30min.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Set color temparature of display according to time of day
+Requires=xorg.target
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/redshift
+
+[Install]
+WantedBy=mystuff.target

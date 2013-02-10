@@ -1,0 +1,10 @@
+[Unit]
+Description=Clipboard Manager
+Requires=xorg.target
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/loliclip
+
+[Install]
+WantedBy=mystuff.target

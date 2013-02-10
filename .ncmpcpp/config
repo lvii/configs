@@ -60,7 +60,7 @@ mpd_music_dir = "/mnt/SD/music"
 #
 #visualizer_in_stereo = "no"
 #
-#visualizer_fifo_path = ""
+visualizer_fifo_path = "/tmp/mpd.fifo"
 #
 ##
 ## Note: Below parameter is needed for ncmpcpp
@@ -87,7 +87,7 @@ mpd_music_dir = "/mnt/SD/music"
 ## you need to compile ncmpcpp with fftw3 support.
 ##
 #
-#visualizer_type = "wave" (spectrum/wave)
+visualizer_type = "spectrum" (spectrum/wave)
 #
 #visualizer_look = "◆│"
 #
@@ -487,7 +487,7 @@ progressbar_elapsed_color = "black"
 #
 active_column_color = "default"
 #
-#visualizer_color = "yellow"
+visualizer_color = "default"
 #
 #window_border_color = "green"
 #

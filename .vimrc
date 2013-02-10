@@ -158,3 +158,8 @@ let g:tagbar_autoshowtag = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 4
 let g:syntastic_python_checker_args = '--ignore=E501'
+
+"------------------------------------------------------------------------------ 
+" Vimwiki
+"------------------------------------------------------------------------------ 
+let g:vimwiki_list = [{'path': '~/safebox/vimwiki'}]

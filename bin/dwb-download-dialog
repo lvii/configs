@@ -1,3 +1,11 @@
 #!/bin/sh
 
-dst=$(zenity --file-selection --save --filename=$2) && urxvtc -title wget -e wget $1 -O $dst --load-cookies $3
+dwb_uri=$1
+dwb_output=$2
+dwb_cookies=$3
+
+dst=$(Xdialog --stdout --fselect "$dwb_output" 0 0)
+
+if [ -n "$dst" ]; then
+	urxvtc -title wget -e wget "$dwb_uri" -O "$dst" --load-cookies "$dwb_cookies"
+fi

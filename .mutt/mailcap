@@ -1,9 +1,0 @@
-text/html; w3m -I %{charset} -T text/html; copiousoutput;
-image/*; sxiv %s
-video; mplayer %s
-text/*; vim %s
-application/pdf; llpp %s
-application/vnd.ms-powerpoint; soffice %s
-application/vnd.ms-excel; soffice %s
-application/vnd.openxmlformats-officedocument.wordprocessingml.document; soffice %s
-application/msword; antiword %s; copiousoutput

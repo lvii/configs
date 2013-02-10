@@ -1,0 +1,8 @@
+[Unit]
+Description=RSS to Maildir
+
+[Service]
+ExecStart=/home/ok/bin/rss2maildir -c /home/ok/.config/rss2maildir/rss2maildir.conf
+
+[Install]
+WantedBy=timer-30min.target

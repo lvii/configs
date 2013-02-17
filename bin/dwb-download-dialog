@@ -6,6 +6,4 @@ dwb_cookies=$3
 
 dst=$(Xdialog --stdout --fselect "$dwb_output" 0 0)
 
-if [ -n "$dst" ]; then
-	urxvtc -title wget -e wget "$dwb_uri" -O "$dst" --load-cookies "$dwb_cookies"
-fi
+[ -n "$dst" ] && urxvtc -title wget -e wget --no-use-server-timestamps "$dwb_uri" -O "$dst" --load-cookies "$dwb_cookies"

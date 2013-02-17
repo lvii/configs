@@ -25,6 +25,9 @@ setopt PROMPT_SUBST
 # set the prompt
 PROMPT='%{$fg[green]%}%1~$(prompt_git_info) %{$fg_bold[black]%}\$%{$reset_color%} '
 
+# set the right prompt if we are in ranger
+[ -n "$RANGER_LEVEL" ] && RPROMPT='%{$fg[magenta]%}(in ranger)%{$reset_color%}'
+
 # live command coloring
 source ~/bin/live-command-coloring.sh
 
@@ -55,6 +58,7 @@ alias diff='colordiff'
 alias exit="clear; exit"
 alias free='free -m'
 alias grep='grep --color=auto'
+alias ad='sudo hostsblock-urlcheck'
 alias iotop='sudo iotop -Poa'
 alias lc='lyvi -c ~/.config/lyvi/lyvi-cover.conf'
 alias less='vimpager'
@@ -84,6 +88,8 @@ alias sub='submarine -l cze -l ces -l cs'
 alias subsk='submarine -l slo -l slk -l sk'
 alias svi='sudo vim'
 alias svim='sudo vim'
+alias sysd='sudo systemctl'
+alias sysdu='systemctl --user'
 alias tex-update='sudo tlmgr update --all'
 alias tlmgr='sudo tlmgr'
 alias u='yaourt -Syu --aur'

@@ -16,7 +16,7 @@ submenu = Accessories
 	icon = null
 
 	item = File Manager
-	cmd = urxvtc -e mc
+	cmd = urxvtc -e ranger
 	icon = null
 
 	item = Gbdfed
@@ -92,7 +92,7 @@ submenu = Internet
 	icon = null
 
 	item = Skype
-	cmd = skypetab-ng
+	cmd = skype
 	icon = null
 
 	item = Transmission

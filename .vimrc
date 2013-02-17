@@ -163,3 +163,8 @@ let g:syntastic_python_checker_args = '--ignore=E501'
 " Vimwiki
 "------------------------------------------------------------------------------ 
 let g:vimwiki_list = [{'path': '~/safebox/vimwiki'}]
+
+"------------------------------------------------------------------------------ 
+" Pydiction
+"------------------------------------------------------------------------------ 
+let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'

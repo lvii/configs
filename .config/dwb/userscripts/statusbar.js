@@ -4,10 +4,10 @@ gui.uriLabel.xalign = 0;
 
 signals.connect("statusBarChange", function(wv, data) {
     // uri
-	gui.uriLabel.useMarkup = true;
+    gui.uriLabel.useMarkup = true;
     var uri = util.markupEscape(wv.uri);
-	if (data.isBookmarked)
-		uri = "<span foreground='#916949'>" + uri + "</span>";
+    if (data.isBookmarked)
+        uri = "<span foreground='#916949'>" + uri + "</span>";
 
     // history
     if (data.canGoBack || data.canGoForward) {
@@ -19,11 +19,11 @@ signals.connect("statusBarChange", function(wv, data) {
     }
 
     // progress
-	var progress = wv.progress;
-	if (progress > 0 && progress < 1) 
-		uri += " <span foreground='#666362'>(" + Math.round(progress * 100) + "%)</span>";
+    var progress = wv.progress;
+    if (progress > 0 && progress < 1) 
+        uri += " <span foreground='#666362'>(" + Math.round(progress * 100) + "%)</span>";
 
-	// ssl check
+    // ssl check
     var statusText = "";
     if (data.ssl == "trusted") 
         statusText = "<span foreground='#6B853D'>SSL</span> ";
@@ -51,8 +51,8 @@ signals.connect("statusBarChange", function(wv, data) {
         statusText += perc + "%";
     }
 
-	uri = "<span weight='normal'>" + uri + "</span>";
-	statusText = "<span weight='normal'>" + statusText + "</span>";
+    uri = "<span weight='normal'>" + uri + "</span>";
+    statusText = "<span weight='normal'>" + statusText + "</span>";
 
     gui.uriLabel.label = uri;
     gui.statusLabel.label = statusText;
@@ -65,6 +65,17 @@ gui.entry.connect("focus-in-event", function() {
 });
 
 gui.entry.connect("focus-out-event", function() { 
-	gui.uriLabel.visible = true;
-	gui.statusLabel.visible = true;
+    gui.uriLabel.visible = true;
+    gui.statusLabel.visible = true;
+});
+
+gui.messageLabel.notify("label", function() {
+    if (gui.messageLabel.label == "") {
+        gui.uriLabel.visible = true;
+        gui.statusLabel.visible = true;
+    }
+    else {
+        gui.uriLabel.visible = false;
+        gui.statusLabel.visible = false;
+    }
 });
